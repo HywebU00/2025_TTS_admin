@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>台灣國際專業展網站管理系統</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/hyui_admin.css">
+    <!-- pg-calendar -->
+    <link rel="stylesheet" href="vendor/pg_calendar/css/pignose.calendar.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="images/ico.png" />
+</head>
+
+<body>
+    <!-- header load('00header.htm') -->
+    <header></header>
+    <!-- menu load('00menu.htm') -->
+    <aside></aside>
+    <!-- 主要內容 -->
+    <div class="main_zone">
+        <div class="content">
+            <h2><code>button</code>按鈕樣式</h2>
+            <div class="hy_block">
+                <button>按鈕</button>
+            </div>
+            <h2><code>button</code>不同顏色按鈕</h2>
+            <div class="hy_block">
+                <button class="btn">btn</button>
+                <button class="btn btn-blue">btn btn-blue</button>
+                <button class="btn btn-red">btn btn-red</button>
+                <button class="btn btn-orange">btn btn-orange</button>
+                <button class="btn btn-yellow">btn btn-yellow</button>
+                <button class="btn btn-green">btn btn-green</button>
+                <button class="btn btn-purple">btn btn-purple</button>
+            </div>
+            <h2><code>input</code>按鈕</h2>
+            <div class="hy_block">
+                <input type="submit" value="submit">
+                <input type="reset" value="reset">
+            </div>
+            <h2><code>a</code>按鈕</h2>
+             <div class="hy_block">
+                <a href="#" class="btn">按鈕</a>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- JS都需要放在最下面 -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- TTS admin 專用 -->
+<script src="js/customize.js"></script>
+<!-- tree view -->
+<script src="js/jquery.treeview.js"></script>
+<!-- pg-calendar -->
+<script src="vendor/pg_calendar/js/pignose.calendar.full.min.js"></script>
+<!-- scrollbar -->
+<script src="vendor/scrollbar/jquery.scrollbar.min.js"></script>
+<script>
+$(function() {
+    if ($('.datepick').length > 0) {
+        $('.datepick input').pignoseCalendar({
+            lang: 'ch',
+            modal: true,
+            format: 'YYYY-MM-DD',
+        });
+    }
+    // header file：00header.htm
+    // menu file：00menu.htm
+    $('header').load('00header.htm');
+    $('aside').load('00menu.htm');
+});
+</script>
+
+</html>

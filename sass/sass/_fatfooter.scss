@@ -1,0 +1,123 @@
+$fatBgColor: #F1F1F1; //fatFooter 底色
+$fatTextColor: $color-word; //fatFooter 連結顏色
+.fatfooter {
+    @include make-fatfooter(6, 100%); // 如需要手機版顯示，把以下註解即可，或改為visible
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+.fatfooter {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 2em;
+    margin-left: auto;
+    background:$fatBgColor;
+    margin-right: auto; // 右上方切換收合按鈕設定
+    .container {
+        position: relative;
+        overflow:hidden;
+        @include box-sizing();
+        @include gutter();
+    } //fatfooter選單
+    .btn-fatfooter {
+        font-size: .813em;
+        cursor: pointer;
+        display: inline-block;
+        width: 80px;
+        color: #FFF;
+        border: none;
+        background: $primaryColor;
+        position: absolute;
+        right: 1%;
+        z-index: 990;
+        @include border-radius(4px);
+        &:hover,
+        &:focus {
+            background: $primaryColor;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+        }
+    }
+    nav {
+        clear: both;
+        color: #fff;
+        overflow: hidden;
+        display: block;
+        position: relative;
+        padding-top: 40px;
+        @include box-sizing(border-box);
+        ul {
+            list-style: none;
+            margin: 0;
+            overflow: hidden;
+            width: 100%;
+            padding: 0;
+            @media (max-width: 767px) {
+                width: 100%;
+                display: block;
+                margin: 0px auto;
+            }
+            li {
+                display: inline-block; // outline: 1px solid red;
+                text-align: left;
+                vertical-align: top;
+                line-height: 2.6em; // margin:$fatFooterliMargin;
+                @include box-sizing(border-box);
+                @media (max-width: 767px) {
+                    display:block;
+                }
+                a {
+                    color: $fatTextColor;
+                    text-align: left;
+                    line-height: 1.65em;
+                    display: block;
+                    font-weight: 800;
+                    padding: 1% 5%;
+                    &:hover,
+                    &:focus {
+                        color: #fff;
+                        text-decoration: none;
+                        background: $primaryColor;
+                        @include border-radius(3px);
+                    }
+                }
+                ul {
+                    padding: 0;
+                    margin-top: 5px;
+                    overflow: hidden;
+                    @media (max-width: 767px) {
+                        width:auto;
+                        padding-left: 5%;
+                    }
+                    li {
+                        display: block;
+                        margin: 0;
+                        padding: 5px 0;
+                        border: none;
+                        background: none;
+                        width: 100%;
+                        a {
+                            display: block;
+                            color: lighten($fatTextColor, 10);
+                            font-weight: normal;
+                            text-align: left;
+                            text-decoration: none;
+                            font-size: .938em;
+                            font-weight: normal;
+                            line-height: 1.4em;
+                            padding: 3px 8px;
+                            background: none;
+                            @include box-sizing(border-box);
+                            border-bottom: none;
+                        }
+                    }
+                    ul {
+                        display: none; //第三層關閉
+                    }
+                }
+            }
+        }
+    }
+}

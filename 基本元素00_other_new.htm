@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>台灣國際專業展網站管理系統</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/hyui_admin.css">
+    <!-- pg-calendar -->
+    <link rel="stylesheet" href="vendor/pg_calendar/css/pignose.calendar.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="images/ico.png" />
+</head>
+
+<body>
+    <!-- header load('00header.htm') -->
+    <header></header>
+    <!-- menu load('00menu.htm') -->
+    <aside></aside>
+    <!-- 主要內容 -->
+    <div class="main_zone">
+        <div class="pills">
+            <ul>
+                <li class="active"><a href="#" class="show_choose">選擇其他展覽</a></li>
+                <li><a href="#">pills按鈕</a></li>
+                <li><a href="#">pills按鈕</a></li>
+                <li><a href="#">pills按鈕</a></li>
+                <li><a href="#">pills按鈕</a></li>
+                <li><a href="#">pills按鈕</a></li>
+                <li><a href="#">pills按鈕</a></li>
+                <li><a href="#">pills按鈕</a></li>
+            </ul>
+        </div>
+        <div class="pills">
+            <ul>
+                <li class="active"><a href="#" class="show_choose">選擇其他展覽</a></li>
+                <li><a href="#">pills按鈕<i class="i_check i_invert"></i></a></li>
+                <li><a href="#">pills按鈕<i class="i_close i_invert"></i></a></li>
+                <li><a href="#">pills按鈕</a></li>
+                <li><a href="#">pills按鈕</a></li>
+                <li><a href="#">pills按鈕</a></li>
+                <li><a href="#">pills按鈕</a></li>
+                <li><a href="#">pills按鈕</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h2>表格上面的control_panel</h2>
+            <div class="hy_block">
+                <div class="control_panel">
+                    <span>標題標題標題說明文字</span>
+                    <button class="btn icon_btn"><i class="i_edit"></i></button>
+                    <button class="btn icon_btn"><i class="i_edit"></i></button>
+                </div>
+            </div>
+            <h2>步驟模組</h2>
+            <div class="step">
+                <ul>
+                    <li class="done">
+                        <span class="num">Step <em>1.</em></span>
+                        <span>主檔資料新增</span>
+                    </li>
+                    <li class="done">
+                        <span class="num">Step <em>2.</em></span>
+                        <span>主檔資料新增</span>
+                    </li>
+                    <li>
+                        <span class="num">Step <em>3.</em></span>
+                        <span>主檔資料新增</span>
+                    </li>
+                    <li>
+                        <span class="num">Step <em>4.</em></span>
+                        <span>主檔資料新增</span>
+                    </li>
+                    <li>
+                        <span class="num">Step <em>5.</em></span>
+                        <span>主檔資料新增</span>
+                    </li>
+                </ul>
+            </div>
+            <h2>dropdown</h2>
+            <div class="dropdown">
+                <button class="btn dropdown-btn">
+                    <i class="i_setting"></i>下拉選單 </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><button class="btn btn-xs"><i class="i_trash"></i>刪除</button></li>
+                        <li>2019-05-18 14:00:05 從10.10.1.1 登入系統</li>
+                        <li>2019-05-18 14:00:05 從10.10.1.1 登入系統</li>
+                    </ul>
+                    <div class="btn-grp">
+                        <button class="btn">變更密碼</button>
+                        <button class="btn btn-red">登出</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- JS都需要放在最下面 -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- TTS admin 專用 -->
+<script src="js/customize.js"></script>
+<!-- tree view -->
+<script src="js/jquery.treeview.js"></script>
+<!-- pg-calendar -->
+<script src="vendor/pg_calendar/js/pignose.calendar.full.min.js"></script>
+<!-- scrollbar -->
+<script src="vendor/scrollbar/jquery.scrollbar.min.js"></script>
+<script>
+$(function() {
+    if ($('.datepick').length > 0) {
+        $('.datepick input').pignoseCalendar({
+            lang: 'ch',
+            modal: true,
+            format: 'YYYY-MM-DD',
+        });
+    }
+    // header file：00header.htm
+    // menu file：00menu.htm
+    $('header').load('00header.htm');
+    $('aside').load('00menu.htm');
+    // dropdown
+    $('.dropdown-content').hide();
+    $('.dropdown-btn').each(function(index, el) {
+        $(this).click(function(e) {
+            $(this).siblings('.dropdown-content').stop(true, true).slideToggle(400, 'easeOutQuint');
+            e.preventDefault();
+        });
+    });
+});
+</script>
+
+</html>

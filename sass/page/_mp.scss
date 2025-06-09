@@ -1,0 +1,154 @@
+/////////////////////////////////////////////////////////以下為demo範例///
+// 首頁區塊設定
+.section {
+    padding: 0em 0 3em;
+    text-align: center;
+    [class^="col"] {
+        border: 2px solid #FFF;
+        background: #DEDEDE;
+        min-height: 250px;
+        color: $primaryColor;
+        text-align: center;
+        line-height: 250px;
+        font-size: 1.5em;
+        font-weight: bold;
+        @include box-sizing();
+    }
+    &+.section {
+        padding-top: 2em;
+    }
+}
+// 可用class個別命名
+.event {
+    .news {
+        @include make-xs-column(12);
+        @include make-sm-column(8);
+        @include make-md-column(8); //992px  width:100%
+        @include make-lg-column(8); //1400px width:100%
+        // @include gutter(); //gutter 代表左右要留白 
+    }
+    .video {
+        @include make-xs-column(12);
+        @include make-sm-column(4);
+        @include make-md-column(4); //992px  width:100%
+        @include make-lg-column(4); //1400px width:100%
+        // @include gutter(); //gutter 代表左右要留白
+    }
+    &+.event {
+        .container {
+            @include gutter(); //gutter 代表左右要留白
+        }
+    }
+}
+// 單欄
+.col-12 {
+    .container {
+        max-width: 100%;
+    }
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(12);
+        @include make-md-column(12); //992px  width:100%
+        @include make-lg-column(12); //1400px width:100%
+        @include gutter(); //gutter 代表左右要留白
+    }
+}
+// 四欄
+.col-3 {
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(3); //768px  width:50%
+        @include make-md-column(3); //992px  width:50%
+        @include make-lg-column(3); //1400px width:50%
+        @include gutter(); //gutter 代表左右要留白
+    }
+}
+// 三欄
+.news {
+    .container {
+        @include gutter(); //gutter 代表左右要留白
+    }
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(4);
+        @include make-md-column(4); //992px  width:100%
+        @include make-lg-column(4); //1400px width:100%
+        @include gutter(); //gutter 代表左右要留白
+    }
+}
+// 雙欄 6-6
+.col-6 {
+    .container {
+        @include gutter(); //gutter 代表左右要留白
+    }
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(6); //768px  width:50%
+        @include make-md-column(6); //992px  width:50%
+        @include make-lg-column(6); //1400px width:50%
+    }
+}
+// 雙欄 8-4
+.col-8-4 {
+    .news {
+        @include make-xs-column(12);
+        @include make-sm-column(8); //768px  width:66.6%
+        @include make-md-column(8); //992px  width:66.6%
+        @include make-lg-column(8); //1400px width:66.6%
+        @include gutter(); //gutter 代表左右要留白
+    }
+    .video {
+        @include make-xs-column(12);
+        @include make-sm-column(4); //768px  width:33.3%
+        @include make-md-column(4); //992px  width:33.3%
+        @include make-lg-column(4); //1400px width:33.3%
+    }
+}
+// 三欄 3-3
+.col-3-3-3 {
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(4); //768px  width:33.3%
+        @include make-md-column(4); //992px  width:33.3%
+        @include make-lg-column(4); //1400px width:33.3%
+    }
+    .imgOuter {
+        @include aspect-ratio(4, 3);
+    }
+    &+.col-3-3-3 {
+        background: $primaryColor;
+    }
+}
+// 進階設定，也可以自己寫
+.col-1-2-1 {
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(3);
+        @include make-md-column(3);
+        @include make-lg-column(3);
+        @include gutter(); //gutter 代表左右要留白
+        min-height: 250px;
+        &:nth-child(2) {
+            @include make-xs-column(12);
+            @include make-sm-column(6);
+            @include make-md-column(6);
+            @include make-lg-column(6);
+        }
+    }
+}
+
+// 五欄
+.col-5 {
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(2);
+        @include make-md-column(2);
+        @include make-lg-column(2);
+        &:first-child {
+            @include make-xs-column-offset(0);
+            @include make-sm-column-offset(1);
+            @include make-md-column-offset(1);
+            @include make-lg-column-offset(1);
+        }
+    }
+}

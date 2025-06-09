@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>台灣國際專業展網站管理系統</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- chosen -->
+    <link rel="stylesheet" href="vendor/chosen_v1.8.5/chosen.min.css">
+
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/hyui_admin.css">
+
+    <!-- pg-calendar -->
+    <link rel="stylesheet" href="vendor/pg_calendar/css/pignose.calendar.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="images/ico.png" />
+</head>
+
+<body>
+    <!-- header load('00header.htm') -->
+    <header></header>
+    <!-- menu load('00menu.htm') -->
+    <aside></aside>
+    <!-- 主要內容 -->
+    <div class="main_zone ">
+        <div class="content">
+            <h2>儀錶板</h2>
+
+            <div class="Dashboard-content">
+                <h3>設定區塊</h3>
+                
+                <div class="Dashboard-body">
+                    <div class="Dashboard-setpage">
+                    
+                        <form class="">
+                            
+                            <div class="form_grp">
+                                <div class="form_content">
+                                    <input type="text" id="code" name="code" required>
+                                    <label for="code" class="form_title necessary">新增區塊</label>
+                                </div>
+                            </div>
+
+                            
+                            <div class="form_grp has_chosen">
+                                <div class="form_content">
+                                    <select id="showID" name="showID" class='chosen' data-placeholder='選擇展覽' >
+                                            <option value="1S" >1S 1S展</option>
+                                            <option value="AP" >AP </option>
+                                            <option value="AQ" >AQ 台灣國際</option>
+                                            <option value="CL" >CL Lue的展覽網站</option>
+                                            <option value="CP" >CP DEMO網站</option>
+                                            <option value="ED" >ED 國際建材大展</option>
+                                            <option value="FT" >FT </option>
+                                            <option value="L1" >L1 </option>
+                                            <option value="MT" >MT 台灣會展網2.0</option>
+                                            <option value="PP" >PP x</option>
+                                            <option value="QQ" >QQ QQ-測試外界展</option>
+                                            <option value="SI" >SI 南島民族論壇全球資訊網</option>
+                                            <option value="TT" >TT TT測試網站</option>
+                                            <option value="UU" >UU UU</option>
+                                            <option value="XC" >XC 擦擦擦</option>
+                                            <option value="XP" >XP XP Test</option>
+                                            <option value="z1" >z1 test1</option>
+                                            <option value="zx" >zx sdf</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form_grp">
+                                <div class="form_content">
+                                    <input type="text"  id="" name="" >
+                                    <label for="" class="form_title ">資料數量(年)</label>
+                                </div>
+                            </div>
+
+                            <div class="btn_grp">
+                                <button type="button"  class="btn btn-cancel" onclick="location.href='dashboard_admin.htm'">取消</button>
+                                <button type="submit"  class="btn btn-primary">確定</button>
+                            </div>
+
+                        </form>
+
+
+                    </div>
+                </div><!--Dashboard-body END-->
+            
+                
+            
+
+            </div>
+        </div>
+    </div>
+
+         
+</body>
+<!-- JS都需要放在最下面 -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- TTS admin 專用 -->
+<script src="js/customize.js"></script>
+<!-- tree view -->
+<script src="js/jquery.treeview.js"></script>
+<!-- pg-calendar -->
+<script src="vendor/pg_calendar/js/pignose.calendar.full.min.js"></script>
+<!--showlist search js css -->
+
+<script type="text/JavaScript" src="vendor/chosen_v1.8.5/chosen.jquery.min.js"></script>
+
+<script>
+$(function() {
+    $(".chosen").chosen({
+        search_contains:true,
+        width: '100%'
+    });
+    if($(".form_content input[type=text]").val()==""){
+        $(".form_content input").removeAttr("value");
+    }
+        
+    $(".form_content input[type=text]").blur(function(){
+        if(this.value == ''){
+            $(this).removeAttr("value");
+        }else{
+            $(this).attr("value", this.value);
+        }
+    });
+});
+</script>
+
+</html>

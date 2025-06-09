@@ -1,0 +1,191 @@
+//http://lab.25sprout.com/responsive_table/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    @include screen('xs_mobile') {
+        width: 100%;
+        position: relative;
+    }
+    tr {
+        border-left: 3px solid transparent;
+        &:hover {
+            border-left: 3px solid $primaryColor;
+        }
+    }
+    th,
+    td {
+        padding: .25em .5em;
+        text-align: left;
+        font-size: .938em;
+        white-space: normal !important;
+        .btn, input[type="button"], input[type="submit"] {
+            padding: .2em !important;
+            i {
+                margin: 0
+            }
+            &:hover, &:focus {
+                border: 1px solid $aHover;
+                background: #FFF;
+            }
+        }
+        img {
+            width: 80px;
+            // max-height:50px;
+            display: block;
+        }
+    }
+    td {
+        border: #EDEEF3 1px solid;
+        //word-break: break-all;
+        border-width: 1px 0;
+        color: #333;
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: .2em;
+            text-align: center;
+            margin-right: .5em;
+            &.green {
+                color: #FFF;
+                margin: 0 .2em 0em;
+                padding: .3em .5em;
+                min-width: 5em;
+                background: $color-green;
+            }
+            &.red {
+                color: #FFF;
+                margin: 0 .2em .2em;
+                padding: .3em .5em;
+                min-width: 5em;
+                background: $color-red;
+            }
+            &.blue {
+                color: #FFF;
+                margin: 0 .2em .2em;
+                padding: .3em .5em;
+                min-width: 5em;
+                background: $color-blue;
+            }
+            &.orange {
+                color: #FFF;
+                margin: 0 .2em .2em;
+                padding: .3em .5em;
+                min-width: 5em;
+                background: $color-orange;
+            }
+        }
+        a {
+            word-break: break-all;
+            color: $aColor;
+            &:hover, &:focus {
+                color: $aHover;
+            }
+        }
+    }
+    th {
+        background-color: #F5F5F5;
+        color: #333;
+        border: #DEDEDE 1px solid;
+        border-width: 1px 0;
+        text-align: left;
+        white-space: nowrap;
+        .i_sort {
+            font-size: .75em;
+            margin-left: .2em;
+            opacity: .45;
+        }
+        a {
+            color: #222;
+        }
+    }
+    &.table_hover {
+        tr:hover {
+            background: #F7F7F7;
+        }
+    }
+    &.table_sprite {
+        tr:nth-child(even) {
+            background: #F7F7F7;
+        }
+    }
+    tbody {
+        th, td {
+            background: transparent;
+            text-align: left;
+            white-space: normal;
+        }
+        th {
+            width: 20%;
+        }
+    }
+}
+.table_list {
+    th:last-child {
+        min-width: 10em;
+    }
+    @include screen('xs_mobile') {
+        background-color: transparent !important; //Force table to not be like tables anymore
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        tr {
+            border: 1px solid #ccc;
+            margin-bottom: 10px; // background-color: #333;
+        }
+        th {
+            display: block;
+            border: none;
+            width: 100%;
+        }
+        td {
+            // Behave  like a "row"
+            border: none !important;
+            border-bottom: 1px solid #eee !important;
+            position: relative;
+            // padding-left: 35% !important;
+            white-space: normal;
+            text-align: left;
+            display: block;
+            @include screen('mobile') {
+                text-align: left !important;
+            }
+            &:before {
+                content: attr(data-title);
+                position: absolute;
+                top: 0em;
+                left: .5em;
+                width: 100%;
+                padding-right: 10px;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: bold;
+                color: #000;
+                display: none;
+            }
+        }
+    }
+}
+.table_wrapper {
+    @include screen('mobile') {
+        width: 100%;
+        display: block;
+        @include clearfix;
+        overflow: hidden;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -webkit-transform: translate3d(0, 0, 0);
+        table {
+            width: 100%;
+            min-width: 545px;
+        }
+    }
+}

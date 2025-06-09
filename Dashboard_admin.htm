@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>台灣國際專業展網站管理系統</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/hyui_admin.css">
+
+    <!-- pg-calendar -->
+    <link rel="stylesheet" href="vendor/pg_calendar/css/pignose.calendar.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="images/ico.png" />
+</head>
+
+<body>
+    <!-- header load('00header.htm') -->
+    <header></header>
+    <!-- menu load('00menu.htm') -->
+    <aside></aside>
+    <!-- 主要內容 -->
+    <div class="main_zone ">
+        
+        <div class="content">
+            <h2>儀錶板
+
+                <div class="setMenu">
+                    <ul>
+                        <li><a href="javascript:;">設定</a>
+                            <ul>
+                                <li><a href="Dashboard_form_1.htm">區塊</a></li>
+                                <li><a href="Dashboard_form_2.htm">圖表</a></li>
+                            </ul>
+                        </li>
+                </div>
+            </h2>
+
+            <div class="Dashboard-content">
+                <h3>1-參觀者</h3>
+                <div class="circleSET">
+                    <a class="a-set" href="javascript:;"><i class="i_setting"></i></a>
+                    <ul>
+                        <li><a href="javascript:;">編輯</a></li>
+                        <li><a href="javascript:;">刪除</a></li>
+                        <li><a href="javascript:;">複製連結</a></li>
+                        <li><a href="javascript:;">匯出</a></li>
+                    </ul>
+                </div>
+
+                <div class="Dashboard-body">                   
+                    <!--統計數字 2：1用dm21 -->
+                    <div class="showBox dm21">
+                        <div class="showBox-body">
+                            <div class="showBox-data-title">
+                                <div class="showBox-logo">
+                                    <span class="logo-tip-pos"><span class="logo-tip">高雄國際食品展</span></span>
+                                    <img src="images/kf_logo.png" alt="高雄國際食品展">
+                                </div>
+                                參觀者統計
+                                <div class="showBox-close">
+                                    <a href=""><i class="i_close"></i></a>
+                                </div>                                
+                            </div>
+                            <div class="showBox-data">
+                                <!--showBox-data-title 原位-->
+                                
+                                <div class="showBox-data-list">
+                                    <ul>
+                                        <li>
+                                            <div class="showBox-data-item">今年預登人數</div>
+                                            <div class="showBox-data-nums">
+                                                <div class="showBox-data-total">
+                                                    <span class="showBox-data-sum">56789</span><span class="ren">人</span><br>
+                                                    <span class="showBox-data-trend">+2.3%</span>
+                                                </div>
+                                                <div class="showBox-data-area">
+                                                    <div>
+                                                        <span class="showBox-data-tw">Taiwan</span><span class="showBox-data-s1">32109</span>
+                                                        <span class="showBox-data-trend">+4.5%</span>
+                                                        <span class="showBox-data-os">Oversea</span><span class="showBox-data-s2">24680</span>
+                                                        <span class="showBox-data-trend">-0.5%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="showBox-data-item">今年報到人數</div>
+                                            <div class="showBox-data-nums">
+                                                <div class="showBox-data-total">
+                                                    <span class="showBox-data-sum">5678</span><span class="ren">人</span><br>
+                                                    <span class="showBox-data-trend">+2.3%</span>
+                                                </div>
+                                                <div class="showBox-data-area">
+                                                    <div>
+                                                        <span class="showBox-data-tw">Taiwan</span><span class="showBox-data-s1">8765</span>
+                                                        <span class="showBox-data-trend">+4.5%</span>
+                                                        <span class="showBox-data-os">Oversea</span><span class="showBox-data-s2">66</span>
+                                                        <span class="showBox-data-trend">-0.5%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="showBox-data-item">上屆預登人數</div>
+                                            <div class="showBox-data-nums">
+                                                <div class="showBox-data-total">
+                                                    <span class="showBox-data-sum">76543</span><span class="ren">人</span><br>
+                                                </div>
+                                                <div class="showBox-data-area">
+                                                    <div>
+                                                        <span class="showBox-data-tw">Taiwan</span><span class="showBox-data-s1">5467</span>
+                                                        <br>
+                                                        <span class="showBox-data-os">Oversea</span><span class="showBox-data-s2">68999</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="showBox-data-item">上屆報到人數</div>
+                                            <div class="showBox-data-nums">
+                                                <div class="showBox-data-total">
+                                                    <span class="showBox-data-sum">5678</span><span class="ren">人</span><br>
+                                                </div>
+                                                <div class="showBox-data-area">
+                                                    <div>
+                                                        <span class="showBox-data-tw">Taiwan</span><span class="showBox-data-s1">8765</span>
+                                                        <br>
+                                                        <span class="showBox-data-os">Oversea</span><span class="showBox-data-s2">66</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--統計數字 1：1用dm11 -->
+                    <div class="showBox dm11">
+                        <div class="showBox-body">
+                            <div class="showBox-data-title">
+                                <div class="showBox-logo">
+                                    <span class="logo-tip-pos"><span class="logo-tip">高雄國際食品展</span></span>
+                                    <img src="images/kf_logo.png" alt="高雄國際食品展">
+                                </div>
+                                參觀者統計
+                                <div class="showBox-close">
+                                    <a href=""><i class="i_close"></i></a>
+                                </div>                                
+                            </div>
+                            <div class="showBox-data">
+                                <!--showBox-data-title原位-->                                
+                                <div class="showBox-data-list">
+                                    <ul>
+                                        <li>
+                                            <div class="showBox-data-item">今年預登人數</div>
+                                            <div class="showBox-data-nums">
+                                                <div class="showBox-data-total">
+                                                    <span class="showBox-data-sum">56789</span><span class="ren">人</span><br>
+                                                    <span class="showBox-data-trend">+2.3%</span>
+                                                </div>
+                                                <div class="showBox-data-area">
+                                                    <div>
+                                                        <span class="showBox-data-tw">Taiwan</span><span class="showBox-data-s1">32109</span>
+                                                        <span class="showBox-data-trend">+4.5%</span>
+                                                        <span class="showBox-data-os">Oversea</span><span class="showBox-data-s2">24680</span>
+                                                        <span class="showBox-data-trend">-0.5%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="showBox-data-item">今年報到人數</div>
+                                            <div class="showBox-data-nums">
+                                                <div class="showBox-data-total">
+                                                    <span class="showBox-data-sum">5678</span><span class="ren">人</span><br>
+                                                    <span class="showBox-data-trend">+2.3%</span>
+                                                </div>
+                                                <div class="showBox-data-area">
+                                                    <div>
+                                                        <span class="showBox-data-tw">Taiwan</span><span class="showBox-data-s1">8765</span>
+                                                        <span class="showBox-data-trend">+4.5%</span>
+                                                        <span class="showBox-data-os">Oversea</span><span class="showBox-data-s2">66</span>
+                                                        <span class="showBox-data-trend">-0.5%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="showBox-data-item">上屆預登人數</div>
+                                            <div class="showBox-data-nums">
+                                                <div class="showBox-data-total">
+                                                    <span class="showBox-data-sum">76543</span><span class="ren">人</span><br>
+                                                </div>
+                                                <div class="showBox-data-area">
+                                                    <div>
+                                                        <span class="showBox-data-tw">Taiwan</span><span class="showBox-data-s1">5467</span>
+                                                        <br>
+                                                        <span class="showBox-data-os">Oversea</span><span class="showBox-data-s2">68999</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="showBox-data-item">上屆報到人數</div>
+                                            <div class="showBox-data-nums">
+                                                <div class="showBox-data-total">
+                                                    <span class="showBox-data-sum">5678</span><span class="ren">人</span><br>
+                                                </div>
+                                                <div class="showBox-data-area">
+                                                    <div>
+                                                        <span class="showBox-data-tw">Taiwan</span><span class="showBox-data-s1">8765</span>
+                                                        <br>
+                                                        <span class="showBox-data-os">Oversea</span><span class="showBox-data-s2">66</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--圖表 1：1用dm11 -->
+                    <div class="dm11 showBox">
+                        <div class="showBox-body">
+                            <div class="showBox-data-title">
+                                <div class="showBox-logo">
+                                    <span class="logo-tip-pos"><span class="logo-tip">高雄國際食品企業營運形象展</span></span>
+                                    <img src="images/kf_logo.png" alt="高雄國際食品展">
+                                </div>
+                                參觀者預登數
+                                <div class="showBox-close">
+                                    <a href=""><i class="i_close"></i></a>
+                                </div>                                
+                            </div>
+                            <div class="showBox-data">
+                                <!--showBox-data-title原位-->
+                                
+                                <div class="showBox-data-chart">
+                                    <div class="chart-img">
+                                        <canvas style="height:300px ;"></canvas>
+                                    </div>
+                                </div>
+                                <div class="date-list">
+                                    <span><a href="javascript:;">10/27</a></span>
+                                    <span><a class="active" href="javascript:;">10/28</a></span>
+                                    <span><a href="javascript:;">10/29</a></span>
+                                    <span><a href="javascript:;">10/30</a></span>
+                                    <span><a href="javascript:;">10/31</a></span>
+                                </div>
+                                <div class="showBox-data-table">
+                                    <table>
+                                        <tr>
+                                            <th>年度</th><th><span>1</span></th><th><span>2</span></th><th><span>3</span></th><th><span>4</span></th>
+                                            <th>欄位六</th><th>欄位七</th><th>欄位八</th><th>欄位九</th><th>欄位十</th>
+                                        </tr>
+                                        <tr>
+                                            <td>2022</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                            <td>data6</td><td>data7</td><td>data8</td><td>data9</td><td>data10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2021</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                            <td>data6</td><td>data7</td><td>data8</td><td>data9</td><td>data10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2020</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                            <td>data6</td><td>data7</td><td>data8</td><td>data9</td><td>data10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2019</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                            <td>data6</td><td>data7</td><td>data8</td><td>data9</td><td>data10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                            <td>data6</td><td>data7</td><td>data8</td><td>data9</td><td>data10</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--圖表 1：1用dm11 -->
+                    <div class="dm11 showBox">
+                        <div class="showBox-body">
+                            <div class="showBox-data-title">
+                                <div class="showBox-logo">
+                                    <span class="logo-tip-pos"><span class="logo-tip">高雄國際食品企業營運形象展</span></span>
+                                    <img src="images/kf_logo.png" alt="高雄國際食品展">
+                                </div>
+                                參觀者預登數
+                                <div class="showBox-close">
+                                    <a href=""><i class="i_close"></i></a>
+                                </div>                                
+                            </div>
+                            <div class="showBox-data">
+                                <!--showBox-data-title原位-->
+                                <div class="showBox-data-chart">
+                                    <div class="chart-img">
+                                        <canvas></canvas>
+                                    </div>
+                                </div>
+                                <div class="date-list">
+                                    <span><a href="javascript:;">10/27</a></span>
+                                    <span><a class="active" href="javascript:;">10/28</a></span>
+                                    <span><a href="javascript:;">10/29</a></span>
+                                    <span><a href="javascript:;">10/30</a></span>
+                                    <span><a href="javascript:;">10/31</a></span>
+                                </div>
+                                <div class="showBox-data-table">
+                                    <table>
+                                        <tr>
+                                            <th>年度</th><th><span>1</span></th><th><span>2</span></th><th><span>3</span></th><th><span>4</span></th>
+                                            <th>欄位六</th><th>欄位七</th><th>欄位八</th><th>欄位九</th><th>欄位十</th>
+                                        </tr>
+                                        <tr>
+                                            <td>2022</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                            <td>data6</td><td>data7</td><td>data8</td><td>data9</td><td>data10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2021</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                            <td>data6</td><td>data7</td><td>data8</td><td>data9</td><td>data10</td>
+                                        </tr>
+                                        <!-- <tr>
+                                            <td>2020</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                            <td>data6</td><td>data7</td><td>data8</td><td>data9</td><td>data10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2019</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                            <td>data6</td><td>data7</td><td>data8</td><td>data9</td><td>data10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                            <td>data6</td><td>data7</td><td>data8</td><td>data9</td><td>data10</td>
+                                        </tr> -->
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--圖表 1：1用dm11 -->
+                    <div class="dm11 showBox">
+                        <div class="showBox-body">
+                            <div class="showBox-data-title">
+                                <div class="showBox-logo">
+                                    <span class="logo-tip-pos"><span class="logo-tip">高雄國際食品自動化生產展&路邊攤文化展</span></span>
+                                    <img src="images/kf_logo.png" alt="高雄國際食品展">
+                                </div>
+                                參觀者報到數
+                                <div class="showBox-close">
+                                    <a href=""><i class="i_close"></i></a>
+                                </div>                                
+                            </div>
+                            <div class="showBox-data">
+                                <!--showBox-data-title原位-->
+                                <div class="showBox-data-chart">
+                                    <div class="chart-img">
+                                        <canvas></canvas>
+                                    </div>
+                                </div>
+                                <div class="showBox-data-table">
+                                    <table>
+                                        <tr>
+                                            <th>年度</th><th>預登總數</th><th>報到總數</th><th>報到率</th><th>預登回流率</th>
+                                            <th>欄位六</th><th>欄位七</th><th>欄位八</th><th>欄位九</th><th>欄位十</th>
+                                        </tr>
+                                        <tr>
+                                            <td>2022</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                            <td>data6</td><td>data7</td><td>data8</td><td>data9</td><td>data10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2021</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                            <td>data6</td><td>data7</td><td>data8</td><td>data9</td><td>data10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2020</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                            <td>data6</td><td>data7</td><td>data8</td><td>data9</td><td>data10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2019</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                            <td>data6</td><td>data7</td><td>data8</td><td>data9</td><td>data10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                            <td>data6</td><td>data7</td><td>data8</td><td>data9</td><td>data10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2019</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                            <td>data6</td><td>data7</td><td>data8</td><td>data9</td><td>data10</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        <div class="Dashboard-content">
+            <h3>2-現場換證儀錶板</h3>
+                <div class="Dashboard-body">
+                    <div class="circleSET">
+                        <a class="a-set" href="javascript:;"><i class="i_setting"></i></a>
+                        <ul>
+                            <li><a href="javascript:;">編輯</a></li>
+                            <li><a href="javascript:;">刪除</a></li>
+                            <li><a href="javascript:;">複製連結</a></li>
+                            <li><a href="javascript:;">匯出</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!--圖表 2：1用dm21 -->
+                    <div class="showBox dm21">
+                        <div class="showBox-body">
+                            <div class="showBox-data-title">
+                                <div class="showBox-logo">
+                                    <span class="logo-tip-pos"><span class="logo-tip">高雄國際食品展</span></span>
+                                    <img src="images/kf_logo.png" alt="高雄國際食品展">
+                                </div>
+                                參觀者報到數
+                                <div class="showBox-close">
+                                    <a href=""><i class="i_close"></i></a>
+                                </div>                                
+                            </div>
+                            <div class="showBox-data">
+                                <!--showBox-data-title原位-->                                
+                                <div class="showBox-data-chart">
+                                    <div class="chart-img">
+                                        <canvas></canvas>
+                                    </div>
+                                </div>
+                                <div class="date-list">
+                                    <span><a href="javascript:;">10/27</a></span>
+                                    <span><a class="active" href="javascript:;">10/28</a></span>
+                                    <span><a href="javascript:;">10/29</a></span>
+                                    <span><a href="javascript:;">10/30</a></span>
+                                    <span><a href="javascript:;">10/31</a></span>
+                                </div>
+                                <div class="showBox-data-table">
+                                    <table>
+                                        <tr>
+                                            <th>年度</th><th>預登總數</th><th>報到總數</th><th>報到率</th><th>預登回流率</th>
+                                            <th>欄位六</th><th>欄位七</th><th>欄位八</th><th>欄位九</th><th>欄位十</th>
+                                        </tr>
+                                        <tr>
+                                            <td>2022</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                            <td>data6</td><td>data7</td><td>data8</td><td>data9</td><td>data10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2021</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                            <td>data6</td><td>data7</td><td>data8</td><td>data9</td><td>data10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2020</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                            <td>data6</td><td>data7</td><td>data8</td><td>data9</td><td>data10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2019</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                            <td>data6</td><td>data7</td><td>data8</td><td>data9</td><td>data10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                            <td>data6</td><td>data7</td><td>data8</td><td>data9</td><td>data10</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+        
+                    
+                </div>
+        </div>
+    </div>
+</body>
+<!-- JS都需要放在最下面 -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- TTS admin 專用 -->
+<script src="js/customize.js"></script>
+<!-- tree view -->
+<script src="js/jquery.treeview.js"></script>
+<!-- pg-calendar -->
+<script src="vendor/pg_calendar/js/pignose.calendar.full.min.js"></script>
+<!-- scrollbar -->
+<script src="vendor/scrollbar/jquery.scrollbar.min.js"></script>
+<script>
+$(function() {
+    var hhh=$('.showBox-data-list ul').height();
+
+   
+    
+    $('.showBox-data-table table th:nth-child(2) span').css('background-color','rgba(0, 200, 0, 0.35)');
+    $('.showBox-data-table table th:nth-child(3) span').css('background-color','rgba(200, 0, 0, 0.35)');
+    $('.showBox-data-table table th:nth-child(4) span').css('background-color','rgba(70, 70, 200, 0.35)');
+    $('.showBox-data-table table th:nth-child(5) span').css('background-color','rgba(0, 150, 255, 0.35)');
+    
+    if ($('.datepick').length > 0) {
+        $('.datepick input').pignoseCalendar({
+            lang: 'ch',
+            modal: true,
+            format: 'YYYY-MM-DD',
+        });
+    }
+    // header file：00header.htm
+    // menu file：00menu.htm
+    $('header').load('00header.htm');
+    $('aside').load('00menu.htm');
+    
+});
+</script>
+
+</html>

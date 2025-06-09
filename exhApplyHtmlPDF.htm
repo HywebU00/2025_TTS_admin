@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>報名表-台灣國際專業展網站管理系統</title>
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- hyUI -->
+  <!-- <link rel="stylesheet" href="css/hyui_admin.css"> -->
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="images/ico.png" />
+
+  <style>
+    @charset "UTF-8";
+    body{
+      font-size: 12pt;
+      font-weight: normal;
+      color: #000;
+      line-height: 1.45em;
+      font-family: Lato, "PingFang TC", "Helvetica Neue", Helvetica, 微軟正黑體, Arial, sans-serif;
+      -webkit-text-size-adjust: none;
+      margin: 0;
+      padding: 0;
+    }
+    .ashow-banner{ text-align: center;}
+    .ashow-banner img{ width: 19cm;}
+    .ashow{ background-color: #fff;}
+    .ashow-reoprt{
+      width: 19cm;
+      margin: 0.5cm auto 0 auto;
+    }
+    .ashow-content{padding:1em 0;}
+    .ashow-content h2{ 
+      font-size: 16pt;
+      font-weight: bold;
+      line-height: 1.5em;
+      color: #000;
+      margin: 0 ;
+      padding: 0;
+      text-align: center;
+    }
+    .ashow-body{
+      padding:0.8em 0 1em 0;
+    }
+    
+    .ashow-body h3{
+      font-size: 13pt;
+      font-weight: bold;
+      line-height: 1.25em;
+      color: #000;
+      margin: 0.35em 0 0.4em 0;
+      list-style-type: circle;
+    }
+    .ashow-body h3::before { 
+      content: "●";
+      padding:0 0.5em 0 2em;
+      color: #000;
+      font-weight: bold;
+      font-size: 12pt;
+    }
+    .ashow-body-info{
+      color: #000;
+    }
+    
+    .ashow-body-info h3 span{
+      font-size: 12pt;
+      font-weight: normal;
+    }
+    .ashow-body-info p{
+      font-size: 13pt;
+      font-weight: normal;
+      line-height: 1.2em;
+      margin: 0;
+      padding: 0 0 0 1.6em;
+    }
+    .reg-table{
+      padding: 1em 1em 1em 2em;
+    }
+    .reg-table table{
+      border-collapse: collapse;
+      border-spacing: 0;
+      font-size: 12pt;
+      border: 3px solid #d2d2d2;
+      width: 100%;
+      margin: 0 auto;
+    }
+    
+    .reg-table table th{
+        background-color: #f1f1f1;
+        color: #111;
+        padding:0.5em 1.5em;
+        text-align: left;
+        border-bottom: 1px solid #ccc;
+        white-space: nowrap;
+    }
+    .reg-table table td{
+      border-bottom: 1px solid #ccc;
+      padding:0.5em 1.5em;
+      text-align: left;
+      color: #333;
+    }
+    .reg-table table tr.table-sum{
+        background-color: #ddd;
+        font-weight: bold;
+    }
+    .reg-table table td ol{
+      margin: 0;
+      padding: 0 0 0 1.2em;
+    }
+    .reg-table table td ol li{
+      margin: 0; padding: 0;
+      line-height: 1.5em;
+    }
+    .reg-data{ padding: 1em 0; }
+    .reg-data p{ margin: 0 0 1em 0; padding: 0; font-size: 12pt;}
+    .reg-data p em{ font-size: 14pt; font-weight: bold; font-style: normal; vertical-align: middle;}
+    .reg-remark{ padding: 1em 0; border-top: 1px dashed #ccc;}
+    .reg-remark p{ margin: 0 0 1em 0; padding: 0; font-size: 12pt; line-height: 1.6em;}
+    .item-text{ vertical-align: baseline;}
+    .item-sb{ vertical-align:baseline; font-size: 18pt;}
+    .reg-data .item-sb {font-size: 24pt; } 
+  </style>
+
+</head>
+
+<body class="ashow">
+
+  <div class="ashow-reoprt">
+    <div class="ashow-banner"><img src="images/ashow-report-banner-19cm.jpg" alt=""></div>
+    <div class="ashow-content">
+      <h2>報名表</h2>
+
+      <div class="ashow-body">
+        <div class="ashow-body-info">
+          <h3>報名表一份<span>（蓋公司大小章之正本）</span></h3>
+          <h3>最近一期產品型錄<span></span></h3>
+          <h3>品牌代理合約或是授權書影本<span>（展出國外品牌之代理商）</span></h3> 
+          <h3>聯合參展申請書<span>（由申請聯合參展的代表廠商統一繳交報名資料）</span></h3>
+          <h3>聯絡人名片一張<span></span></h3>
+          <h3>專業展參展規定<span>（蓋公司章之正本）</span></h3>
+        </div>
+
+        
+        <div class="reg-table">
+
+          <table>
+            <tr>
+              <th>參展聯絡人資料(會員)：</th>
+              <td>11207111@hy.com</td>
+            </tr>
+            <tr>
+              <th>國別：</th>
+              <td>中華民國</td>
+            </tr>
+            <tr>
+              <th>統一編號：</th>
+              <td>20237111</td>
+            </tr>
+            <tr>
+              <th>統一編號(個人)：</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>公司電話：</th>
+              <td> (886)03-3333333</td>
+            </tr>
+            <tr>
+              <th>公司名稱(中)：</th>
+              <td>凌網11207111</td>
+            </tr>
+            <tr>
+              <th>公司名稱(英)：</th>
+              <td>Hyweb11207111</td>
+            </tr>
+            <tr>
+              <th>公司傳真：</th>
+              <td>(886)03-3333334</td>
+            </tr>
+            <tr>
+              <th>通訊地址： </th>
+              <td>土耳其 30011 竹北市台元一街8號5樓TW</td>
+            </tr>
+            <tr>
+              <th>公司網址：</th>
+              <td>www.hyweb.com.tw</td>
+            </tr>
+            <tr>
+              <th>公司Email：</th>
+              <td>11207111@hy.com</td>
+            </tr>
+            <tr>
+              <th>公司品牌(中)：</th>
+              <td>索引產品</td>
+            </tr>
+            <tr>
+              <th>公司品牌(英)：</th>
+              <td>Hysearch</td>
+            </tr>
+            <tr>
+              <th>參展證名稱：</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>經營業務類別：</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>發票地址：</th>
+              <td>土耳其 30011 竹北市台元一街8號5樓</td>
+            </tr>
+            <tr>
+              <th>參展聯絡人姓名：</th>
+              <td>QQ Test</td>
+            </tr>
+            <tr>
+              <th>參展聯絡人電話：</th>
+              <td>03-3333333</td>
+            </tr>
+            <tr>
+              <th>聯絡人行動電話：</th>
+              <td>(886)0911111111</td>
+            </tr>
+            <tr>
+              <th>業務聯絡人姓名(中)：</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>業務聯絡人姓名(英)：</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>稱謂：</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>聯絡電話：</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>報名展示區域(單選)：</th>
+              <td>
+                <span class="item-text">
+                  <span class="item-sb">■</span>
+                  實體展&線上展 (世貿一館)<br>
+                  <span class="item-sb">□</span>
+                  實體展 (世貿一館)<br>
+                  <span class="item-sb">□</span>
+                  A計畫01+B計畫01 (世貿一館)<br>
+                  <span class="item-sb">□</span>
+                  A計畫03+B計畫03tw (世貿一館)<br>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>行動電話：</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>線上展報名展示區域(單選)：</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>公司傳真：</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th><span class="item-sb">□</span> 傻眼貓咪欄位</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>報名攤位數量：</th>
+              <td>1</td>
+            </tr>
+            <tr>
+              <th>報名攤位型式：</th>
+              <td>淨地</td>
+            </tr>
+            <tr>
+              <th>業務聯絡人E-mail：</th>
+              <td>11207111@hy.com</td>
+            </tr>
+            <tr>
+              <th>選擇參展產品代碼：</th>
+              <td>
+                <ol>
+                  <li>5105 畜產品</li>
+                  <li>5105 畜產品</li>
+                  <li>5105 畜產品</li>
+                </ol>
+                  <p>其他（請以中、英文對照書寫）：
+                    <span>a/d</span>
+                    <span>b/e</span>
+                    <span>c/f</span>
+                  </p>
+              </td>
+            </tr>
+          </table>
+
+          <div class="reg-data">
+            <p>若您是代理商代理報名，請填寫以下代理商相關資訊</p>
+            <p><em><span class="item-sb">□</span> 您是否同意代理商代理相關展覽業務作業</em></p>
+          </div>
+          <div class="reg-remark">
+            <p>以上參展商報名表個人資料僅供2024年至2026年台北國際自行車展相關推廣活動用，透過電話、郵件等通訊方式與提供資料之個人聯繫接洽用。 提供資料之個人可就其個人資料： 
+              1. 查詢或請求閱覽。
+              2. 請求製給複製本。
+              3. 請求補充或更正。
+              4. 請求停止蒐集、處理或利用。5. 請求刪除。如欲行使以上權利可洽本展承辦人。
+            </p>
+          </div>
+
+
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body>
+<!-- JS都需要放在最下面 -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- TTS admin 專用 -->
+<script src="js/customize.js"></script>
+<!-- tree view -->
+<script src="js/jquery.treeview.js"></script>
+<!-- pg-calendar -->
+<script src="vendor/pg_calendar/js/pignose.calendar.full.min.js"></script>
+
+<script type="text/JavaScript" src="vendor/chosen_v1.8.5/chosen.jquery.min.js"></script>
+
+<script>
+ 
+ 
+  $(document).ready(function() {
+    
+  }); 
+  
+  //-->
+</script>
+
+
+</html>
+
+
+</html>

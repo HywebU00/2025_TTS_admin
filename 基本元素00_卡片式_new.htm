@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>台灣國際專業展網站管理系統</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/hyui_admin.css">
+    <!-- pg-calendar -->
+    <link rel="stylesheet" href="vendor/pg_calendar/css/pignose.calendar.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="images/ico.png" />
+</head>
+
+<body>
+    <!-- header load('00header.htm') -->
+    <header></header>
+    <!-- menu load('00menu.htm') -->
+    <aside></aside>
+    <!-- 主要內容 -->
+    <div class="main_zone">
+        <div class="content">
+            <h2>卡片式版面管理</h2>
+            <div class="hy_block">
+                <form action="" class="form_grid">
+                    <div class="form_grp">
+                        <fieldset>
+                            <legend class="form_title">語系</legend>
+                            <div class="form_content">
+                                <div class="radio_grp form_inline btn_style">
+                                    <label>
+                                        <input type="radio" name="satisfy" value="">繁體中文</label>
+                                    <label>
+                                        <input type="radio" name="satisfy" value="">英文</label>
+                                    <label>
+                                        <input type="radio" name="satisfy" value="">日文</label>
+                                    <label>
+                                        <input type="radio" name="satisfy" value="">簡體中文</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form_grp">
+                        <fieldset>
+                            <legend class="form_title">圖片樣式</legend>
+                            <div class="form_content">
+                                <div class="check_grp form_inline btn_style">
+                                    <label>
+                                        <input type="checkbox" name="" value="">繁體中文</label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">英文</label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">日文</label>
+                                    <label>
+                                        <input type="checkbox" name="" value="">簡體中文</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+            <div class="control_panel">
+                <button class="btn btn-sm"><i class="i_photo"></i>設為封面</button>
+                <button class="btn btn-sm"><i class="i_trash"></i>下架</button>
+                <button class="btn btn-sm"><i class="i_sort"></i>設定排序</button>
+                <button class="btn btn-sm"><i class="i_add"></i>新增</button>
+            </div>
+            <h2>可排序卡片<small>class加上dragble，注意滑鼠標示</small></h2>
+            <div class="card dragable">
+                <ul>
+                    <li>
+                        <div class="gra_item">
+                            <div class="order_num">1</div>
+                            <label><input type="checkbox"></label>
+                            <div class="img-container gra_img">
+                                <img src="images/photo_01.png" class="cover" alt="">
+                                <div class="tag_grp">
+                                    <div class="tag">繁中</div>
+                                    <div class="tag">封面</div>
+                                </div>
+                            </div>
+                            <div class="main_title">大會刊物</div>
+                            <div class="gra_text">
+                                <ul>
+                                    <li>展覽快訊展覽快訊展覽快訊(5 / 28)<i class="i_edit"></i><i class="i_trash"></i></li>
+                                    <li>展覽快訊(5 / 29)<i class="i_edit"></i><i class="i_trash"></i></li>
+                                    <li>展覽快訊(5 / 29)<i class="i_edit"></i><i class="i_trash"></i></li>
+                                    <li>展覽快訊(5 / 30)<i class="i_edit"></i><i class="i_trash"></i></li>
+                                </ul>
+                            </div>
+                            <div class="btn_grp">
+                                <button class="btn icon_btn" tooltip="修改"><i class="i_edit"></i></button>
+                                <button class="btn icon_btn" tooltip="刪除"><i class="i_trash"></i></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="gra_item">
+                            <div class="order_num">2</div>
+                            <label><input type="checkbox"></label>
+                            <div class="img-container gra_img">
+                                <img src="images/photo_02.png" class="cover" alt="">
+                                <div class="tag_grp">
+                                    <div class="tag">繁中</div>
+                                </div>
+                            </div>
+                            <div class="main_title">照片格式</div>
+                            <div class="gra_text">
+                                <ul>
+                                    <li>上線日期:<time>2019/01/01</time></li>
+                                    <li>下線日期:<time>2019/12/31</time></li>
+                                </ul>
+                            </div>
+                            <div class="btn_grp">
+                                <button class="btn icon_btn" tooltip="修改"><i class="i_edit"></i></button>
+                                <button class="btn icon_btn" tooltip="刪除"><i class="i_trash"></i></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="gra_item">
+                            <div class="order_num">3</div>
+                            <label><input type="checkbox"></label>
+                            <div class="img-container gra_img">
+                                <img src="images/photo_03.png" alt="">
+                                <div class="tag_grp">
+                                    <div class="tag">繁中</div>
+                                </div>
+                            </div>
+                            <div class="main_title">標題</div>
+                            <div class="gra_text">
+                                <p>內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述</p>
+                            </div>
+                            <div class="btn_grp">
+                                <button class="btn icon_btn" tooltip="修改"><i class="i_edit"></i></button>
+                                <button class="btn icon_btn" tooltip="刪除"><i class="i_trash"></i></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="gra_item">
+                            <div class="order_num">4</div>
+                            <label><input type="checkbox"></label>
+                            <div class="img-container gra_img">
+                                <img src="images/photo_04.png" alt="">
+                                <div class="tag_grp">
+                                    <div class="tag">繁中</div>
+                                </div>
+                            </div>
+                            <div class="main_title">標題</div>
+                            <div class="gra_text">
+                                <p>內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述</p>
+                            </div>
+                            <div class="btn_grp">
+                                <button class="btn icon_btn" tooltip="修改"><i class="i_edit"></i></button>
+                                <button class="btn icon_btn" tooltip="刪除"><i class="i_trash"></i></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="gra_item">
+                            <div class="order_num">5</div>
+                            <label><input type="checkbox"></label>
+                            <div class="img-container gra_img">
+                                <img src="https://assets.imgix.net/unsplash/womansitting.jpg?w=800&h=480" alt="">
+                                <div class="tag_grp">
+                                    <div class="tag">繁中</div>
+                                </div>
+                            </div>
+                            <div class="main_title">標題</div>
+                            <div class="gra_text">
+                                <p>內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述</p>
+                            </div>
+                            <div class="btn_grp">
+                                <button class="btn icon_btn" tooltip="修改"><i class="i_edit"></i></button>
+                                <button class="btn icon_btn" tooltip="刪除"><i class="i_trash"></i></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="gra_item">
+                            <div class="order_num">6</div>
+                            <label><input type="checkbox"></label>
+                            <div class="img-container gra_img">
+                                <img src="https://assets.imgix.net/unsplash/umbrella.jpg?w=800&h=480" alt="">
+                                <div class="tag_grp">
+                                    <div class="tag">繁中</div>
+                                </div>
+                            </div>
+                            <div class="main_title">標題</div>
+                            <div class="gra_text">
+                                <p>內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述</p>
+                            </div>
+                            <div class="btn_grp">
+                                <button class="btn icon_btn" tooltip="修改"><i class="i_edit"></i></button>
+                                <button class="btn icon_btn" tooltip="刪除"><i class="i_trash"></i></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="gra_item">
+                            <div class="order_num">6</div>
+                            <label><input type="checkbox"></label>
+                            <div class="img-container gra_img">
+                                <img src="https://assets.imgix.net/examples/kingfisher.jpg?w=800&h=480&fit=crop" alt="">
+                                <div class="tag_grp">
+                                    <div class="tag">金質獎</div>
+                                    <div class="tag">智慧科技應用產品</div>
+                                </div>
+                            </div>
+                            <div class="main_title">標題</div>
+                            <div class="gra_text">
+                                <p>內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述</p>
+                            </div>
+                            <div class="btn_grp">
+                                <button class="btn icon_btn" tooltip="修改"><i class="i_edit"></i></button>
+                                <button class="btn icon_btn" tooltip="刪除"><i class="i_trash"></i></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="gra_item">
+                            <div class="order_num">6</div>
+                            <label><input type="checkbox"></label>
+                            <div class="img-container gra_img">
+                                <img src="https://assets.imgix.net/unsplash/raspberries.jpg?w=800&h=480" alt="">
+                                <div class="tag_grp">
+                                    <div class="tag">繁中</div>
+                                    <div class="tag">媒體合作</div>
+                                </div>
+                            </div>
+                            <div class="main_title">標題</div>
+                            <div class="gra_text">
+                                <p>內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述</p>
+                            </div>
+                            <div class="btn_grp">
+                                <button class="btn icon_btn" tooltip="修改"><i class="i_edit"></i></button>
+                                <button class="btn icon_btn" tooltip="刪除"><i class="i_trash"></i></button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <h2>不可排序卡片</h2>
+            <div class="card">
+                <ul>
+                    <li>
+                        <div class="gra_item">
+                            <div class="order_num">1</div>
+                            <label><input type="checkbox"></label>
+                            <div class="img-container gra_img">
+                                <img src="images/photo_01.png" class="cover" alt="">
+                                <div class="tag_grp">
+                                    <div class="tag">繁中</div>
+                                    <div class="tag">封面</div>
+                                </div>
+                            </div>
+                            <div class="main_title">大會刊物</div>
+                            <div class="gra_text">
+                                <ul>
+                                    <li>展覽快訊(5 / 28)</li>
+                                    <li>展覽快訊(5 / 29)</li>
+                                    <li>展覽快訊(5 / 29)</li>
+                                    <li>展覽快訊(5 / 30)</li>
+                                </ul>
+                            </div>
+                            <div class="btn_grp">
+                                <button class="btn icon_btn" tooltip="修改"><i class="i_edit"></i></button>
+                                <button class="btn icon_btn" tooltip="刪除"><i class="i_trash"></i></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="gra_item">
+                            <div class="order_num">2</div>
+                            <label><input type="checkbox"></label>
+                            <div class="img-container gra_img">
+                                <img src="images/photo_02.png" class="cover" alt="">
+                                <div class="tag_grp">
+                                    <div class="tag">繁中</div>
+                                </div>
+                            </div>
+                            <div class="main_title">照片格式</div>
+                            <div class="gra_text">
+                                <ul>
+                                    <li>上線日期:<time>2019/01/01</time></li>
+                                    <li>下線日期:<time>2019/12/31</time></li>
+                                </ul>
+                            </div>
+                            <div class="btn_grp">
+                                <button class="btn icon_btn" tooltip="修改"><i class="i_edit"></i></button>
+                                <button class="btn icon_btn" tooltip="刪除"><i class="i_trash"></i></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="gra_item">
+                            <div class="order_num">3</div>
+                            <label><input type="checkbox"></label>
+                            <div class="img-container gra_img">
+                                <img src="images/photo_03.png" alt="">
+                                <div class="tag_grp">
+                                    <div class="tag">繁中</div>
+                                </div>
+                            </div>
+                            <div class="main_title">標題</div>
+                            <div class="gra_text">
+                                <p>內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述</p>
+                            </div>
+                            <div class="btn_grp">
+                                <button class="btn icon_btn" tooltip="修改"><i class="i_edit"></i></button>
+                                <button class="btn icon_btn" tooltip="刪除"><i class="i_trash"></i></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="gra_item">
+                            <div class="order_num">4</div>
+                            <label><input type="checkbox"></label>
+                            <div class="img-container gra_img">
+                                <img src="images/photo_04.png" alt="">
+                                <div class="tag_grp">
+                                    <div class="tag">繁中</div>
+                                </div>
+                            </div>
+                            <div class="main_title">標題</div>
+                            <div class="gra_text">
+                                <p>內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述</p>
+                            </div>
+                            <div class="btn_grp">
+                                <button class="btn icon_btn" tooltip="修改"><i class="i_edit"></i></button>
+                                <button class="btn icon_btn" tooltip="刪除"><i class="i_trash"></i></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="gra_item">
+                            <div class="order_num">5</div>
+                            <label><input type="checkbox"></label>
+                            <div class="img-container gra_img">
+                                <img src="https://assets.imgix.net/unsplash/womansitting.jpg?w=800&h=480" alt="">
+                                <div class="tag_grp">
+                                    <div class="tag">繁中</div>
+                                </div>
+                            </div>
+                            <div class="main_title">標題</div>
+                            <div class="gra_text">
+                                <p>內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述</p>
+                            </div>
+                            <div class="btn_grp">
+                                <button class="btn icon_btn" tooltip="修改"><i class="i_edit"></i></button>
+                                <button class="btn icon_btn" tooltip="刪除"><i class="i_trash"></i></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="gra_item">
+                            <div class="order_num">6</div>
+                            <label><input type="checkbox"></label>
+                            <div class="img-container gra_img">
+                                <img src="https://assets.imgix.net/unsplash/umbrella.jpg?w=800&h=480" alt="">
+                                <div class="tag_grp">
+                                    <div class="tag">繁中</div>
+                                </div>
+                            </div>
+                            <div class="main_title">標題</div>
+                            <div class="gra_text">
+                                <p>內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述</p>
+                            </div>
+                            <div class="btn_grp">
+                                <button class="btn icon_btn" tooltip="修改"><i class="i_edit"></i></button>
+                                <button class="btn icon_btn" tooltip="刪除"><i class="i_trash"></i></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="gra_item">
+                            <div class="order_num">6</div>
+                            <label><input type="checkbox"></label>
+                            <div class="img-container gra_img">
+                                <img src="https://assets.imgix.net/examples/kingfisher.jpg?w=800&h=480&fit=crop" alt="">
+                                <div class="tag_grp">
+                                    <div class="tag">金質獎</div>
+                                    <div class="tag">智慧科技應用產品</div>
+                                </div>
+                            </div>
+                            <div class="main_title">標題</div>
+                            <div class="gra_text">
+                                <p>內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述</p>
+                            </div>
+                            <div class="btn_grp">
+                                <button class="btn icon_btn" tooltip="修改"><i class="i_edit"></i></button>
+                                <button class="btn icon_btn" tooltip="刪除"><i class="i_trash"></i></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="gra_item">
+                            <div class="order_num">6</div>
+                            <label><input type="checkbox"></label>
+                            <div class="img-container gra_img">
+                                <img src="https://assets.imgix.net/unsplash/raspberries.jpg?w=800&h=480" alt="">
+                                <div class="tag_grp">
+                                    <div class="tag">繁中</div>
+                                    <div class="tag">媒體合作</div>
+                                </div>
+                            </div>
+                            <div class="main_title">標題</div>
+                            <div class="gra_text">
+                                <p>內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述內文描述</p>
+                            </div>
+                            <div class="btn_grp">
+                                <button class="btn icon_btn" tooltip="修改"><i class="i_edit"></i></button>
+                                <button class="btn icon_btn" tooltip="刪除"><i class="i_trash"></i></button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <h2>相片專用<small>class加上dragble，注意滑鼠標示</small></h2>
+            <div class="slider_imgs dragable">
+                <ul>
+                    <li>
+                        <div class="img_wrap">
+                            <div class="order_num">1</div>
+                             <label><input type="checkbox"></label>
+                            <div class="img-container">
+                                <img src="images/photo_01.png" alt="">
+                            </div>
+                            <div class="main_title">圖片一</div>
+                            <button class="btn icon_btn">
+                                <i class="i_trash"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_wrap">
+                            <div class="order_num">2</div>
+                             <label><input type="checkbox"></label>
+                            <div class="img-container">
+                                <img src="images/photo_02.png" alt="">
+                            </div>
+                            <div class="main_title">圖片二</div>
+                            <button class="btn icon_btn">
+                                <i class="i_trash"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_wrap">
+                            <div class="order_num">3</div>
+                             <label><input type="checkbox"></label>
+                            <div class="img-container">
+                                <img src="images/photo_03.png" alt="">
+                            </div>
+                            <div class="main_title">圖片三</div>
+                            <button class="btn icon_btn">
+                                <i class="i_trash"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_wrap">
+                            <div class="order_num">3</div>
+                             <label><input type="checkbox"></label>
+                            <div class="img-container">
+                                <img src="images/photo_04.png" alt="">
+                            </div>
+                            <div class="main_title">圖片四</div>
+                            <button class="btn icon_btn">
+                                <i class="i_trash"></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <h2>相片專用</h2>
+            <div class="slider_imgs">
+                <ul>
+                    <li>
+                        <div class="img_wrap">
+                            <div class="order_num">1</div>
+                             <label><input type="checkbox"></label>
+                            <div class="img-container">
+                                <img src="images/photo_01.png" alt="">
+                            </div>
+                            <div class="main_title">圖片一</div>
+                            <button class="btn icon_btn">
+                                <i class="i_trash"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_wrap">
+                            <div class="order_num">2</div>
+                             <label><input type="checkbox"></label>
+                            <div class="img-container">
+                                <img src="images/photo_02.png" alt="">
+                            </div>
+                            <div class="main_title">圖片二</div>
+                            <button class="btn icon_btn">
+                                <i class="i_trash"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_wrap">
+                            <div class="order_num">3</div>
+                             <label><input type="checkbox"></label>
+                            <div class="img-container">
+                                <img src="images/photo_03.png" alt="">
+                            </div>
+                            <div class="main_title">圖片三</div>
+                            <button class="btn icon_btn">
+                                <i class="i_trash"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_wrap">
+                            <div class="order_num">3</div>
+                             <label><input type="checkbox"></label>
+                            <div class="img-container">
+                                <img src="images/photo_04.png" alt="">
+                            </div>
+                            <div class="main_title">圖片四</div>
+                            <button class="btn icon_btn">
+                                <i class="i_trash"></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <h2>圖庫選擇</h2>
+            <div class="photo_library">
+                <ul>
+                    <li><a href="#"><img src="images/photo_01.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/photo_02.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/photo_03.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/photo_04.png" alt=""></a></li> <li><a href="#"><img src="images/photo_01.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/photo_02.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/photo_03.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/photo_04.png" alt=""></a></li> <li><a href="#"><img src="images/photo_01.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/photo_02.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/photo_03.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/photo_04.png" alt=""></a></li> <li><a href="#"><img src="images/photo_01.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/photo_02.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/photo_03.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/photo_04.png" alt=""></a></li> <li><a href="#"><img src="images/photo_01.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/photo_02.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/photo_03.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/photo_04.png" alt=""></a></li>
+                </ul>
+            </div>
+            <!-- 分頁模組 -->
+            <div class="pagination">
+                <ul class="page">
+                    <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                    <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                    <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- JS都需要放在最下面 -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- TTS admin 專用 -->
+<script src="js/customize.js"></script>
+<!-- tree view -->
+<script src="js/jquery.treeview.js"></script>
+<!-- pg-calendar -->
+<script src="vendor/pg_calendar/js/pignose.calendar.full.min.js"></script>
+<!-- scrollbar -->
+<script src="vendor/scrollbar/jquery.scrollbar.min.js"></script>
+<script>
+$(function() {
+    if ($('.datepick').length > 0) {
+        $('.datepick input').pignoseCalendar({
+            lang: 'ch',
+            modal: true,
+            format: 'YYYY-MM-DD',
+        });
+    }
+    // header file：00header.htm
+    // menu file：00menu.htm
+    $('header').load('00header.htm');
+    $('aside').load('00menu.htm');
+});
+</script>
+
+</html>

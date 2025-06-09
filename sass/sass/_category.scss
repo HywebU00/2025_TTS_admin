@@ -1,0 +1,20 @@
+.category {
+    text-align: left;
+    @include box-sizing;
+    margin: 0em auto;
+    ul {
+        padding: 0;
+        margin: 0;
+        overflow:hidden;
+        li {
+            margin: 0px 3px 3px 0px;
+            display: block;
+            float: left;
+        }
+    }
+    a {
+        @extend .btn;
+        display:block;
+        @include box-sizing();
+    }
+}

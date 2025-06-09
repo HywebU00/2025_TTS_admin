@@ -1,0 +1,965 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>參展商個人化設定-台灣國際專業展網站管理系統</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/hyui_admin.css">
+    <!-- pg-calendar -->
+    <link rel="stylesheet" href="vendor/pg_calendar/css/pignose.calendar.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="images/ico.png" />
+    <style>
+        /* 
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 32px;
+        height: 18px;
+    }
+
+    .switch input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .switch .sliderSW {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 34px;
+    }
+
+    .switch .sliderSW:before {
+        position: absolute;
+        content: "";
+        height: 12px;
+        width: 12px;
+        left: 4px;
+        bottom: 3px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 50%;
+    }
+
+    .switch input:checked + .sliderSW {
+    background-color: #5CB85C;
+    }
+
+    .switch input:focus + .sliderSW {
+    box-shadow: 0 0 1px #5CB85C;
+    }
+
+    .switch input:checked + .sliderSW:before {
+    -webkit-transform: translateX(12px);
+    -ms-transform: translateX(12px);
+    transform: translateX(12px);
+    }
+
+    .exh_set_box_page{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px 10px;
+    }
+    .exh_set_box{
+        width: 46%;
+        margin: 0 2% 3% 2%;
+        padding: 15px;
+        border-radius: 0.8em;
+        box-shadow: 1px 2px 6px 0 rgba(0, 0, 0, 0.3);
+    }
+    .exh_set_box h3{
+        font-size: 1.35em;
+        font-weight: bold;
+        color:#222;
+        position: relative;
+    }
+    .exh_set_box h3 .set_item{
+        width:60px;
+        position: absolute;
+        top:5px;
+        right:15px; 
+    }
+    .exh_set_box h3 .set_item .switch {
+        width: 44px;
+    }
+    .exh_set_box h3 .switch input:checked + .sliderSW:before {
+        -webkit-transform: translateX(24px);
+        -ms-transform: translateX(24px);
+        transform: translateX(24px);
+    }
+
+    .exh_set_box h3 em{
+        padding:0px 5px 1px 5px;
+        border-bottom: 3px solid #2196F3;
+        font-style:normal;
+    }
+    .exh_set_list{
+        padding: 0 1em;
+    }
+    .exh_set_list ul{
+        list-style: none;
+        padding:0;
+    }
+    .exh_set_list ul li{
+        position: relative;
+        line-height: 1.25em;
+        padding: 9px 60px 8px 0;
+        border-bottom: 1px solid #e5e5e5;
+        font-size: 1.15em;
+        font-weight: bold;
+        color: #333;
+    }
+    .exh_set_list ul li .set_item{
+        width:60px;
+        position: absolute;
+        top:7px;
+        right:0px;        
+    }
+    .exh_set_list ul li .set_item .switch{
+        vertical-align:middle;
+    }
+    .exh_set_list ul li .set_item span.lock{
+        display: inline;
+        padding-left: 5px;
+        vertical-align:middle;
+        opacity: 0.25;
+    }
+    .exh_set_list ul li .set_item span.lock i{
+        margin: 0;
+        font-size: 0.89em;        
+    }
+    .exh_set_list ul li .set_item span.lock i::before{
+        vertical-align:baseline;
+    }
+    .exh_set_list .set_item_details{
+        padding: 0.5em 0 0.65em 2em;
+    }
+    .exh_set_list .set_item_details span{
+        font-size: 0.89em;
+        line-height: 1.25em;
+        display: inline-block;
+        vertical-align: middle;
+        color:#828282;
+    }
+    .exh_set_list .set_item_details span.num{
+        border-bottom: 1px solid #333;
+        padding:0 10px;
+        color: #0870b6;
+        font-weight: bold;
+    }
+    .exh_set_list .set_item_details .datepick{
+        display: inline;
+        margin-left: 4em;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .exh_set_list .set_item_details .datepick input{
+        display: inline;
+        width:auto;
+        color:#666;
+        border:1px solid #e5e5e5;
+        font: 0.88em sans-serif;
+    }
+    .exh_set_list .set_item_details .datepick button{
+        width: auto;
+        min-width: 20px;
+        padding: 0.5em;
+        background: none;
+        border: none;
+        margin-left: -2.65em;
+    }
+    .exh_set_list .set_item_details .datepick button:hover,
+    .exh_set_list .set_item_details .datepick button:focus{
+        background: none !important;
+        border: none !important;
+    }
+    .exh_set_list .set_item_details .datepick button i{
+        
+    }
+    @media screen and (max-width: 991px) {
+        .exh_set_box{
+            width: 46%;
+            margin: 0 2% 4% 2%;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        .exh_set_box{
+            width: 96%;
+            margin: 0 2% 6% 2%;
+        }
+        .exh_set_list .set_item_details{
+        padding: 0.5em 0 0.65em 0em;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        .exh_set_list .set_item_details .datepick{
+            margin-left: 0px;
+            margin-top: 5px;
+            display: block;
+        }
+        .exh_set_list .set_item_details .datepick input{
+            width: 95%;
+        }
+        .exh_set_box_page+.fix_btngrp{
+            padding: 20px 10px;
+            position: static;
+            width: 94%;
+        }
+    }
+    .uncheck, .uncheck>em, .uncheck>li, .uncheck>div {
+        color:#bbb !important;
+    }
+    .uncheck>div>span  {
+        color:#bbb !important;
+        border-color: #bbb !important;
+    }
+    .uncheck .set_item_details .datepick input[type='text'],
+    .uncheck .set_item_details .datepick input[type='text']::placeholder{
+        color: #c2c2c2;
+    }
+    .w100{
+        width: 96% !important;
+        margin: 0 2% !important;
+    }
+     */
+    </style>
+</head>
+
+<body>
+    <!-- header load('00header.htm') -->
+    <header></header>
+    <!-- menu load('00menu.htm') -->
+    <aside class="closed"></aside>
+    <!-- 主要內容 -->
+    <div class="main_zone closed">
+
+        <div class="content has_fixblock">
+            <h2>修改參展商個人化設定</h2>
+            <div class="hy_block">
+
+                <form id="frm" class="form_grid" action="" >
+                    <div class="exh_set_box_page">
+
+                        <div class="exh_set_box w100">
+                            <h3><em>基本設定</em></h3>
+                            <div class="exh_set_list">
+                                <ul>
+                                    <li>開放日期
+                                        <div class="set_item_details">
+                                            <div class="datepick">
+                                                <input type="text" id="startDate" name="startDate"
+                                                    class="calendar hasDatepicker" value="2023/02/21"><button
+                                                    type="button" class="btn"><i class="i_calendar_color"></i></button>
+                                            </div>～
+                                            <div class="datepick">
+                                                <input type="text" id="endDate" name="endDate"
+                                                    class="calendar hasDatepicker" value="2023/02/28"><button
+                                                    type="button" class="btn"><i class="i_calendar_color"></i></button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>廠商參展報名表單
+                                        <div class="set_item_details">
+                                            
+                                            <div class="form_grp">
+                                                <label for="url_en" class="form_title">英文(en)</label>
+                                                <div class="form_content">
+                                                    <div class="sub_form_content">
+                                                        <input name="url_en" id="url_en" type="text" value="regist form"
+                                                            placeholder="請輸入英文(en)">
+                                                    </div>
+                                                </div>
+                                            </div><!--end form_grp-->
+                                            <div class="form_grp">
+                                                <label for="url_zh-tw" class="form_title">繁體中文(zh-tw)</label>
+                                                <div class="form_content">
+                                                    <div class="sub_form_content">
+                                                        <input name="url_zh-tw" id="url_zh-tw" type="text" value="報名表"
+                                                            placeholder="請輸入繁體中文(zh-tw)">
+                                                    </div>
+                                                </div>
+                                            </div><!--end form_grp-->
+                                            <div class="form_grp">
+                                                <label for="url_ja" class="form_title">日文(ja)</label>
+                                                <div class="form_content">
+                                                    <div class="sub_form_content">
+                                                        <input name="url_ja" id="url_ja" type="text" value="regist form"
+                                                            placeholder="請輸入日文(ja)">
+                                                    </div>
+                                                </div>
+                                            </div><!--end form_grp-->
+                                            <div class="form_grp">
+                                                <label for="url_ru" class="form_title">俄文(ru)</label>
+                                                <div class="form_content">
+                                                    <div class="sub_form_content">
+                                                        <input name="url_ru" id="url_ru" type="text" value="regist form"
+                                                            placeholder="請輸入俄文(ru)">
+                                                    </div>
+                                                </div>
+                                            </div><!--end form_grp-->
+                                            <div class="form_grp" style="display:none">
+                                                <label for="url_zh-cn" class="form_title">簡體中文(zh-cn)</label>
+                                                <div class="form_content">
+                                                    <div class="sub_form_content">
+                                                        <input name="url_zh-cn" id="url_zh-cn" type="text" value="xxxxx"
+                                                            placeholder="請輸入簡體中文(zh-cn)"> <label><input name="url_t2s"
+                                                                type="checkbox" value="Y">轉自繁體中文</label>
+                                                    </div>
+                                                </div>
+                                            </div><!--end form_grp-->
+
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="exh_set_box">
+                            <h3><em>帳號管理</em></h3>
+                            <div class="exh_set_list">
+                                <ul>
+                                    <li>公司資料維護
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input name="" type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                            <span class="lock"><i class="i_lock"></i></span>
+                                        </div>
+                                    </li>
+                                    <li>修改密碼
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input name="" type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+
+                                        </div>
+                                    </li>
+                                    <li>子帳號維護
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input name="" type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--exh_set_box END-->
+
+                        <div class="exh_set_box">
+                            <h3><em>收藏管理</em></h3>
+                            <div class="exh_set_list">
+                                <ul>
+                                    <li>收藏參展商
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                            <span class="lock"><i class="i_lock"></i></span>
+                                        </div>
+                                    </li>
+                                    <li>收藏產品
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                            <span class="lock"><i class="i_lock"></i></span>
+                                        </div>
+                                    </li>
+                                    <li>收藏名片（交換名片）
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                            <span class="lock"><i class="i_lock"></i></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--exh_set_box END-->
+
+                        <div class="exh_set_box">
+                            <h3><em>產品型錄</em></h3>
+                            <div class="exh_set_list">
+                                <ul>
+                                    <li>型錄上傳設定張數
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                            <span class="lock"><i class="i_lock"></i></span>
+                                        </div>
+                                        <div class="set_item_details">
+                                            <span>張數上限</span>
+                                            <span class="num"><input type="text" id="" name="uploadLimit"
+                                                    value="5"></span><span>張</span>
+                                        </div>
+                                    </li>
+                                    <li>上傳360型錄
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+
+                                        </div>
+                                    </li>
+                                    <li>上傳3D（720）型錄
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+
+                                        </div>
+                                    </li>
+                                    <li>標籤服務
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--exh_set_box END-->
+
+                        <div class="exh_set_box">
+                            <h3><em>產品型錄</em></h3>
+                            <div class="exh_set_list">
+                                <ul>
+                                    <li>型錄上傳設定張數
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                            <!-- <span class="lock"><i class="i_lock"></i></span> -->
+                                        </div>
+                                        <div class="set_item_details">
+                                            <span>張數上限</span>
+                                            <span class="num"><input type="text" id="uploadLimit" name="uploadLimit"
+                                                    value="5"></span><span>張</span>
+                                        </div>
+                                    </li>
+                                    <li>上傳360型錄
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+
+                                        </div>
+                                    </li>
+                                    <li>上傳3D（720）型錄
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="sliderSW"></span>
+                                            </label>
+
+                                        </div>
+                                    </li>
+                                    <li>標籤服務
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--exh_set_box END-->
+
+                        <div class="exh_set_box">
+                            <h3><em>線上文字聊天</em>
+                                <div class="set_item">
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="sliderSW"></span>
+                                    </label>
+                                </div>
+                            </h3>
+                            <div class="exh_set_list">
+                                <ul>
+                                    <li>聊天翻譯
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>線上視訊
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>聊天歡迎訊息／離線訊息設定
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>聊天記錄
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                            <span class="lock"><i class="i_lock"></i></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--exh_set_box END-->
+
+                        <div class="exh_set_box">
+                            <h3><em>線上文字聊天</em>
+                                <div class="set_item">
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="sliderSW"></span>
+                                    </label>
+                                </div>
+                            </h3>
+                            <div class="exh_set_list">
+                                <ul>
+                                    <li>聊天翻譯
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>線上視訊
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>聊天歡迎訊息／離線訊息設定
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>聊天記錄
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                            <span class="lock"><i class="i_lock"></i></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--exh_set_box END-->
+
+                        <div class="exh_set_box">
+                            <h3><em>參展商資訊管理</em></h3>
+                            <div class="exh_set_list">
+                                <ul>
+                                    <li>新聞訊息
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                        <div class="set_item_details uck">
+                                            <span>審核狀態開啓</span>
+                                            <div class="set_item">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="sliderSW"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="uncheck">活動訊息
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                        <div class="set_item_details ck">
+                                            <span>審核狀態開啓</span>
+                                            <div class="set_item">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="sliderSW"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>影片
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>貼紙產生器
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--exh_set_box END-->
+
+                        <div class="exh_set_box">
+                            <h3><em>互動功能</em></h3>
+                            <div class="exh_set_list">
+                                <ul>
+                                    <li>訊息夾
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>廠商邀請買主
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>會議預約
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>會議邀約
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--exh_set_box END-->
+
+                        <div class="exh_set_box w100">
+                            <h3><em>報表管理</em></h3>
+                            <div class="exh_set_list">
+                                <ul>
+                                    <li>型錄下載次數統計
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input name="" type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>360/720型錄瀏覽次數
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input name="" type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>各功能點擊數統計
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input name="" type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>參展商攤位訪次數統計
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input name="" type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>參觀者國別統計
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input name="" type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>會議預約次數統計
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input name="" type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>影片瀏覽次數
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input name="" type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>聊天人數
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input name="" type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>參觀者人數統計（有登入帳號）
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input name="" type="checkbox" checked>
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                        <div class="set_item_details">
+                                            <span>匯出參觀者明細<br>明細起始日</span>
+                                            <div class="datepick">
+                                                <input name="" type="text" value="" class="calendar" placeholder="選擇日期">
+                                                <button class="btn"><i class="i_calendar_color"></i></button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>潛在商機名單
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input name="" type="checkbox">
+                                                <span class="sliderSW"></span>
+                                            </label>
+                                        </div>
+                                        <div class="set_item_details">
+                                            <span>匯出參觀者明細<br>明細起始日</span>
+                                            <div class="datepick">
+                                                <input name="" type="text" value="" class="calendar" placeholder="選擇日期">
+                                                <button class="btn"><i class="i_calendar_color"></i></button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>潛在參觀者名單
+                                        <div class="set_item">
+                                            <label class="switch">
+                                                <input name="F0123" value="1" type="hidden">
+                                                <input value="" type="checkbox" checked="">
+                                                <span class="sliderSW"></span>
+                                            </label>
+
+                                        </div>
+
+                                        <div class="set_item_details">
+                                            <span>匯出參觀者明細<br>明細起始日</span>
+                                            <div class="datepick">
+                                                <input type="text" id="exportVisStartDate" name="exportVisStartDate"
+                                                    class="calendar" value="2021/11/01">
+                                                <button type="button" class="btn"><i
+                                                        class="i_calendar_color"></i></button>
+                                            </div>
+                                            <div class="set_item">
+                                                <label class="switch">
+                                                    <input id="exportVisEnable" name="exportVisEnable" value="1"
+                                                        type="hidden">
+                                                    <input value="" type="checkbox" checked="">
+                                                    <span class="sliderSW"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--exh_set_box END-->
+                    </div>
+
+                    <div class="btn_grp fix_btngrp">
+                        <button type="button" class="btn" onclick="doback();">取消</button>
+                        <button id="save-btn" type="submit" class="btn btn-blue">確定儲存</button>
+
+                        <h3>異動資訊</h3>
+                        <div class="table_list">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>新增人員</th>
+                                        <td>系統管理者(admin)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>新增時間</th>
+                                        <td data-title="新增人員">2019/12/03 10:33:28</td>
+                                    </tr>
+                                    <tr>
+                                        <th>異動人員</th>
+                                        <td data-title="新增人員">系統管理者(admin)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>異動時間</th>
+                                        <td data-title="新增人員">2023/02/21 15:54:31</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+        </div>
+    </div>
+</body>
+<!-- JS都需要放在最下面 -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- TTS admin 專用 -->
+<script src="js/customize.js"></script>
+<!-- tree view -->
+<script src="js/jquery.treeview.js"></script>
+<!-- pg-calendar -->
+<script src="vendor/pg_calendar/js/pignose.calendar.full.min.js"></script>
+<!-- scrollbar -->
+<script src="vendor/scrollbar/jquery.scrollbar.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        // header file：00header.htm
+        // menu file：00menu.htm
+        $('header').load('00header.htm');
+        $('aside').load('00menu.htm');
+
+        if (window.innerWidth <= 768) {
+            $(".content").removeClass("has_fixblock");
+        } else {
+            $(".content").addClass("has_fixblock");
+        }
+
+        $(window).resize(function () {
+            if (window.innerWidth <= 768) {
+                $(".content").removeClass("has_fixblock");
+            } else {
+                $(".content").addClass("has_fixblock");
+            }
+        });
+
+        if ($('.datepick').length > 0) {
+            $('.datepick input').pignoseCalendar({
+                lang: 'ch',
+                modal: true,
+                format: 'YYYY-MM-DD',
+            });
+        }
+
+        $("li>.set_item>.switch input[type=checkbox]").each(function () {
+            if ($(this).parent().next().attr("class") == "lock") {
+                $(this).prop("disabled", true);
+            }
+            if (!$(this).prop("checked")) {
+                $(this).closest("li").addClass("uncheck");
+                $(this).closest("h3").addClass("uncheck");
+                $(this).closest(".set_item").siblings().find(".datepick input").prop("disabled", true);
+                $(this).closest(".set_item_details span.num input").prop("disabled", true);
+            }
+        });
+        $("li>.set_item_details input[type=text]").each(function () {
+            if ($(this).closest("set_item").find("span").attr("class") == "lock") {
+                $(this).prop("disabled", true);
+            }
+            if (!$(this).prop("disabled")) {
+                $(this).closest("set_item_details").addClass("uck");
+                $(this).closest(".set_item_details span.num input").prop("disabled", true);
+
+            }
+        });
+
+        $("li>.set_item>.switch input[type=checkbox]").click(function () {
+            $(this).closest("li").toggleClass("uncheck");
+            if ($(this).prop('checked')) {
+                $(this).closest(".set_item").siblings().find(".datepick input").prop("disabled", false);
+                $(this).closest(".set_item").siblings().find(".num>input").prop("disabled", false);
+            } else {
+                $(this).closest(".set_item").siblings().find(".datepick input").prop("disabled", true);
+                $(this).closest(".set_item").siblings().find(".num>input").prop("disabled", true);
+            }
+        });
+
+        $("li>.set_item_details>.set_item>.switch input[type=checkbox]").click(function () {
+            if ($(this).prop('checked')) {
+                $(this).closest(".set_item_details").removeClass("uck");
+                $(this).closest(".set_item_details").addClass("ck");
+                $(this).closest(".set_item_details").find(".datepick input").prop("disabled", false);
+            } else {
+                $(this).closest(".set_item_details").removeClass("ck");
+                $(this).closest(".set_item_details").addClass("uck");
+                $(this).closest(".set_item_details").find(".datepick input").prop("disabled", true);
+            }
+        });
+
+        $("h3 .switch input[type=checkbox]").click(function () {
+            $(this).closest("h3").toggleClass("uncheck");
+            if ($(this).prop('checked')) {
+                $(this).closest("h3").siblings().find(".switch input[type=checkbox]:enabled").prop("checked", true);
+            } else {
+                $(this).closest("h3").siblings().find(".switch input[type=checkbox]:enabled").prop("checked", false);
+            }
+        });
+
+    });
+</script>
+
+</html>

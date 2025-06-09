@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>台灣國際專業展網站管理系統</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/hyui_admin.css">
+    <!-- pg-calendar -->
+    <link rel="stylesheet" href="vendor/pg_calendar/css/pignose.calendar.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="images/ico.png" />
+</head>
+
+<body>
+    <!-- header load('00header.htm') -->
+    <header></header>
+    <!-- menu load('00menu.htm') -->
+    <aside id="menu"></aside>
+    <!-- 主要內容 -->
+    <div class="main_zone">
+	<div class="pills">
+                 <ul>
+                    <li><a href="論壇05_12活動資訊管理.htm">活動資訊</a></li>
+                    <li><a href="論壇05_13活動資訊管理_議程管理.htm">議程管理</a></li>
+					<li class="active"><a href="論壇05_14活動資訊管理_報名管理.htm">報名管理</a></li>
+                </ul>
+            </div>
+
+        <div class="content">
+            <!-- path -->
+            <div class="breadcrumb hy_block">
+                 <ul>
+                    <li><a href="#">論壇活動</a></li>
+                    <li><a href="#">論壇網站管理</a></li>
+                    <li onclick="javascript:showDiv('note')">報名管理?</li>
+                </ul>
+            </div>
+            <!-- 節點標題 -->
+            <h2>報名管理</h2>
+				<div class="pills">
+                  <ul>
+                    <li><a href="論壇05_14活動資訊管理_報名管理.htm">報名條件設定</a></li>
+                    <li class="active"><a href="論壇05_17活動資訊管理_報名管理 _優惠設定.htm">付款/優惠設定</a></li>
+                </ul>
+            </div>		
+                <div class="table_list">
+                    <!--<h3>新增部門至 <span>中華民國對外貿易協會</span></h3>-->
+                    <form action="" class="form_grid">
+						<h3>報名優惠設定</h3>
+					    
+						<div class="form_grp">
+                            <label for="" class="form_title">付款期限<abbr class="necessary" title="">*</abbr></label>
+                            <div class="form_content hasBtn">
+                                <input type="radio">天數，報名後<input type="text">天</br>
+								<input type="radio">日期<div class="datepick">
+                                <input name="" type="text" value="" class="calendar">
+                                <button class="btn"><i class="i_calendar_color"></i></button>
+                            </div>
+                                
+                                
+                            </div>
+                        </div>
+						
+							<div class="form_grp has-danger">
+                            <label for="" class="form_title">折扣優惠選擇</label>
+                            <div class="form_content">
+						
+						
+							
+		<div class="hy_block">
+		 <div class="table_list ">
+                    <table>
+                        <thead>
+							<tr>
+								<th>折扣優惠</th>
+								<th>優惠方式</th>
+							</tr>
+                        </thead>
+                        <tbody>
+                          
+	<tr>
+		<td><input type="checkbox">早鳥優惠</td>
+		<td><div class="datepick">
+                                <input name="" type="text" value="" class="calendar">
+                                <button class="btn"><i class="i_calendar_color"></i></button>
+                            </div>前報名，每場次減<font style="color:red">NTD</font><input type="">元</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox">多場次優惠</td>
+		<td>報名<input type="text">場(含以上)，總價減<font style="color:red">NTD</font><input type="">元</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox">折扣碼優惠</td>
+		<td>
+			<input type="button" value="新增" /><input type="button" value="匯出折扣碼" /></br>
+			折扣碼一經報名資料使用則，不可刪除
+			</br>
+				
+				<div class="hy_block">
+		 <div class="table_list ">
+                    <table>
+                        <thead>
+							<tr>
+								<th>折扣</th>
+								<th>份數</th>
+								<th>動作</th>
+							</tr>
+                        </thead>
+                        <tbody>
+                          
+	<tr>
+		<td>總金額減<font style="color:red">NTD</font><input type="">元</td>
+		<td><input type="text">份</td>
+		<td><input type="button" value="刪除"></td>
+	</tr>
+	<tr>
+		<td>總金額減<font style="color:red">NTD</font><input type="">元</td>
+		<td><input type="text">份</td>
+		<td><input type="button" value="刪除"></td>
+	</tr>
+                     </tbody>
+                    </table>
+                </div>
+				
+
+				
+			</div>	
+				
+				
+				
+		</td>
+	</tr>
+	
+							
+                        </tbody>
+                    </table>
+                </div>
+				
+
+				
+			</div>	
+                               
+                            </div>
+                        </div>
+						
+					
+							
+					
+					<div class="form_grp">
+                            <label for="" class="form_title">財務介接設定<abbr class="necessary" title="">*</abbr></label>
+                            <div class="form_content hasBtn">
+                                單位代碼<select><option>拓展處</option></select><br/>
+								計畫編號<input type="text"/><br/>
+								預算科目<input type="text"/><br/>
+								
+                            </div>
+                                
+                                
+                            </div>
+               
+						
+						
+						
+						<h3>異動資訊</h3>
+				<div class="form_grp">
+                    <label for="apartment_num" class="form_title">新增人員</label>
+                    <div class="form_content">
+                       張三(a0343)
+                    </div>
+                </div>
+				<div class="form_grp">
+                    <label for="apartment_num" class="form_title">新增時間</label>
+                    <div class="form_content">
+                       2019/09/04 12:34
+                    </div>
+                </div>
+				<div class="form_grp">
+                    <label for="apartment_num" class="form_title">異動人員</label>
+                    <div class="form_content">
+                       張三(a0343)
+                    </div>
+                </div>
+				<div class="form_grp">
+                    <label for="apartment_num" class="form_title">異動時間</label>
+                    <div class="form_content">
+                       2019/09/04 12:34
+                    </div>
+                </div>
+                        <div class="btn_grp">
+                            <button class="btn btn-primary">確認</button>
+							 <button class="btn btn-cancel">取消</button>
+                        </div>
+                    </form>
+                </div>
+	
+		
+ 
+        </div>
+    </div>
+	
+	<div id='note' style="width: 600px;  height: 300px;  position: absolute;  top: 50%;  left: 50%;  margin: -150px 0 0 -300px;background-color:pink;overflow:scroll" onclick="javascript:closeDiv('note')">
+	<p>開發前你是否已經讀過TTS的切版原則?</p>
+	<p>寫程式前一定要知道，D部門類似頁面的操作行為，最好先由SA講解一下</p>
+	 <p>多語系資料結構為 : 多語系，不同時發布，這類的資料ADM一定會有繁中與英文，且列表要顯示繁中與英文資料，其他語系則依據論壇所選用的語系讓使用者於新增時輸入多語資料，其他語系若沒有輸入資料，則全數帶入英文資料，故系統再怎樣所有必填欄位都一定要輸入英文資料</p>
+	 <p>點選收費，顯示報名優惠設定頁籤給予設定</p>
+	 <p>其他付款資料的設定方式要同，活動資訊的參考資料的方式，支援多語，且是同時發布的方式</p>
+	  <p>財務系統介接設定，只有在論壇設定選擇財務設定介接才可設定</p>
+	</div>
+	
+	<div id='referdoc' style="width: 900px;  height: 300px;  position: absolute;  top: 1000px;  left: 50%;  margin: -150px 0 0 -300px;background-color:pink;overflow:scroll; display:none" onclick="javascript:closeDiv('referdoc')">
+				<div class="hy_block">
+					<h2>其他付款方式說明資料</h2>
+						<div class="form_grp">
+                            <label for="" class="form_title">語系</label>
+                            <div class="form_content">
+								<select>
+									<option>繁體中文</option>
+									<option>英文</option>
+									<option>義大利文</option>
+									<option>越南文</option>
+									<option>簡體中文</option>
+								</select>
+							
+                               
+                            </div>
+                        </div>
+						<div class="control_panel">
+                    <button class="btn btn-sm" onclick="javascript:showDiv('addreferdoc');closeDiv('referdoc');"><i class="i_add"></i>新增其他付款方式說明資料</button>
+					
+                </div>
+                <div class="table_list ">
+                    <table>
+                        <thead>
+							<tr>
+								<th>顯示名稱</th>
+								<th>檔案</th>
+								<th>動作</th>
+
+							</tr>
+                        </thead>
+                        <tbody>
+                          	<tr><td>超商</td><td><a href="#">xxx.pdf</a></td><td><button class="btn btn-sm">編輯</button><button class="btn btn-sm">刪除</button>
+							
+					</td></tr>
+							<tr><td>郵局</td><td>xxx.doc</td><td></td></tr>
+							<tr><td>電匯</td><td>xxx.pdf</td><td></td></tr>
+						
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+	</div>
+	
+	
+	<div id='addreferdoc' style="width: 800px;  height: 600px;  position: absolute;  top: 1000px;  left: 50%;  margin: -150px 0 0 -300px;background-color:pink;overflow:scroll;display:none" onclick="javascript:closeDiv('addreferdoc')">
+				<div class="hy_block">
+					<h2>新增其他付款方式資料</h2>
+						<div class="form_grp">
+                            <label for="" class="form_title">語系</label>
+                            <div class="form_content">
+								<select>
+									<option>繁體中文</option>
+									<option selected>英文</option>
+									<option>義大利文</option>
+									<option>越南文</option>
+									<option>簡體中文</option>
+								</select>
+							
+                               
+                            </div>
+                        </div>
+						
+							<div class="form_grp">
+                            <label for="apartment_num" class="form_title"> 顯示名稱<abbr class="necessary" title="">*</abbr>
+                            </label>
+                            <div class="form_content">
+                                <input type="text" id="username" value="" >
+                            </div>
+                        </div>
+							<div class="form_grp">
+                            <label for="apartment_num" class="form_title"> 上傳檔案<abbr class="necessary" title="">*</abbr>
+                            </label>
+                             <div class="form_content hasBtn">
+                                <input type="text" id="username" value="">
+								  <button class="btn" >上傳檔案</button>
+							
+                            </div>
+                        </div>
+				
+						<div class="form_grp">
+                        <label for="apartment_num" class="form_title">同時發布語系</label>
+                        <div class="form_content">
+                            <div class="radio_grp form_inline">
+                                <label>
+                                    <input type="checkbox" name="sampleRadio1" value="" checked disabled>英文</label>
+								 <label>
+                                    <input type="checkbox" name="sampleRadio1" value="" >中文</label>
+								 <label>
+                                    <input type="checkbox" name="sampleRadio1" value="" >義大利文</label>
+								 <label>
+                                    <input type="checkbox" name="sampleRadio1" value="" >越南文</label> 
+                            </div>
+                        </div>
+                    </div>						
+					
+					 <div class="btn_grp">
+                            <button class="btn btn-primary">確認</button>
+							 <button class="btn btn-cancel">取消</button>
+                        </div>
+
+                    </div>
+	
+			
+                
+            </div>
+	</div>
+	
+	
+</body>
+<!-- JS都需要放在最下面 -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- TTS admin 專用 -->
+<script src="js/customize.js"></script>
+<!-- tree view -->
+<script src="js/jquery.treeview.js"></script>
+<!-- pg-calendar -->
+<script src="vendor/pg_calendar/js/pignose.calendar.full.min.js"></script>
+<script src="js/human.js"></script>
+<script>
+$(function() {
+    if ($('.datepick').length > 0) {
+        $('.datepick input').pignoseCalendar({
+            lang: 'ch',
+            modal: true,
+            format: 'YYYY-MM-DD',
+        });
+    }
+    // header file：00header.htm    
+    // menu file：00menu.htm
+    $('header').load('00header.htm');
+    $('aside').load('00menu.htm');
+});
+</script>
+</html>

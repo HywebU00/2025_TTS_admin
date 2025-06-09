@@ -1,0 +1,768 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>台灣國際專業展網站管理系統</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/hyui_admin.css">
+    <!-- pg-calendar -->
+    <link rel="stylesheet" href="vendor/pg_calendar/css/pignose.calendar.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="images/ico.png" />
+</head>
+
+<body>
+    <!-- header load('00header.htm') -->
+    <header></header>
+    <!-- menu load('00menu.htm') -->
+    <aside></aside>
+    <!-- 主要內容 -->
+    <div class="main_zone">
+        <div class="content has_fixblock">
+            <!-- 節點標題 -->
+            <h2>版型設定</h2>
+            <div class="hy_block">
+                <div class="col">
+                    <div class="template_choose">
+                        <div class="form_grp ">
+                            <form action="">
+                                <h3>分眾</h3>
+                                <select name="" id="selectSample">
+                                    <option value="">參觀者</option>
+                                    <option value="">廠商</option>
+                                    <option value="">媒體</option>
+                                </select>
+                                <h3>語系</h3>
+                                <select name="" id="selectSample">
+                                    <option value="">繁體中文</option>
+                                    <option value="">英文</option>
+                                    <option value="">日文</option>
+                                    <option value="">簡體中文</option>
+                                    <option value="">...</option>
+                                </select>
+                                <button class="btn btn-primary">切換</button>
+                            </form>
+                        </div>
+                        <!-- 按鈕外多包一層.chooseTemplate start-->
+                        <div class="chooseTemplate">
+                            <button class="btn btn-primary wiseChoose">智慧選版</button>
+                            <a href="#" class="btn dropdown-btn btn-tpl">設定版型與色系 </a>
+                        </div>
+                        <!-- 按鈕外多包一層.chooseTemplate end-->
+                        <div class="template_content">
+                            <a href="#" class="close">關閉</a>
+                            <div>
+                                <div class="col">
+                                    <div class="style_choose">
+                                        <h3>請選擇視覺風格</h3>
+                                        <div class="btn_grp">
+                                            <img src="images/style_fashion.jpg" alt="">
+                                            <button class="btn btn-sm btn-primary"> 01經典設計</button>
+                                        </div>
+                                        <hr>
+                                        <div class="radio_grp form_inline">
+                                            <h3>版型快速設定</h3>
+                                            <label><input name="radioSample" type="radio" value="">建議版面</label>
+                                            <label>
+                                                <input name="radioSample" type="radio" value="">複製 <select name="" id="selectSample2">
+                                                    <option value="">下拉選單</option>
+                                                    <option value="">同繁體中文</option>
+                                                    <option value="">...</option>
+                                                </select>
+                                            </label>
+                                            <button class="btn btn-primary">切換</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="col">
+                                    <div class="color_choose">
+                                        <h3>請選擇色系</h3>
+                                        <div class="radio_grp">
+                                            <label><input name="radioSample" type="radio" value="">藍色<img src="images/color-scheme-blue.jpg" alt=""></label>
+                                            <label><input name="radioSample" type="radio" value="">紅色<img src="images/color-scheme-red.jpg" alt=""></label>
+                                            <label><input name="radioSample" type="radio" value="">咖啡<img src="images/color-scheme-brown.jpg" alt=""></label>
+                                            <label><input name="radioSample" type="radio" value="">黃色<img src="images/color-scheme-yellow.jpg" alt=""></label>
+                                            <label><input name="radioSample" type="radio" value="">綠色<img src="images/color-scheme-green.jpg" alt=""></label>
+                                            <label><input name="radioSample" type="radio" value="">青色<img src="images/color-scheme-cyanblue.jpg" alt=""></label>
+                                            <label><input name="radioSample" type="radio" value="">紫色<img src="images/color-scheme-purple.jpg" alt=""></label>
+                                            <label><input name="radioSample" type="radio" value="">深灰<img src="images/color-scheme-gray.jpg" alt=""></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 版型管理 -->
+            <div class="layout">
+                <div class="hy_block">
+                    <h3>請設定首頁呈現模組</h3>
+                    <!-- header -->
+                    <div class="col-12 layout_header">
+                        <div class="module">
+                            <!-- 模組設定按鈕下拉 -->
+                            <div class="setting">
+                                <a href="#" class="btn dropdown-btn">
+                                    <i class="i_setting"></i></a>
+                                <div class="dropdown-content">
+                                    <ul>
+                                        <button class="btn btn-sm"><i class="i_setting"></i>設定模組屬性</button>
+                                        <button class="btn btn-sm"><i class="i_edit"></i>設定資料條件</button>
+                                        <button class="btn btn-sm bnt-red"><i class="i_trash"></i>移除模組</button>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="module_info">
+                                <h3>Header</h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider">網頁內容</div>
+                    <div class="drag_area">
+                        <!-- col-12 -->
+                        <div class="col-12">
+                            <div class="container">
+                                <!-- row的控制面板 -->
+                                <div class="col_control">
+                                    <button class="btn btn-green btn-xs"><i class="i_move invert"></i>移動</button>
+                                    <button class="btn btn-red btn-xs"><i class="i_close invert"></i>刪除</button>
+                                </div>
+                                <div class="col">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- col-12 -->
+                        <div class="col-12 full">
+                            <div class="container">
+                                <!-- row的控制面板 -->
+                                <div class="col_control">
+                                    <button class="btn btn-green btn-xs"><i class="i_move invert"></i>移動</button>
+                                    <button class="btn btn-red btn-xs"><i class="i_close invert"></i>刪除</button>
+                                </div>
+                                <div class="col">
+                                    <div class="module">
+                                        <!-- 模組設定按鈕下拉 -->
+                                        <div class="setting">
+                                            <a href="#" class="btn dropdown-btn">
+                                                <i class="i_setting"></i></a>
+                                            <div class="dropdown-content">
+                                                <ul>
+                                                    <button class="btn btn-sm"><i class="i_setting"></i>設定模組屬性</button>
+                                                    <button class="btn btn-sm"><i class="i_edit"></i>設定資料條件</button>
+                                                    <button class="btn btn-sm btn-red"><i class="i_trash"></i>移除模組</button>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="module_info">
+                                            <input type="text" value="KV區塊" placeholder="請輸入節點標題">
+                                            <p>模組描述</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- col-6-6 -->
+                        <div class="col-6-6">
+                            <div class="container">
+                                <!-- row的控制面板 -->
+                                <div class="col_control">
+                                    <button class="btn btn-green btn-xs"><i class="i_move invert"></i>移動</button>
+                                    <button class="btn btn-red btn-xs"><i class="i_close invert"></i>刪除</button>
+                                </div>
+                                <div class="col">
+                                    <div class="module">
+                                        <!-- 模組設定按鈕下拉 -->
+                                        <div class="setting">
+                                            <a href="#" class="btn dropdown-btn">
+                                                <i class="i_setting"></i></a>
+                                            <div class="dropdown-content">
+                                                <ul>
+                                                    <button class="btn btn-sm"><i class="i_setting"></i>設定模組屬性</button>
+                                                    <button class="btn btn-sm"><i class="i_edit"></i>設定資料條件</button>
+                                                    <button class="btn btn-sm btn-red"><i class="i_trash"></i>移除模組</button>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="module_info">
+                                            <input type="text" value="" placeholder="請輸入節點標題">
+                                            <p>模組描述</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="module">
+                                        <!-- 模組設定按鈕下拉 -->
+                                        <div class="setting">
+                                            <a href="#" class="btn dropdown-btn">
+                                                <i class="i_setting"></i></a>
+                                            <div class="dropdown-content">
+                                                <ul>
+                                                    <button class="btn btn-sm"><i class="i_setting"></i>設定模組屬性</button>
+                                                    <button class="btn btn-sm"><i class="i_edit"></i>設定資料條件</button>
+                                                    <button class="btn btn-sm btn-red"><i class="i_trash"></i>移除模組</button>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="module_info">
+                                            <input type="text" value="" placeholder="請輸入節點標題">
+                                            <p>模組描述</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- col-8-4 -->
+                        <div class="col-8-4">
+                            <div class="container">
+                                <!-- row的控制面板 -->
+                                <div class="col_control">
+                                    <button class="btn btn-green btn-xs"><i class="i_move invert"></i>移動</button>
+                                    <button class="btn btn-red btn-xs"><i class="i_close invert"></i>刪除</button>
+                                </div>
+                                <div class="col">
+                                    <div class="module">
+                                        <!-- 模組設定按鈕下拉 -->
+                                        <div class="setting">
+                                            <a href="#" class="btn dropdown-btn">
+                                                <i class="i_setting"></i></a>
+                                            <div class="dropdown-content">
+                                                <ul>
+                                                    <button class="btn btn-sm"><i class="i_setting"></i>設定模組屬性</button>
+                                                    <button class="btn btn-sm"><i class="i_edit"></i>設定資料條件</button>
+                                                    <button class="btn btn-sm btn-red"><i class="i_trash"></i>移除模組</button>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="module_info">
+                                            <input type="text" value="" placeholder="請輸入節點標題">
+                                            <p>模組描述</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="module">
+                                        <!-- 模組設定按鈕下拉 -->
+                                        <div class="setting">
+                                            <a href="#" class="btn dropdown-btn">
+                                                <i class="i_setting"></i></a>
+                                            <div class="dropdown-content">
+                                                <ul>
+                                                    <button class="btn btn-sm"><i class="i_setting"></i>設定模組屬性</button>
+                                                    <button class="btn btn-sm"><i class="i_edit"></i>設定資料條件</button>
+                                                    <button class="btn btn-sm btn-red"><i class="i_trash"></i>移除模組</button>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="module_info">
+                                            <input type="text" value="" placeholder="請輸入節點標題">
+                                            <p>模組描述</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- col-4-8 -->
+                        <div class="col-4-8">
+                            <div class="container">
+                                <!-- row的控制面板 -->
+                                <div class="col_control">
+                                    <button class="btn btn-green btn-xs"><i class="i_move invert"></i>移動</button>
+                                    <button class="btn btn-red btn-xs"><i class="i_close invert"></i>刪除</button>
+                                </div>
+                                <div class="col">
+                                    <div class="module">
+                                        <!-- 模組設定按鈕下拉 -->
+                                        <div class="setting">
+                                            <a href="#" class="btn dropdown-btn">
+                                                <i class="i_setting"></i></a>
+                                            <div class="dropdown-content">
+                                                <ul>
+                                                    <button class="btn btn-sm"><i class="i_setting"></i>設定模組屬性</button>
+                                                    <button class="btn btn-sm"><i class="i_edit"></i>設定資料條件</button>
+                                                    <button class="btn btn-sm btn-red"><i class="i_trash"></i>移除模組</button>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="module_info">
+                                            <input type="text" value="" placeholder="請輸入節點標題">
+                                            <p>模組描述</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="module">
+                                        <!-- 模組設定按鈕下拉 -->
+                                        <div class="setting">
+                                            <a href="#" class="btn dropdown-btn">
+                                                <i class="i_setting"></i></a>
+                                            <div class="dropdown-content">
+                                                <ul>
+                                                    <button class="btn btn-sm"><i class="i_setting"></i>設定模組屬性</button>
+                                                    <button class="btn btn-sm"><i class="i_edit"></i>設定資料條件</button>
+                                                    <button class="btn btn-sm btn-red"><i class="i_trash"></i>移除模組</button>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="module_info">
+                                            <input type="text" value="" placeholder="請輸入節點標題">
+                                            <p>模組描述</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- col-4-4-4 -->
+                        <div class="col-4-4-4">
+                            <div class="container">
+                                <!-- row的控制面板 -->
+                                <div class="col_control">
+                                    <button class="btn btn-green btn-xs"><i class="i_move invert"></i>移動</button>
+                                    <button class="btn btn-red btn-xs"><i class="i_close invert"></i>刪除</button>
+                                </div>
+                                <div class="col">
+                                    <div class="module">
+                                        <!-- 模組設定按鈕下拉 -->
+                                        <div class="setting">
+                                            <a href="#" class="btn dropdown-btn">
+                                                <i class="i_setting"></i></a>
+                                            <div class="dropdown-content">
+                                                <ul>
+                                                    <button class="btn btn-sm"><i class="i_setting"></i>設定模組屬性</button>
+                                                    <button class="btn btn-sm"><i class="i_edit"></i>設定資料條件</button>
+                                                    <button class="btn btn-sm btn-red"><i class="i_trash"></i>移除模組</button>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="module_info">
+                                            <input type="text" value="" placeholder="請輸入節點標題">
+                                            <p>模組描述</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="module">
+                                        <!-- 模組設定按鈕下拉 -->
+                                        <div class="setting">
+                                            <a href="#" class="btn dropdown-btn">
+                                                <i class="i_setting"></i></a>
+                                            <div class="dropdown-content">
+                                                <ul>
+                                                    <button class="btn btn-sm"><i class="i_setting"></i>設定模組屬性</button>
+                                                    <button class="btn btn-sm"><i class="i_edit"></i>設定資料條件</button>
+                                                    <button class="btn btn-sm btn-red"><i class="i_trash"></i>移除模組</button>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="module_info">
+                                            <input type="text" value="" placeholder="請輸入節點標題">
+                                            <p>模組描述</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="module">
+                                        <!-- 模組設定按鈕下拉 -->
+                                        <div class="setting">
+                                            <a href="#" class="btn dropdown-btn">
+                                                <i class="i_setting"></i></a>
+                                            <div class="dropdown-content">
+                                                <ul>
+                                                    <button class="btn btn-sm"><i class="i_setting"></i>設定模組屬性</button>
+                                                    <button class="btn btn-sm"><i class="i_edit"></i>設定資料條件</button>
+                                                    <button class="btn btn-sm btn-red"><i class="i_trash"></i>移除模組</button>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="module_info">
+                                            <input type="text" value="" placeholder="請輸入節點標題">
+                                            <p>模組描述</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- col-3-3-3-3 -->
+                        <div class="col-3-3-3-3">
+                            <div class="container">
+                                <!-- row的控制面板 -->
+                                <div class="col_control">
+                                    <button class="btn btn-green btn-xs"><i class="i_move invert"></i>移動</button>
+                                    <button class="btn btn-red btn-xs"><i class="i_close invert"></i>刪除</button>
+                                </div>
+                                <div class="col">
+                                    <div class="module">
+                                        <!-- 模組設定按鈕下拉 -->
+                                        <div class="setting">
+                                            <a href="#" class="btn dropdown-btn">
+                                                <i class="i_setting"></i></a>
+                                            <div class="dropdown-content">
+                                                <ul>
+                                                    <button class="btn btn-sm"><i class="i_setting"></i>設定模組屬性</button>
+                                                    <button class="btn btn-sm"><i class="i_edit"></i>設定資料條件</button>
+                                                    <button class="btn btn-sm btn-red"><i class="i_trash"></i>移除模組</button>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="module_info">
+                                            <input type="text" value="" placeholder="請輸入節點標題">
+                                            <p>模組描述</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="module">
+                                        <!-- 模組設定按鈕下拉 -->
+                                        <div class="setting">
+                                            <a href="#" class="btn dropdown-btn">
+                                                <i class="i_setting"></i></a>
+                                            <div class="dropdown-content">
+                                                <ul>
+                                                    <button class="btn btn-sm"><i class="i_setting"></i>設定模組屬性</button>
+                                                    <button class="btn btn-sm"><i class="i_edit"></i>設定資料條件</button>
+                                                    <button class="btn btn-sm btn-red"><i class="i_trash"></i>移除模組</button>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="module_info">
+                                            <input type="text" value="" placeholder="請輸入節點標題">
+                                            <p>模組描述</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="module">
+                                        <!-- 模組設定按鈕下拉 -->
+                                        <div class="setting">
+                                            <a href="#" class="btn dropdown-btn">
+                                                <i class="i_setting"></i></a>
+                                            <div class="dropdown-content">
+                                                <ul>
+                                                    <button class="btn btn-sm"><i class="i_setting"></i>設定模組屬性</button>
+                                                    <button class="btn btn-sm"><i class="i_edit"></i>設定資料條件</button>
+                                                    <button class="btn btn-sm btn-red"><i class="i_trash"></i>移除模組</button>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="module_info">
+                                            <input type="text" value="" placeholder="請輸入節點標題">
+                                            <p>模組描述</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="module">
+                                        <!-- 模組設定按鈕下拉 -->
+                                        <div class="setting">
+                                            <a href="#" class="btn dropdown-btn">
+                                                <i class="i_setting"></i></a>
+                                            <div class="dropdown-content">
+                                                <ul>
+                                                    <button class="btn btn-sm"><i class="i_setting"></i>設定模組屬性</button>
+                                                    <button class="btn btn-sm"><i class="i_edit"></i>設定資料條件</button>
+                                                    <button class="btn btn-sm btn-red"><i class="i_trash"></i>移除模組</button>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="module_info">
+                                            <input type="text" value="" placeholder="請輸入節點標題">
+                                            <p>模組描述</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- footer -->
+                    <div class="col-12 layout_footer">
+                        <div class="module">
+                            <!-- 模組設定按鈕下拉 -->
+                            <div class="setting">
+                                <a href="#" class="btn dropdown-btn">
+                                    <i class="i_setting"></i></a>
+                                <div class="dropdown-content">
+                                    <ul>
+                                        <button class="btn btn-sm"><i class="i_setting"></i>設定模組屬性</button>
+                                        <button class="btn btn-sm"><i class="i_edit"></i>設定資料條件</button>
+                                        <button class="btn btn-sm btn-red"><i class="i_trash"></i>移除模組</button>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="module_info">
+                                <h3>Footer</h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 右側元件庫 -->
+            <div class="library">
+                <div class="hy_block">
+                    <ul>
+                        <li><a href="#" class="open">格線設定</a>
+                            <ul style="" id="right-events-module">
+                                <div div-count="1" data="col-12-full"><img src="/images/layout/col-12-full.svg" alt=""></div>
+                                <div div-count="1" data="col-12"><img src="/images/layout/col-12.svg" alt=""></div>
+                                <div div-count="2" data="col-6-6"><img src="/images/layout/col-6-6.svg" alt=""></div>
+                                <div div-count="2" data="col-8-4"><img src="/images/layout/col-8-4.svg" alt=""></div>
+                                <div div-count="2" data="col-4-8"><img src="/images/layout/col-4-8.svg" alt=""></div>
+                                <div div-count="3  data=" col-4-4-4"=""><img src="/images/layout/col-4-4-4.svg" alt=""></div>
+                                <div div-count="4" data="col-3-3-3-3"><img src="/images/layout/col-3-3-3-3.svg" alt=""></div>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="">模組元件</a>
+                            <ul style="display: none;" id="right-events-data" class="dragula-container">
+                                <div mid="award-list" data="award" data-name="創新設計獎" title="創新設計獎">
+                                    <i class="i_layout"></i>
+                                    <span>創新設計獎</span>
+                                </div>
+                                <div mid="banner-list" data="banner" data-name="Banner" title="廣告banner">
+                                    <i class="i_layout"></i>
+                                    <span>廣告banner</span>
+                                </div>
+                                <div mid="event-list" data="event" data-name="活動" title="精選活動(W)">
+                                    <i class="i_layout"></i>
+                                    <span>精選活動(W)</span>
+                                </div>
+                                <div mid="exhibition-info" data="sqlparameter" data-name="展區規劃" title="展覽數據(W)">
+                                    <i class="i_layout"></i>
+                                    <span>展覽數據(W)</span>
+                                </div>
+                                <div mid="html-template" data="html" data-name="HTML模板" title="HTML自訂">
+                                    <i class="i_layout"></i>
+                                    <span>HTML自訂</span>
+                                </div>
+                                <div mid="instagram" data="instagram" data-name="Instagram介接" title="Instagram區塊(W)">
+                                    <i class="i_layout"></i>
+                                    <span>Instagram區塊(W)</span>
+                                </div>
+                                <div mid="kv" data="kv" data-name="kv形象圖" title="KV區塊">
+                                    <i class="i_layout"></i>
+                                    <span>KV區塊</span>
+                                </div>
+                                <div mid="main-prod" data="prod" data-name="產品型錄" title="精選產品(W)">
+                                    <i class="i_layout"></i>
+                                    <span>精選產品(W)</span>
+                                </div>
+                                <div mid="marquee" data="marquee" data-name="跑馬燈" title="跑馬燈">
+                                    <i class="i_layout"></i>
+                                    <span>跑馬燈</span>
+                                </div>
+                                <div mid="media-list" data="media" data-name="影音專區" title="影音專區">
+                                    <i class="i_layout"></i>
+                                    <span>影音專區</span>
+                                </div>
+                                <div mid="menu-info" data="menu" data-name="選單" title="頁面連結">
+                                    <i class="i_layout"></i>
+                                    <span>頁面連結</span>
+                                </div>
+                                <div mid="news-photo-list" data="news" data-name="新聞" title="最新消息(圖文)">
+                                    <i class="i_layout"></i>
+                                    <span>最新消息(圖文)</span>
+                                </div>
+                                <div mid="photo-list" data="photo" data-name="相簿" title="活動照片">
+                                    <i class="i_layout"></i>
+                                    <span>活動照片</span>
+                                </div>
+                                <div mid="industry-photo-list" data="news" data-name="新聞" title="產業消息(圖文)">
+                                    <i class="i_layout"></i>
+                                    <span>產業消息(圖文)</span>
+                                </div>
+                                <div mid="prod-list" data="prod" data-name="產品型錄" title="產品型錄">
+                                    <i class="i_layout"></i>
+                                    <span>產品型錄</span>
+                                </div>
+                                <div mid="show-time" data="show-info" data-name="" title="展覽時間">
+                                    <i class="i_layout"></i>
+                                    <span>展覽時間</span>
+                                </div>
+                                <div mid="news-text-list" data="news" data-name="新聞" title="最新消息(列表)">
+                                    <i class="i_layout"></i>
+                                    <span>最新消息(列表)</span>
+                                </div>
+                                <div mid="industry-text-list" data="news" data-name="新聞" title="產業消息(列表)">
+                                    <i class="i_layout"></i>
+                                    <span>產業消息(列表)</span>
+                                </div>
+                                <div mid="trafic-info" data="show-info" data-name="" title="交通指引">
+                                    <i class="i_layout"></i>
+                                    <span>交通指引</span>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //視窗 -->
+    <div id="modal1" class="modal">
+        <h2>請選擇視覺風格</h2>
+        <div class="modal_content">
+            <div class="col-4-4-4">
+                <div class="col">
+                    <div class="hy_block">
+                        <h4>01.視覺潮流<img src="images/style_fashion.jpg" alt=""></h4>
+                        <div class="btn_grp">
+                            <button class="btn">預覽</button>
+                            <button class="btn btn-primary">套用</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="hy_block">
+                        <h4>02.經典設計<img src="images/style_classic.jpg" alt=""></h4>
+                        <div class="btn_grp">
+                            <button class="btn">預覽</button>
+                            <button class="btn btn-primary">套用</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="hy_block">
+                        <h4>03.極簡風格<img src="images/style_simple.jpg" alt=""></h4>
+                        <div class="btn_grp">
+                            <button class="btn">預覽</button>
+                            <button class="btn btn-primary">套用</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="hy_block">
+                        <h4>04.視覺潮流<img src="images/style_fashion.jpg" alt=""></h4>
+                        <div class="btn_grp">
+                            <button class="btn">預覽</button>
+                            <button class="btn btn-primary">套用</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="hy_block">
+                        <h4>05.經典設計<img src="images/style_classic.jpg" alt=""></h4>
+                        <div class="btn_grp">
+                            <button class="btn">預覽</button>
+                            <button class="btn btn-primary">套用</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="hy_block">
+                        <h4>06.極簡風格<img src="images/style_simple.jpg" alt=""></h4>
+                        <div class="btn_grp">
+                            <button class="btn">預覽</button>
+                            <button class="btn btn-primary">套用</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fix -->
+    <div class="fix_block fix_btngrp">
+        <div class="btn_grp status_block">
+            <button class="btn btn-sm btn-orange">儲存為草稿</button>
+            <button class="btn btn-sm">預覽</button>
+            <div class="now">
+                <p>目前版型：<span>C極簡風格</span></p>
+                <p>目前色系：<img src="images/color-scheme-purple.jpg" alt=""></p>
+            </div>
+            <hr />
+            <!-- <button class="btn btn-sm btn-primary not-allowed">正式發布</button> -->
+            <button class="btn btn-sm btn-primary btn-release">正式發布</button>
+            <div class="pills">
+                <ul>
+                    <li class="active"><a href="javascript:void(0)">年度檔期資料設定<i class="i_check i_invert"></i></a></li>
+                    <li><a href="javascript:doTab('/associate/show-external-list/show-visitor/index.html')">買主預登設定<i class="i_check i_invert"></i></a></li>
+                    <li><a href="javascript:doTab('/associate/show-external-list/survey-manager/index.html?showIDYear=QQ2020&amp;role=1')">買主問卷設定<i class="i_close i_invert"></i></a></li>
+                    <li><a href="javascript:doTab('/associate/show-external-list/show-exhibitor/index.html')">廠商預登設定<i class="i_check i_invert"></i></a></li>
+                    <li><a href="javascript:doTab('/associate/show-external-list/show-exhibitor-sticker/index.html')">廠商貼紙設定<i class="i_close i_invert"></i></a></li>
+                    <li><a href="javascript:doTab('/associate/show-external-list/show-media/index.html')">媒體預登設定<i class="i_check i_invert"></i></a></li>
+                    <li><a href="javascript:doTab('/associate/show-external-list/survey-manager/index.html?showIDYear=QQ2020&amp;role=3')">媒體問卷設定<i class="i_close i_invert"></i></a></li>
+                    <li><a href="javascript:doTab('/associate/show-external-list/mail-template/list.html')">信件範本設定<i class="i_close i_invert"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <h3>異動資訊</h3>
+        <div class="table_list">
+            <table>
+                <tbody>
+                    <tr>
+                        <th>新增人員</th>
+                        <td>系統管理者(admin)</td>
+                    </tr>
+                    <tr>
+                        <th>新增時間</th>
+                        <td data-title="新增人員">2019/11/23 12:24:23</td>
+                    </tr>
+                    <tr>
+                        <th>異動人員</th>
+                        <td data-title="新增人員">系統管理者(admin)</td>
+                    </tr>
+                    <tr>
+                        <th>異動時間</th>
+                        <td data-title="新增人員">2019/11/26 14:26:10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<!-- JS都需要放在最下面 -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- TTS admin 專用 -->
+<script src="js/customize.js"></script>
+<!-- tree view -->
+<script src="js/jquery.treeview.js"></script>
+<!-- pg-calendar -->
+<script src="vendor/pg_calendar/js/pignose.calendar.full.min.js"></script>
+<script>
+$(function() {
+    // header file：00header.htm
+    // menu file：00menu.htm
+    $('header').load('00header.htm');
+    $('aside').load('00menu.htm');
+    if ($('.datepick').length > 0) {
+        $('.datepick input').pignoseCalendar({
+            lang: 'ch',
+            modal: true,
+            format: 'YYYY-MM-DD',
+        });
+    }
+    /*-----------------------------------*/
+    /////////////modal設定/////////////
+    /*-----------------------------------*/
+    $('#modal1').show(); //先隱藏視窗
+    $('.modal').after('<div class="modal_overlay"></div>'); //新增透明底
+    $('.modal_overlay').show();
+    $('.modal').prepend('<button type="button" class="close">關閉</button>'); //新增關閉按鈕
+    //按鈕動作
+    $('#openModal').click(function(e) {
+        $('#modal1').show();
+        $('.modal_overlay').fadeIn(100);
+        $('body').addClass('noscroll');
+        e.preventDefault();
+    });
+    //關閉function
+    function closeModal() {
+        $('#modal1').hide();
+        $('.modal_overlay').hide();
+        $('body').removeClass('noscroll');
+    }
+    //點選關閉按鈕及透明底都可關閉
+    $('.modal_overlay').click(closeModal);
+    $('.modal .close').click(closeModal);
+});
+</script>
+
+</html>

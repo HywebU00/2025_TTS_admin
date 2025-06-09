@@ -1,0 +1,168 @@
+<menu>
+    <ul>
+        <li><a href='index.htm' OnClick='index.htm'><img src="images/icon_home.svg" alt=""><span>回列表</span></a>
+        </li>
+        <li><a href="#"><img src="images/icon_global.svg" alt=""><span>展覽管理</span></a>
+            <ul>
+                <li><a href="#">展覽/年度檔期管理</a></li>
+                <li><a href="#">TAITRA Code管理</a></li>
+                <li><a href="#">CDN管理</a></li>
+                <li><a href="#">版型管理</a></li>
+                <li><a href="#">SEO管理</a></li>
+            </ul>
+        </li>
+        <li><a href="#"><img src="images/icon_data.svg" alt=""><span>展覽資料管理</span></a>
+            <ul>
+                <li><a href="#">選單管理</a>
+                    <ul>
+                        <li><a href="#">level3</a></li>
+                        <li><a href="#">level3</a></li>
+                        <li><a href="#">level3</a></li>
+                        <li><a href="#">level3</a></li>
+                        <li><a href="#">level3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">形象大圖輪播管理</a></li>
+                <li><a href="#">新聞類訊息管理</a></li>
+                <li><a href="#">圖文連結管理</a></li>
+                <li><a href="#">相簿及相片管理</a></li>
+                <li><a href="#">影片模組管理</a></li>
+                <li><a href="#">贊助廠商Banner管理</a></li>
+                <li><a href="#">創新設計獎管理</a></li>
+                <li><a href="#">自由區資料管理</a></li>
+                <li><a href="#">FAQ資料管理</a></li>
+                <li><a href="#">跑馬燈訊息管理</a></li>
+            </ul>
+        </li>
+        <li><a href="#"><img src="images/icon_personal.svg" alt=""><span>個人化管理</span></a>
+            <ul>
+                <li><a href="#">參展廠商設定</a></li>
+                <li><a href="#">參觀者(買主)設定</a></li>
+                <li><a href="#">媒體業者設定</a></li>
+                <li><a href="#">外單位展覽參觀者(買主設定)</a></li>
+                <li><a href="#">外界展媒體業者設定</a></li>
+                <li><a href="#">外界展參展廠商管理</a></li>
+                <li><a href="#">外界展會員管理</a></li>
+            </ul>
+        </li>
+        <li><a href="#"><img src="images/icon_pen.svg" alt=""><span>邀請作業</span></a>
+            <ul>
+                <li><a href="#">廠商邀請買主資料</a></li>
+                <li><a href="#">買主邀請作業</a></li>
+                <li><a href="#">媒體邀請作業</a></li>
+            </ul>
+        </li>
+        <li><a href="#"><img src="images/icon_setting1.svg" alt=""><span>共用設定</span></a>
+            <ul>
+                <li><a href="#">訊息夾訊息範本管理</a></li>
+                <li><a href="#">短網址設定(taiwanshows)</a></li>
+                <li><a href="#">頁尾資料管理</a></li>
+                <li><a href="#">問卷範本設定</a></li>
+                <li><a href="#">短網址設定(mytts)</a></li>
+            </ul>
+        </li>
+        <li><a href="#"><img src="images/icon_check.svg" alt=""><span>展覽資料權限設定</span></a></li>
+        <li><a href="#"><img src="images/icon_seminar.svg" alt=""><span>論壇活動</span></a>
+            <ul>
+                <li><a href="#">展覽活動及網頁管理</a></li>
+                <li><a href="#">展覽場次管理</a></li>
+                <li><a href="#">其他活動及網頁管理</a></li>
+                <li><a href="#">其他活動場次管理</a></li>
+                <li><a href="#">活動主持人資料管理</a></li>
+                <li><a href="#">報名設定管理</a></li>
+                <li><a href="#">問卷共用設定</a></li>
+                <li><a href="#">報名資料管理</a></li>
+                <li><a href="#">報到管理</a></li>
+            </ul>
+        </li>
+        <li><a href="#"><img src="images/icon_account.svg" alt=""><span>系統帳號管理</span></a>
+            <ul>
+                <li><a href="#">人員帳號管理</a></li>
+                <li><a href="#">部門組織管理</a></li>
+                <li><a href="#">人員角色管理</a></li>
+                <li><a href="#">人員群組管理</a></li>
+            </ul>
+        </li>
+        <li><a href="#"><img src="images/icon_lock.svg" alt=""><span>系統中央權限控管</span></a>
+            <ul>
+                <li><a href="#">功能權限控管</a></li>
+                <li><a href="#">使用者登入列表</a></li>
+                <li><a href="#">會員登入列表</a></li>
+                <li><a href="#">使用者功能查詢</a></li>
+            </ul>
+        </li>
+        <li><a href="#"><img src="images/icon_setting.svg" alt=""><span>系統設定</span></a>
+            <ul>
+                <li><a href="#">資料選項管理</a></li>
+                <li><a href="#">服務用戶管理</a></li>
+                <li><a href="#">報表匯出紀錄</a></li>
+                <li><a href="#">重建索引(hysearch)</a></li>
+                <li><a href="#">會員個人化功能管理</a></li>
+                <li><a href="#">Taitra Code Sync</a></li>
+                <li><a href="#">Akamai URL 群組管理</a></li>
+            </ul>
+        </li>
+    </ul>
+</menu>
+<!-- 以下js已存在customize.js 這裏只是為了demo用 -->
+
+<script>
+$(function() {
+    var Menu_Status = false;
+    $('aside').prepend('<div class="toggle_btn"><a href="#"></a></div>');
+    var _Menu_Btn = $('aside').find('.toggle_btn a');
+    _Menu_Btn.off().click(function(e) {
+        if (!Menu_Status) {
+            $('aside').addClass('closed');
+            $('header').addClass('closed');
+            $('.main_zone').addClass('closed');
+            $(this).parent().addClass('closed');
+            Menu_Status = true;
+        } else {
+            $('aside').removeClass('closed');
+            $('header').removeClass('closed');
+            $('.main_zone').removeClass('closed');
+            $(this).parent().removeClass('closed');
+            Menu_Status = false;
+        }
+        if ($('.show_list').position().left > 0) {
+            $('.show_list').css("left", $('menu').width());
+        }
+        $(this).blur();
+        e.preventDefault();
+    });
+    // menu
+    var _menu = $('aside menu'),
+        _menuItem = $('aside menu>ul>li').has('ul'),
+        _menuItem_2 = $('aside menu>ul>li>ul>li').has('ul');
+    _menuItem.each(function(index, el) {
+        $(this).children('ul').hide();
+        $(this).children('a').append('<a href="javascript:;" class="toggle_btn"></a>');
+        $(this).children('a').click(function(e) {
+            $(this).parent('li').siblings().find('.toggle_btn').removeClass('open');
+            $(this).parent('li').find('.toggle_btn').toggleClass('open');
+            $(this).parent('li').siblings().find('ul').slideUp(600, 'easeOutQuint');
+            $(this).next('ul').slideToggle(600, 'easeOutQuint');
+            e.preventDefault();
+        });
+    });
+    _menuItem_2.each(function(index, el) {
+        $(this).hover(function() {
+            $(this).children('ul').show();
+        }, function() {
+            $(this).children('ul').hide();
+        });
+    });
+    if ($('aside').hasClass('closed')) {
+        _menuItem.each(function(index, el) {
+            $(this).children('a').hover(function() {
+                $(this).parent('li').siblings().find('ul').slideUp(600, 'easeOutQuint');
+                $(this).next('ul').slideDown(600, 'easeOutQuint');
+                console.log('aaaa');
+            }, function() {
+                $(this).next('ul').slideUp(600, 'easeOutQuint');
+            });
+        });
+    }
+});
+</script>

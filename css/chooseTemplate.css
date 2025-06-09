@@ -1,0 +1,59 @@
+.template_choose {
+  padding-right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.template_choose .form_grp {
+  margin: 0.2em 0;
+}
+.template_choose .btn-tpl {
+  position: relative;
+  top: auto;
+  right: auto;
+}
+
+.chooseTemplates .chooseTemplates_title {
+  font-size: 1.25rem;
+  text-align: center;
+}
+.chooseTemplates .form_grid .form_grp {
+  border: 0;
+}
+.chooseTemplates .form_content {
+  width: 100%;
+}
+.chooseTemplates .form_content .style,
+.chooseTemplates .form_content .color {
+  margin-top: 8px;
+}
+
+.wiseStyleView {
+  padding-top: 126px;
+}
+.wiseStyleView .wiseStyleView_header {
+  background: #fff;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  padding-top: 20px;
+  position: fixed;
+  height: 126px;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9;
+}
+.wiseStyleView .wiseStyleView_header .title {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+.wiseStyleView .wiseStyleView_content {
+  height: calc(100vh - 126px);
+  overflow-y: auto;
+}/*# sourceMappingURL=chooseTemplate.css.map */

@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>台灣國際專業展網站管理系統</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/hyui_admin.css">
+    <!-- pg-calendar -->
+    <link rel="stylesheet" href="vendor/pg_calendar/css/pignose.calendar.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="images/ico.png" />
+</head>
+
+<body>
+    <!-- header load('00header.htm') -->
+    <header></header>
+    <!-- menu load('00menu.htm') -->
+    <aside></aside>
+    <!-- 主要內容 -->
+    <div class="main_zone">
+        <div class="pills">
+            <ul>
+                <li class="active"><a href="#">選擇其他展覽</a></li>
+                <li><a href="#">pills按鈕</a></li>
+                <li><a href="#">pills按鈕</a></li>
+                <li><a href="#">pills按鈕</a></li>
+                <li><a href="#">pills按鈕</a></li>
+                <li><a href="#">pills按鈕</a></li>
+                <li><a href="#">pills按鈕</a></li>
+                <li><a href="#">pills按鈕</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <!-- path -->
+
+            <h2>常用單欄：按鈕樣式radio &. checkbox</h2>
+            <div class="hy_block">
+                <div class="col-12">
+                    <form action="" class="form_grid">
+                        <div class="form_grp">
+                            <fieldset>
+                                <legend class="form_title">語系</legend>
+                                <div class="form_content">
+                                    <div class="radio_grp form_inline btn_style">
+                                        <label>
+                                            <input type="radio" name="satisfy" value="">繁體中文</label>
+                                        <label>
+                                            <input type="radio" name="satisfy" value="">英文</label>
+                                        <label>
+                                            <input type="radio" name="satisfy" value="">日文</label>
+                                        <label>
+                                            <input type="radio" name="satisfy" value="">簡體中文</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="form_grp">
+                            <fieldset>
+                                <legend class="form_title">圖片樣式</legend>
+                                <div class="form_content">
+                                    <div class="check_grp form_inline btn_style">
+                                        <label>
+                                            <input type="checkbox" name="" value="">繁體中文</label>
+                                        <label>
+                                            <input type="checkbox" name="" value="">英文</label>
+                                        <label>
+                                            <input type="checkbox" name="" value="">日文</label>
+                                        <label>
+                                            <input type="checkbox" name="" value="">簡體中文</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <h2>常用雙欄：進階功能區</h2>
+            <div class="hy_block">
+                <div class="col-6-6">
+                    <form action="" class="form_grid">
+                        <div class="form_grp">
+                            <label for="" class="form_title">展覽名稱（代碼展覽名稱)<i class="i_info" tooltip="說明文字"></i> </label>
+                            <div class="form_content">
+                                <input name="" type="text" value="">
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <label for="" class="form_title">人員帳號 </label>
+                            <div class="form_content hasBtn">
+                                <input name="" type="text" value="">
+                                <button class="btn">選擇人員</button>
+                                <p class="notice">提示文字</p>
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <div class="form_title">起始日期</div>
+                            <div class="form_content hasBtn">
+                                <div class="datepick">
+                                    <input name="" type="text" value="" class="calendar" placeholder="開始日期">
+                                    <button class="btn"><i class="i_calendar_color"></i></button>
+                                </div>
+                                <div class="datepick">
+                                    <input name="" type="text" value="" class="calendar" placeholder="結束日期">
+                                    <button class="btn"><i class="i_calendar_color"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <div class="form_title">下拉兩兄弟</div>
+                            <div class="form_content">
+                                <div class="select">
+                                    <select id="selectSample" name="">
+                                        <option value="">6F電腦教室</option>
+                                        <option value="">B1國際會議廳</option>
+                                    </select>
+                                </div>
+                                <div class="select">
+                                    <select id="selectSample" name="">
+                                        <option value="">6F電腦教室</option>
+                                        <option value="">B1國際會議廳</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <label for="" class="form_title">下拉選單</label>
+                            <div class="form_content">
+                                <select id="selectSample" name="">
+                                    <option value="">6F電腦教室</option>
+                                    <option value="">B1國際會議廳</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form_grp col-12">
+                            <label for="" class="form_title">展覽名稱（代碼展覽名稱) </label>
+                            <div class="form_content">
+                                <input name="" type="text" value="">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="btn_grp">
+                        <button class="btn reset">取消</button>
+                        <button class="btn btn-primary">確認</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 節點標題 -->
+            <h2>基本表單元素</h2>
+            <div class="hy_block">
+                <form action="" class="form_grid">
+                    <div class="form_grp">
+                        <label for="" class="form_title"> 文字欄位<abbr class="necessary" title="">*</abbr>
+                        </label>
+                        <div class="form_content">
+                            <input name="" type="text" value="">
+                        </div>
+                    </div>
+                    <div class="form_grp has-error">
+                        <label for="" class="form_title"> 部門名稱<abbr class="necessary" title="">*</abbr>
+                        </label>
+                        <div class="form_content form-control-danger">
+                            <input name="" type="text" value="中華民國對外貿易協會">
+                            <div id="name-danger" class="form-control-feedback text-sm">注意提示文字</div>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title"> 驗證錯誤的時候<abbr class="necessary" title="">*</abbr>
+                        </label>
+                        <div class="form_content">
+                            <input name="" type="text" value="" class="error" placeholder="注意提示文字">
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title"> 驗證錯誤的時候<abbr class="necessary" title="">*</abbr>
+                        </label>
+                        <div class="form_content">
+                            <input name="" type="text" value="" class="error">
+                            <div class="notice_warning">請檢查資訊是否....</div>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title">部門管理人員</label>
+                        <div class="form_content hasBtn">
+                            <input name="" type="text" disabled="">
+                            <button class="btn">文字文字文字</button>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title">點點點</label>
+                        <div class="form_content hasDot">
+                            <input name="" type="text" disabled="">
+                            <button class="btn">...</button>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title">水平radio<abbr class="necessary" title="">*</abbr>
+                        </label>
+                        <div class="form_content radio_grp form_inline">
+                            <label><input name="radioSample" type="radio" value="">選單節點</label>
+                            <label><input name="radioSample" type="radio" value="">一般資料</label>
+                            <label><input name="radioSample" type="radio" value="">URL連結</label>
+                            <label><input name="radioSample" type="radio" value="">檔案下載</label>
+                            <label><input name="radioSample" type="radio" value="">網站功能頁</label>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title">垂直radio </label>
+                        <div class="form_content radio_grp">
+                            <label><input name="radioSample" type="radio" value="">選單節點</label>
+                            <label><input name="radioSample" type="radio" value="">一般資料</label>
+                            <label><input name="radioSample" type="radio" value="">URL連結</label>
+                            <label><input name="radioSample" type="radio" value="">檔案下載</label>
+                            <label><input name="radioSample" type="radio" value="">網站功能頁</label>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title"> 選單類型 </label>
+                        <div class="form_content check_grp form_inline">
+                            <label><input name="checkboxSample" type="checkbox" value="">選單節點</label>
+                            <label><input name="checkboxSample" type="checkbox" value="">一般資料</label>
+                            <label><input name="checkboxSample" type="checkbox" value="">URL連結</label>
+                            <label><input name="checkboxSample" type="checkbox" value="">檔案下載</label>
+                            <label><input name="checkboxSample" type="checkbox" value="">網站功能頁</label>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title"> 垂直radio </label>
+                        <div class="form_content check_grp">
+                            <label><input name="checkboxSample" type="checkbox" value="">選單節點</label>
+                            <label><input name="checkboxSample" type="checkbox" value="">一般資料</label>
+                            <label><input name="checkboxSample" type="checkbox" value="">URL連結</label>
+                            <label><input name="checkboxSample" type="checkbox" value="">檔案下載</label>
+                            <label><input name="checkboxSample" type="checkbox" value="">網站功能頁</label>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <div class="form_title">起始日期</div>
+                        <div class="form_content hasBtn">
+                            <div class="datepick">
+                                <input name="" type="text" value="" class="calendar" placeholder="開始日期">
+                                <button class="btn"><i class="i_calendar_color"></i></button>
+                            </div>
+                            <div class="datepick">
+                                <input name="" type="text" value="" class="calendar" placeholder="結束日期">
+                                <button class="btn"><i class="i_calendar_color"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <div class="form_title">起始日期</div>
+                        <div class="form_content hasBtn">
+                            <label><input name="chechboxSample" type="checkbox" value="">啟用</label>
+                            <div class="datepick">
+                                <input name="" type="text" value="" class="calendar" placeholder="開始日期">
+                                <button class="btn"><i class="i_calendar_color"></i></button>
+                            </div>
+                            <div class="datepick">
+                                <input name="" type="text" value="" class="calendar" placeholder="結束日期">
+                                <button class="btn"><i class="i_calendar_color"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- multi_form_set -->
+                    <div class="form_grp">
+                        <div class="form_title">多重組合</div>
+                        <div class="form_content">
+                            <label for="" class="form_title">裡面每個表單要用sub_form_content包覆</label>
+                            <div class="form_content">
+                                <div class="sub_form_content">
+                                    <input name="" type="text" value="">
+                                </div>
+                                <div class="sub_form_content">
+                                    <select id="selectSample" name="">
+                                        <option value="">6F電腦教室</option>
+                                        <option value="">B1國際會議廳</option>
+                                    </select>
+                                </div>
+                                <div class="sub_form_content check_grp form_inline">
+                                    <label><input name="radioSample" type="checkbox" value="">選單節點</label>
+                                    <label><input name="radioSample" type="checkbox" value="">一般資料</label>
+                                    <label><input name="radioSample" type="checkbox" value="">URL連結</label>
+                                    <label><input name="radioSample" type="checkbox" value="">檔案下載</label>
+                                    <label><input name="radioSample" type="checkbox" value="">網站功能頁</label>
+                                </div>
+                                <div class="sub_form_content radio_grp form_inline">
+                                    <label><input name="radioSample" type="radio" value="">選單節點</label>
+                                    <label><input name="radioSample" type="radio" value="">一般資料</label>
+                                    <label><input name="radioSample" type="radio" value="">URL連結</label>
+                                    <label><input name="radioSample" type="radio" value="">檔案下載</label>
+                                    <label><input name="radioSample" type="radio" value="">網站功能頁</label>
+                                </div>
+                                <div class="sub_form_content check_grp">
+                                    <label><input name="radioSample" type="checkbox" value="">選單節點</label>
+                                    <label><input name="radioSample" type="checkbox" value="">一般資料</label>
+                                    <label><input name="radioSample" type="checkbox" value="">URL連結</label>
+                                    <label><input name="radioSample" type="checkbox" value="">檔案下載</label>
+                                    <label><input name="radioSample" type="checkbox" value="">網站功能頁</label>
+                                </div>
+                                <div class="sub_form_content radio_grp">
+                                    <label><input name="radioSample" type="radio" value="">選單節點</label>
+                                    <label><input name="radioSample" type="radio" value="">一般資料</label>
+                                    <label><input name="radioSample" type="radio" value="">URL連結</label>
+                                    <label><input name="radioSample" type="radio" value="">檔案下載</label>
+                                    <label><input name="radioSample" type="radio" value="">網站功能頁</label>
+                                </div>
+                                <div class="sub_form_content hasBtn">
+                                    <input name="" type="text" disabled>
+                                    <button class="btn">文字文字文字</button>
+                                </div>
+                                <div class="sub_form_content">
+                                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- multi_form_set -->
+                    <div class="form_grp">
+                        <div class="form_title">多重組合</div>
+                        <div class="form_content">
+                            <div class="form_grp">
+                                <label for="" class="form_title">中文</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="" type="text" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="" class="form_title">英文</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="" type="text" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="" class="form_title">日文</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="" type="text" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="" class="form_title">越南文</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="" type="text" value="">
+                                        <label><input name="radioSample" type="checkbox" value="">同英文</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title">下拉選單</label>
+                        <div class="form_content">
+                            <select id="selectSample" name="">
+                                <option value="">6F電腦教室</option>
+                                <option value="">B1國際會議廳</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title">網站UR</label>
+                        <div class="form_content form_inline">
+                            <select id="selectSample" name="">
+                                <option value="">http</option>
+                                <option value="">https</option>
+                            </select>
+                            <input type="text" value="www.khhalal.com.tw">
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title">連結網址</label>
+                        <div class="form_content">
+                            <input name="" type="text" value="">
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title">連結方式</label>
+                        <div class="form_content">
+                            <select id="selectSample" name="">
+                                <option value="">原視窗開啟</option>
+                                <option value="">另開新視窗</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title">公司電話</label>
+                        <div class="form_content form_inline hastel">
+                            <input class="short" type="text" id="username" value="" placeholder="02"> <input type="text" id="username" value=""> 分機<input class="short" type="text" id="username" value="">
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title">內文</label>
+                        <div class="form_content">
+                            <div class="editor_area">
+                                <!-- 這裡放html editor 外掛 -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title">上傳圖檔</label>
+                        <div class="form_content">
+                            <!-- 圖片檔案上傳模組 -->
+                            <div class="upload_area">
+                                <p class="upload_notice">請把檔案拖拉到此框，或是<a href="#" class="btn btn-xs">選擇檔案</a>上傳</p>
+                                <p>檔案類型：jpg、png、gif；檔案大小：5,120KB</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title">圖片替代文字</label>
+                        <div class="form_content">
+                            <input name="" type="text" value="">
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title">上傳檔案</label>
+                        <div class="form_content">
+                            <!-- 圖片檔案上傳模組 -->
+                            <!-- 如果拖曳到觸碰到就add class working -->
+                            <div class="upload_area working">
+                                <p class="upload_notice">請把檔案拖拉到此框，<a href="#" class="btn btn-xs">選自圖庫</a>上傳，或是<a href="#" class="btn btn-xs">選擇檔案</a>上傳</p>
+                                <div class="file">
+                                    <div class="pic">
+                                        <img src="images/photo_01.png" alt="">
+                                    </div>
+                                    <span>檔案名稱檔案名稱.jpg<em>450KB</em></span>
+                                    <div class="progress_bar">
+                                        <span style="width:70%"></span>
+                                    </div>
+                                    <a href="#" class="delete"><i class="i_close"></i></a>
+                                </div>
+                                <div class="file">
+                                    <div class="pic">
+                                        <img src="images/photo_01.png" alt="">
+                                    </div>
+                                    <span>檔案名稱.jpg<em>450KB</em></span>
+                                    <div class="progress_bar">
+                                        <span style="width:50%"></span>
+                                    </div>
+                                    <a href="#" class="delete"><i class="i_close"></i></a>
+                                </div>
+                                <div class="file">
+                                    <div class="pic">
+                                        <img src="images/photo_01.png" alt="">
+                                    </div>
+                                    <span>檔案名稱.jpg<em>450KB</em></span>
+                                    <div class="progress_bar">
+                                        <span style="width:30%"></span>
+                                    </div>
+                                    <a href="#" class="delete"><i class="i_close"></i></a>
+                                </div>
+                                <div class="file notice_error">
+                                    <div class="pic">
+                                        <img src="images/photo_01.png" alt="">
+                                    </div>
+                                    <span>檔案名稱.jpg<em>檔案類型不正確</em></span>
+                                    <div class="progress_bar">
+                                        <span style="width:30%"></span>
+                                    </div>
+                                    <a href="#" class="delete"><i class="i_close"></i></a>
+                                </div>
+                                <p>檔案類型：*.doc *.docx *.xls *.xlsx *.pptx *.ppt *.pdf *.zip *.rar *.pdf；檔案大小： 4,000 KB</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_grp fix_btngrp">
+                        <input name="" type="reset" value="取消">
+                        <input name="" type="submit" value="確定儲存">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- JS都需要放在最下面 -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- TTS admin 專用 -->
+<script src="js/customize.js"></script>
+<!-- tree view -->
+<script src="js/jquery.treeview.js"></script>
+<!-- pg-calendar -->
+<script src="vendor/pg_calendar/js/pignose.calendar.full.min.js"></script>
+<!-- scrollbar -->
+<script src="vendor/scrollbar/jquery.scrollbar.min.js"></script>
+<script>
+$(function() {
+    if ($('.datepick').length > 0) {
+        $('.datepick input').pignoseCalendar({
+            lang: 'ch',
+            modal: true,
+            format: 'YYYY-MM-DD',
+        });
+    }
+    // header file：00header.htm
+    // menu file：00menu.htm
+    $('header').load('00header.htm');
+    $('aside').load('00menu.htm');
+});
+</script>
+
+</html>

@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>台灣國際專業展網站管理系統</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/hyui_admin.css">
+    <!-- pg-calendar -->
+    <link rel="stylesheet" href="vendor/pg_calendar/css/pignose.calendar.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="images/ico.png" />
+</head>
+
+<body>
+    <!-- header load('00header.htm') -->
+    <header></header>
+    <!-- menu load('00menu.htm') -->
+    <aside></aside>
+    <!-- 主要內容 -->
+    <div class="main_zone">
+        <div class="content">
+            <!-- 節點標題 -->
+            <h2>展覽主檔/年度檔期管理</h2>
+            <div class="hy_block">
+                <form action="" class="form_inline">
+                    <div class="form_grp">
+                        <!--   <label for="">請輸入展覽名稱/簡稱/代碼:</label> -->
+                        <input name="" type="text" placeholder="請輸入展覽名稱/簡稱/代碼">
+                    </div>
+                    <div class="btn_grp">
+                        <input name="" type="submit" value="查詢">
+                    </div>
+                </form>
+            </div>
+            <!-- sort -->
+            <div class="sort">
+                <div class="btn_grp">
+                    <button class="btn btn-sm btn-green">新增</button>
+                    <button class="btn btn-sm btn-green">全部展覽資料匯出</button>
+                </div>
+                <div class="btn_grp text-right">
+                    <button class="btn btn-sm">展覽名稱 <i class="i_sort"></i></button>
+                    <button class="btn btn-sm">展覽簡稱 <i class="i_sort"></i></button>
+                    <button class="btn btn-sm">展覽代碼 <i class="i_sort"></i></button>
+                    <button class="btn btn-sm">檔期日期 <i class="i_sort"></i></button>
+                </div>
+            </div>
+            <!-- 展覽列表卡片 -->
+            <div class="card">
+                <ul>
+                    <li>
+                        <div class="ex_item">
+                            <div class="status red">未發佈</div>
+                            <div class="ex_title">
+                                <a href="#">
+                                    <div class="pic">
+                                        <img src="images/ex_01.png" alt="">
+                                    </div>
+                                    <div class="main_title">台北國際禮品展台北國際禮品展(QE)</div>
+                                    <div class="sub_title">Taiwan Souvenir Test</div>
+                                </a>
+                            </div>
+                            <div class="ex_time">
+                                <p>目前檔期日期：<span>2019-10-24~2019-10-27</span></p>
+                            </div>
+                            <!-- 下拉選單 -->
+                            <div class="dropdown">
+                                <button class="btn dropdown-btn">
+                                    <i class="i_setting"></i></button>
+                                <div class="dropdown-content">
+                                    <ul>
+                                        <li>
+                                            <button class="btn">
+                                                <i class="i_global"></i>網站預覽 </button>
+                                        </li>
+                                        <li>
+                                            <button class="btn">
+                                                <i class="i_setting"></i>設定 </li>
+                                        <li>
+                                            <button class="btn btn-red">
+                                                <i class="i_trash"></i>刪除 </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <div class="ex_panel">
+                                <button class="btn" tooltip="網站預覽">
+                                    <i class="i_global"></i>
+                                </button>
+                                <button class="btn" tooltip="設定">
+                                    <i class="i_setting"></i>
+                                </button>
+                                <button class="btn" tooltip="刪除">
+                                    <i class="i_trash"></i>
+                                </button>
+                            </div> -->
+                            <div class="btn_grp">
+                                <button class="btn">年度管理</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ex_item">
+                            <div class="status green">已發佈</div>
+                            <div class="ex_title">
+                                <a href="#">
+                                    <div class="pic">
+                                        <img src="images/ex_02.png" alt="">
+                                    </div>
+                                    <div class="main_title">高雄國際清真展(HK)</div>
+                                    <div class="sub_title">Kaoshiung HALAL</div>
+                                </a>
+                            </div>
+                            <div class="ex_time">
+                                <p>目前檔期日期：<span>2019-10-24~2019-10-27</span></p>
+                            </div>
+                            <!-- 下拉選單 -->
+                            <div class="dropdown">
+                                <button class="btn dropdown-btn">
+                                    <i class="i_setting"></i></button>
+                                <div class="dropdown-content">
+                                    <ul>
+                                        <li>
+                                            <button class="btn">
+                                                <i class="i_global"></i>網站預覽 </button>
+                                        </li>
+                                        <li>
+                                            <button class="btn">
+                                                <i class="i_setting"></i>設定 </li>
+                                        <li>
+                                            <button class="btn btn-red">
+                                                <i class="i_trash"></i>刪除 </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <div class="ex_panel">
+                                <button class="btn" tooltip="網站預覽">
+                                    <i class="i_global"></i>
+                                </button>
+                                <button class="btn" tooltip="設定">
+                                    <i class="i_setting"></i>
+                                </button>
+                                <button class="btn" tooltip="刪除">
+                                    <i class="i_trash"></i>
+                                </button>
+                            </div> -->
+                            <div class="btn_grp">
+                                <button class="btn">年度管理</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ex_item">
+                            <div class="status green">已發佈</div>
+                            <div class="ex_title">
+                                <a href="#">
+                                    <div class="pic">
+                                        <img src="images/ex_03.png" alt="">
+                                    </div>
+                                    <div class="main_title">高雄國際食品展(KF)</div>
+                                    <div class="sub_title">Kaoshiung Food Show</div>
+                                </a>
+                            </div>
+                            <div class="ex_time">
+                                <p>目前檔期日期：<span>2019-10-24~2019-10-27</span></p>
+                            </div>
+                            <!-- 下拉選單 -->
+                            <div class="dropdown">
+                                <button class="btn dropdown-btn">
+                                    <i class="i_setting"></i></button>
+                                <div class="dropdown-content">
+                                    <ul>
+                                        <li>
+                                            <button class="btn">
+                                                <i class="i_global"></i>網站預覽 </button>
+                                        </li>
+                                        <li>
+                                            <button class="btn">
+                                                <i class="i_setting"></i>設定 </li>
+                                        <li>
+                                            <button class="btn btn-red">
+                                                <i class="i_trash"></i>刪除 </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <div class="ex_panel">
+                                <button class="btn" tooltip="網站預覽">
+                                    <i class="i_global"></i>
+                                </button>
+                                <button class="btn" tooltip="設定">
+                                    <i class="i_setting"></i>
+                                </button>
+                                <button class="btn" tooltip="刪除">
+                                    <i class="i_trash"></i>
+                                </button>
+                            </div> -->
+                            <div class="btn_grp">
+                                <button class="btn">年度管理</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ex_item">
+                            <div class="status green">已發佈</div>
+                            <div class="ex_title">
+                                <a href="#">
+                                    <div class="pic">
+                                        <img src="images/ex_04.png" alt="">
+                                    </div>
+                                    <div class="main_title">高雄國際飯店、餐飲暨烘焙設備用品展(KH)</div>
+                                    <div class="sub_title">Kaoshiung HORECA</div>
+                                </a>
+                            </div>
+                            <div class="ex_time">
+                                <p>目前檔期日期：<span>2019-10-24~2019-10-27</span></p>
+                            </div>
+                            <!-- 下拉選單 -->
+                            <div class="dropdown">
+                                <button class="btn dropdown-btn">
+                                    <i class="i_setting"></i></button>
+                                <div class="dropdown-content">
+                                    <ul>
+                                        <li>
+                                            <button class="btn">
+                                                <i class="i_global"></i>網站預覽 </button>
+                                        </li>
+                                        <li>
+                                            <button class="btn">
+                                                <i class="i_setting"></i>設定 </li>
+                                        <li>
+                                            <button class="btn btn-red">
+                                                <i class="i_trash"></i>刪除 </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <div class="ex_panel">
+                                <button class="btn" tooltip="網站預覽">
+                                    <i class="i_global"></i>
+                                </button>
+                                <button class="btn" tooltip="設定">
+                                    <i class="i_setting"></i>
+                                </button>
+                                <button class="btn" tooltip="刪除">
+                                    <i class="i_trash"></i>
+                                </button>
+                            </div> -->
+                            <div class="btn_grp">
+                                <button class="btn">年度管理</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ex_item">
+                            <div class="status green">已發佈</div>
+                            <div class="ex_title">
+                                <a href="#">
+                                    <div class="pic">
+                                        <img src="images/ex_05.png" alt="">
+                                    </div>
+                                    <div class="main_title">SMART ASIA INDIA(SI)</div>
+                                    <div class="sub_title">SMART ASIA INDIA</div>
+                                </a>
+                            </div>
+                            <div class="ex_time">
+                                <p>目前檔期日期：<span>2019-10-24~2019-10-27</span></p>
+                            </div>
+                            <!-- 下拉選單 -->
+                            <div class="dropdown">
+                                <button class="btn dropdown-btn">
+                                    <i class="i_setting"></i></button>
+                                <div class="dropdown-content">
+                                    <ul>
+                                        <li>
+                                            <button class="btn">
+                                                <i class="i_global"></i>網站預覽 </button>
+                                        </li>
+                                        <li>
+                                            <button class="btn">
+                                                <i class="i_setting"></i>設定 </li>
+                                        <li>
+                                            <button class="btn btn-red">
+                                                <i class="i_trash"></i>刪除 </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <div class="ex_panel">
+                                <button class="btn" tooltip="網站預覽">
+                                    <i class="i_global"></i>
+                                </button>
+                                <button class="btn" tooltip="設定">
+                                    <i class="i_setting"></i>
+                                </button>
+                                <button class="btn btn-red" tooltip="刪除">
+                                    <i class="i_trash"></i>
+                                </button>
+                            </div> -->
+                            <div class="btn_grp">
+                                <button class="btn">年度管理</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ex_item">
+                            <div class="status red">未發佈</div>
+                            <div class="ex_title">
+                                <a href="#">
+                                    <div class="pic">
+                                        <img src="images/ex_06.png" alt="">
+                                    </div>
+                                    <div class="main_title">台灣國際人工智慧暨物聯網展(IO)</div>
+                                    <div class="sub_title">AIoT Taiwan</div>
+                                </a>
+                            </div>
+                            <div class="ex_time">
+                                <p>目前檔期日期：<span>2019-10-24~2019-10-27</span></p>
+                            </div>
+                            <!-- 下拉選單 -->
+                            <div class="dropdown">
+                                <button class="btn dropdown-btn">
+                                    <i class="i_setting"></i></button>
+                                <div class="dropdown-content">
+                                    <ul>
+                                        <li>
+                                            <button class="btn">
+                                                <i class="i_global"></i>網站預覽 </button>
+                                        </li>
+                                        <li>
+                                            <button class="btn">
+                                                <i class="i_setting"></i>設定 </li>
+                                        <li>
+                                            <button class="btn btn-red">
+                                                <i class="i_trash"></i>刪除 </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <div class="ex_panel">
+                                <button class="btn" tooltip="網站預覽">
+                                    <i class="i_global"></i>
+                                </button>
+                                <button class="btn" tooltip="設定">
+                                    <i class="i_setting"></i>
+                                </button>
+                                <button class="btn" tooltip="刪除">
+                                    <i class="i_trash"></i>
+                                </button>
+                            </div> -->
+                            <div class="btn_grp">
+                                <button class="btn">年度管理</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ex_item">
+                            <div class="status red">未發佈</div>
+                            <div class="ex_title">
+                                <a href="#">
+                                    <div class="pic">
+                                        <img src="images/ex_07.png" alt="">
+                                    </div>
+                                    <div class="main_title">台灣國際智慧能源展(PV)</div>
+                                    <div class="sub_title">Energy Taiwan</div>
+                                </a>
+                            </div>
+                            <div class="ex_time">
+                                <p>目前檔期日期：<span>2019-10-24~2019-10-27</span></p>
+                            </div>
+                            <!-- 下拉選單 -->
+                            <div class="dropdown">
+                                <button class="btn dropdown-btn">
+                                    <i class="i_setting"></i></button>
+                                <div class="dropdown-content">
+                                    <ul>
+                                        <li>
+                                            <button class="btn">
+                                                <i class="i_global"></i>網站預覽 </button>
+                                        </li>
+                                        <li>
+                                            <button class="btn">
+                                                <i class="i_setting"></i>設定 </li>
+                                        <li>
+                                            <button class="btn btn-red">
+                                                <i class="i_trash"></i>刪除 </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <div class="ex_panel">
+                                <button class="btn" tooltip="網站預覽">
+                                    <i class="i_global"></i>
+                                </button>
+                                <button class="btn" tooltip="設定">
+                                    <i class="i_setting"></i>
+                                </button>
+                                <button class="btn" tooltip="刪除">
+                                    <i class="i_trash"></i>
+                                </button>
+                            </div> -->
+                            <div class="btn_grp">
+                                <button class="btn">年度管理</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- JS都需要放在最下面 -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- TTS admin 專用 -->
+<script src="js/customize.js"></script>
+<!-- tree view -->
+<script src="js/jquery.treeview.js"></script>
+<!-- pg-calendar -->
+<script src="vendor/pg_calendar/js/pignose.calendar.full.min.js"></script>
+<script>
+$(function() {
+    // header file：00header.htm
+    // menu file：00menu.htm
+    $('header').load('00header.htm');
+    $('aside').load('00menu.htm');
+    if ($('.datepick').length > 0) {
+        $('.datepick input').pignoseCalendar({
+            lang: 'ch',
+            modal: true,
+            format: 'YYYY-MM-DD',
+        });
+    }
+    /*-----------------------------------*/
+    /////////////modal設定/////////////
+    /*-----------------------------------*/
+    $('#modal1').show(); //先隱藏視窗
+    $('.modal').after('<div class="modal_overlay"></div>'); //新增透明底
+    $('.modal_overlay').show();
+    $('.modal').prepend('<button type="button" class="close">關閉</button>'); //新增關閉按鈕
+    //按鈕動作
+    $('#openModal').click(function(e) {
+        $('#modal1').show();
+        $('.modal_overlay').fadeIn(100);
+        $('body').addClass('noscroll');
+        e.preventDefault();
+    });
+    //關閉function
+    function closeModal() {
+        $('#modal1').hide();
+        $('.modal_overlay').hide();
+        $('body').removeClass('noscroll');
+    }
+    //點選關閉按鈕及透明底都可關閉
+    $('.modal_overlay').click(closeModal);
+    $('.modal .close').click(closeModal);
+});
+</script>
+
+</html>

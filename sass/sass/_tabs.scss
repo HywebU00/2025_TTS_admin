@@ -1,0 +1,123 @@
+.tabSet {
+    max-width: 100%;
+    margin: 0px auto;
+    background: #f3f3f3;
+    overflow: hidden;
+    @include clearfix();
+    @include box-shadow(rgba(0, 0, 0, .3) 0 2px 12px);
+    @include screen('(max-width:767px)') {
+        max-width: 100%;
+        width: auto;
+        height: auto !important;
+    }
+}
+.tabs {
+    position: relative;
+    @include screen('(max-width:767px)') {
+        position: relative;
+    }
+    &>.tabItem {
+        &.active>a {
+            background-color: $color-orange;
+            color: #FFF;
+        }
+        float: left;
+        font-size: 1em;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        font-weight: normal;
+        @include screen('(max-width:767px)') {
+            float: none;
+            &>a {
+                width: 100% !important;
+            }
+            &.active>a {
+                border-color: $color-orange;
+            }
+        }
+        &>a {
+            display: block;
+            padding: 16px 0 14px;
+            text-align: center;
+            background-color: #DDD;
+            color: #333;
+            text-decoration: none;
+            @include text-overflow();
+            @include box-sizing();
+            &:hover {
+                color: #FFF;
+                background: darken($color-orange,5);
+            }
+        }
+    }
+}
+//多組 可設定差異
+.example-2 {
+    .tabItem>a:hover {
+        background: $secondaryColor;
+    }
+    .tabItem.active>a {
+        background: $secondaryColor;
+    }
+}
+// 顯示content
+.active+.tabContent {
+    display: block;
+}
+
+.tabContent {
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: 0;
+    clear: both;
+    padding: 30px 20px;
+    display: none;
+    overflow:hidden;
+    @include screen('(max-width:767px)') {
+        position: static;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+    li {
+        margin: 0 0 1.3em 0;
+        padding: 0;
+        border-bottom: 1px #999 dashed;
+        @include screen('(max-width:767px)') {
+            @include text-overflow();
+        }
+
+        span {
+            display: inline-block;
+            margin: 0 0 0 1em;
+            font-size: .813em;
+            color: #666;
+        }
+    }
+    .more {
+        text-align: right;
+        @include screen('(max-width:767px)') {
+            text-align: center;
+        }
+        a {
+            display: inline-block;
+            background: $color-gray;
+            color: #FFF;
+            width: auto;
+            font-size: .813em;
+            padding: .5em 2em;
+            @include border-radius(4px);
+            @include transition(all, .3s, ease-out);
+            &:hover,
+            &:focus {
+                background: darken($color-gray, 10);
+            }
+        }
+    }
+}

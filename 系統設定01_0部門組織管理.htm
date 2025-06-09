@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>台灣國際專業展網站管理系統</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/hyui_admin.css">
+    <!-- pg-calendar -->
+    <link rel="stylesheet" href="vendor/pg_calendar/css/pignose.calendar.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="images/ico.png" />
+</head>
+
+<body>
+    <!-- header load('00header.htm') -->
+    <header></header>
+    <!-- menu load('00menu.htm') -->
+    <aside></aside>
+    <!-- 主要內容 -->
+    <div class="main_zone">
+        <!-- 目錄樹區塊 -->
+        <div class="treeview_block hy_block">
+            <ul class="treeview">
+                <li class="collapsable">
+                    <div class="hitarea collapsable-hitarea"></div><span class="folder">中華民國對外貿易協會</span>
+                    <ul>
+                        <li class="collapsable">
+                            <div class="hitarea collapsable-hitarea"></div><span class="folder">網路中心</span>
+                            <ul id="folder21">
+                                <li><a href="#"><span class="file">專案組</span></a></li>
+                                <li><a href="#"><span class="file">應用組</span></a></li>
+                                <li><a href="#"><span class="file">技術組</span></a></li>
+                                <li class="last"><a href="#"><span class="file">測試部門</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="last collapsable"><span class="folder">展覽處</span>
+                            <ul id="folder21">
+                                <li><a href="#"><span class="file">一組</span></a></li>
+                                <li><a href="#"><span class="file">二組</span></a></li>
+                                <li><a href="#"><span class="file">三組</span></a></li>
+                                <li><a href="#"><span class="file">四組</span></a></li>
+                                <li><a href="#"><span class="file">五組</span></a></li>
+                                <li><a href="#"><span class="file">六組</span></a></li>
+                                <li><a href="#"><span class="file">七組</span></a></li>
+                                <li class="last"><a href="#"><span class="file">八組</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="closed expandable">
+                    <div class="hitarea closed-hitarea expandable-hitarea"></div><span class="folder">其他單位</span>
+                    <ul style="display: none;">
+                        <li class="last"><span class="file">其他單位</span></li>
+                        <li><span class="file">其他單位</span></li>
+                    </ul>
+                </li>
+                <li class="last"><span class="file">其他單位</span></li>
+            </ul>
+        </div>
+        <div class="content">
+            <!-- path -->
+
+            <!-- 節點標題 -->
+            <h2>部門組織管理</h2>
+            <div class="hy_block">
+                <div class="control_panel">
+                        <button class="btn btn-sm"><i class="i_edit"></i>編輯</button>
+                        <button class="btn btn-sm"><i class="i_add"></i>新增子部門</button>
+                    </div>
+                <div class="table_list">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>部門編號</th>
+                                <td>Root</td>
+                            </tr>
+                            <tr>
+                                <th>部門名稱</th>
+                                <td>中華民國對外貿易協會</td>
+                            </tr>
+                            <tr>
+                                <th>部門描述</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>部門人員</th>
+                                <td><a href="#">金城武</a>、<a href="#">林志玲</a></td>
+                            </tr>
+                             <tr>
+                                <th>上一層部門</th>
+                                <td></td>
+                            </tr>
+                             <tr>
+                                <th>子部門</th>
+                                <td>網路中心展覽處</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- JS都需要放在最下面 -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- TTS admin 專用 -->
+<script src="js/customize.js"></script>
+<!-- tree view -->
+<script src="js/jquery.treeview.js"></script>
+<!-- pg-calendar -->
+<script src="vendor/pg_calendar/js/pignose.calendar.full.min.js"></script>
+<script>
+$(function() {
+    if ($('.datepick').length > 0) {
+        $('.datepick input').pignoseCalendar({
+            lang: 'ch',
+            modal: true,
+            format: 'YYYY-MM-DD',
+        });
+    }
+    // header file：00header.htm
+    // menu file：00menu.htm
+    $('header').load('00header.htm');
+    $('aside').load('00menu.htm');
+});
+</script>
+
+</html>

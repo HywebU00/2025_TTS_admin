@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>台灣國際專業展網站管理系統</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/hyui_admin.css">
+    <!-- pg-calendar -->
+    <link rel="stylesheet" href="vendor/pg_calendar/css/pignose.calendar.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="images/ico.png" />
+</head>
+<body>
+    <div class="window_open">
+        <div class="table_list">
+            <h3 class="modal_title">編輯功能資訊</h3>
+            <form action="" class="form_grid">
+                <div class="form_grp">
+                    <label for="apartment_num" class="form_title">功能名稱<abbr class="necessary" title="">*</abbr></label>
+                    <div class="form_content">
+                        <input type="text" id="" value="展覽網站管理">
+                    </div>
+                </div>
+                <div class="form_grp">
+                    <label for="apartment_num" class="form_title">功能名稱<abbr class="necessary" title="">*</abbr></label>
+                    <div class="form_content">
+                        <input type="text" id="" value="">
+                    </div>
+                </div>
+                <div class="form_grp">
+                    <label for="" class="form_title">程式位址</label>
+                    <div class="form_content">
+                        <input name="" type="text" value=".../show.html">
+                    </div>
+                </div>
+                 <div class="form_grp">
+                    <label for="" class="form_title">程式參數</label>
+                    <div class="form_content">
+                        <input name="" type="text" value="">
+                    </div>
+                </div>
+            </form>
+            <div class="btn_grp">
+                <button class="btn btn-cancel">取消</button>
+                <button class="btn btn-primary">確認</button>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- JS都需要放在最下面 -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- TTS admin 專用 -->
+<script src="js/customize.js"></script>
+<!-- tree view -->
+<script src="js/jquery.treeview.js"></script>
+<!-- pg-calendar -->
+<script src="vendor/pg_calendar/js/pignose.calendar.full.min.js"></script>
+<script>
+$(function() {
+    if ($('.datepick').length > 0) {
+        $('.datepick input').pignoseCalendar({
+            lang: 'ch',
+            modal: true,
+            format: 'YYYY-MM-DD',
+        });
+    }
+});
+</script>
+
+</html>

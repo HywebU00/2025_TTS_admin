@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>台灣國際專業展網站管理系統</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- chosen -->
+    <link rel="stylesheet" href="vendor/chosen_v1.8.5/chosen.min.css">
+
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/hyui_admin.css">
+
+    <!-- pg-calendar -->
+    <link rel="stylesheet" href="vendor/pg_calendar/css/pignose.calendar.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="images/ico.png" />
+</head>
+
+<body>
+    <!-- header load('00header.htm') -->
+    <header></header>
+    <!-- menu load('00menu.htm') -->
+    <aside></aside>
+
+    <style>
+	
+		
+        .trans {
+            width: 360px;
+            height: 535px;
+            box-shadow: 0px 0px 5em rgba(0, 0, 0, 0.75);
+            top: 60px;
+            left: 60px;
+            background: #FFF;
+            padding: 0;
+            display: flex;
+            overflow: hidden;
+        }
+        
+        .trans .trans_function {
+            width: 100%;
+            height: 32px;
+            background: #555;
+            color: #FFF;
+            display: flex
+        ;
+        }
+        .trans .messenger {
+            padding: .25em;
+        }
+        
+        .trans .trans_function a {
+            margin: .25em .25em 0 .5em;
+            color: #AAA;
+        }
+        .trans .trans_inside {
+            padding: 0.5em;
+            flex-flow: column wrap;
+        }
+        .trans .src-text, .trans .trans-text {
+            clear: both;
+            border-radius: .25em;
+            border: 2px solid #DDD;
+            padding: .5em;
+            font-size: .813rem;
+            line-height: 1.35em;
+            margin-bottom: .5em;
+            height: 185px;
+            overflow: hidden;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            -webkit-transform: translate3d(0, 0, 0);
+            white-space: pre-wrap;
+        }
+        .trans .trans_tool {
+            clear: both;
+            overflow: hidden;
+            margin-bottom: .5em;
+        }
+        .trans .trans_tool a {
+            display: block;
+            float: left;
+            background: #EEE;
+            border-radius: .25em;
+            padding: .25em 1em;
+            font-size: .75rem;
+            line-height: 1.25em;
+            color: #777;
+            min-width: 6em;
+            text-align: center;
+        }
+        .trans .trans_tool a:hover, .trans .trans_tool a:focus {
+            background: #BBB;
+            color: #FFF;
+        }
+        .trans .trans .trans-text {
+            clear: both;
+            border-radius: .25em;
+            border: 2px solid #DDD;
+            padding: .5em;
+            font-size: .813rem;
+            line-height: 1.35em;
+            margin-bottom: .5em;
+            height: 185px;
+            overflow: hidden;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            -webkit-transform: translate3d(0, 0, 0);
+            white-space: pre-wrap;
+        }
+        
+        
+                .aitxt{ display: none; position:relative;}
+                .aitxt .trans{ position:fixed; left: 50%; margin-left: -180px; z-index:999997;}
+                .aitxt .trans .trans_window{width:100%; translateX(0px);}
+                .aitxt .trans .messenger {
+                    padding-left: 0.5em;
+                }  
+                .aitxt .trans .messenger a.close{
+                    filter: invert(1);
+                    position: absolute;
+                    right:0.3em;
+                    top:0.1em;
+                }   
+                .aitxt .trans .messenger a.close .i_close:before {
+                    margin-left: -4px;
+                    content: "";
+                    display: inline-block;
+                    height: 0.85em;
+                    width: 0.85em;
+                    vertical-align: middle;
+                    speak: none;
+                }
+                .aitxt .trans .trans_tool a:nth-child(2){
+                    float:left;
+                    font-size: 0.813rem;
+                }
+                .aitxt .trans .trans_tool .title{
+                    float:left;
+                    font-size: 0.813rem;
+                    margin-right:0.5em;
+                }
+                .aitxt .trans .trans_tool a{
+                   margin: 0 0.25em;
+                }
+                .aitxt .trans .trans_tool a.selected{
+                    background: #BBB;
+                    color: #FFF;
+                }
+                
+                .aitxt .trans .trans_tool .paRight{
+                    position: absolute;
+                    right:1em;
+                    font-size: 0.813rem;
+                    color: #888;
+                }
+                .aitxt .trans .src-text{ 
+                    height: 155px;
+                    resize:none;
+                }.aitxt .trans .trans-text{ 
+                    height: 155px;
+                    resize:none;
+                }
+                .aitxt .btn-grp {
+                    text-align: center;
+                    position: relative;
+                }
+                .aitxt .btn-grp button{
+                    /* border: 1px solid #999;
+                    background: linear-gradient(to bottom, #999, #777); */
+                }
+                .aitxt .btn-grp button:hover, .aitxt .btn-grp button:focus{
+                    /* border: 1px solid #bbb !important;
+                    background: linear-gradient(to bottom, #bbb, #aaa); */
+                }
+                
+                @media screen and (max-width: 575px) {
+                  .aitxt .trans {
+                    left:0;
+                    margin-left:0;
+                    height: auto;
+                    top: 10%;
+                  }
+                }
+                
+                
+        
+        
+            </style>
+
+    <!-- AI文案 -->
+	<div id="aitxt" class="aitxt">
+        <div class="trans">
+            <div class="trans_window trans_open" style="transform: translateX(0px);">
+                <div class="trans_function">
+                   
+                    <div class="messenger">AI文案
+                        <a href="javascript:aiclose()" class="close"><i class="i_close"></i></a>
+                    </div>
+                </div>
+                <div class="trans_inside" id="transArea">
+                    <div class="trans_tool">
+                        <span class="title">問題</span>
+                        <!-- <a href="javascript:clearText()" class="do_delete">clear</a> -->
+                        <span class="paRight"><span class="txtnum">0</span>/200字</span>
+                    </div>
+					<textarea class="src-text" id="questionContent" maxlength="200" placeholder="請輸入問題"></textarea>
+                    
+                    <div class="trans_tool">
+                        <span class="title">長度</span>
+                        <a href="javascript:doSetText(500)" title="短" class="setbtn selected">短</a>
+                        <a href="javascript:doSetText(1000)" title="中" class="setbtn ">中</a>
+                        <a href="javascript:doSetText(1500)" title="長" class="setbtn ">長</a>
+                        <input type="hidden" id="txtLength" name="txtLength" value="500" >
+                    </div>
+                    <div class="btn-grp">
+                        <button type="button" onclick="genAItxt()" class="btn-xs btn-primary">產生文稿</button>
+						<button type="reset" onclick="clearQuest()" class="btn-xs">清除</button>
+                        <!-- <span class="paRight">次數 1/10字</span> -->
+                    </div>
+                    
+					<textarea class="trans-text" id="reContent"></textarea>
+					
+                    <div class="btn-grp">
+                        <button type="button" class="btn-xs btn-primary copythis">複製內容</button>
+                    </div>
+                </div>
+            </div>
+            <!--end trans_window--->
+        </div>
+    </div>
+	<!-- AI文案 END-->
+
+    <!-- 主要內容 -->
+    <div class="main_zone opened">
+        <div class="content has_fixblock">
+            <h2>廠商活動審核 / QQ-測試外界展(QQ)</h2>
+
+            <div class="hy_block">
+                <form id="activity-form" class="form_grid" method="POST" action="/associate/activity-verify/save.html">
+                    <div class="form_grp">
+                        <label for="type" class="form_title"><abbr class="necessary" title="">*</abbr>活動類型</label>
+                        <div class="form_content">
+                            <div class="radio_grp form_inline btn_style">
+                                <label class="active">
+                                    <input type="radio" name="type" value="E" checked />廠商活動
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="type" class="form_title"><abbr class="necessary" title="">*</abbr>活動類別</label>
+                        <div class="form_content">
+                            <div class="radio_grp form_inline btn_style">
+                                <label class="active">
+                                    <input type="radio" name="category" id="category" value="A" checked />實體活動
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title"><span class="necessary">*</span>Icon logo</label>
+                        <div class="form_content" id="icon-logo"> 
+                        <div class="upload_area"><p class="upload_notice">請把檔案拖拉到此框，或是<a href="#" class="btn btn-xs">選擇檔案</a><input type="file" style="display:none"><input type="hidden" id="btn-icon-logo" name="btn-icon-logo" value="1" style="display:none"></p><div class="ui-sortable"><div class="file" id="fileArea_12443353"><div class="pic"><img src="http://tts.portal.hyweb.com.tw/public/ttsShow/202005/T-42029319.png" alt=""></div><span>QQ.png<em>599 B</em></span><div class="progress_bar" style="display:none"><span style="width:0%"></span></div><a href="javascript:void(0);" class="delete" uid="12443353" style="display: block;"><i style="font-size:1.3em;" class="i_close"></i></a></div></div><p>檔案類型：*.jpg *.gif *.png；檔案大小：5 MB；建議尺寸：100x100</p></div></div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title"><abbr class="necessary" title="">*</abbr>廠商統編</label>
+                        <div class="form_content">
+                            16541333-1
+                            <input type="hidden" name="exhibitorId" value="16541333-1" />
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <div class="form_title"><abbr class="necessary" title="">*</abbr>活動名稱</div>
+                        <div class="form_content">
+                            <div class="form_grp">
+                                <label for="name_en" class="form_title">英文(en)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="name_en" id="name_en" type="text" value="Exhibitor Activity 0117">
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+                            <div class="form_grp">
+                                <label for="name_zh-tw" class="form_title">繁體中文(zh-tw)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="name_zh-tw" id="name_zh-tw" type="text"
+                                            value="Exhibitor Activity 0117">
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+                            <div class="form_grp">
+                                <label for="name_ja" class="form_title">日文(ja)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="name_ja" id="name_ja" type="text" value="">
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+                            <div class="form_grp">
+                                <label for="name_ru" class="form_title">俄文(ru)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="name_ru" id="name_ru" type="text" value="">
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+                            <div class="form_grp" style="display:none">
+                                <label for="name_zh-cn" class="form_title">簡體中文(zh-cn)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="name_zh-cn" id="name_zh-cn" type="text"
+                                            value="Exhibitor Activity 0117"> <label><input name="name_t2s"
+                                                type="checkbox" value="Y">轉自繁體中文</label>
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+
+                        </div>
+                    </div>
+                    <div class="form_grp ">
+                        <label for="apartment_num" class="form_title"><abbr class="necessary"
+                                title="">*</abbr>活動日期時間</label>
+                        <div class="form_content hasBtn">
+                            <div class="datepick">
+                                <input autocomplete="off" name="startDateTime" type="text" class="calendar"
+                                    placeholder="開始日期時間" value="2020/01/17 09:00" />
+                                <button class="btn">
+                                    <i class="i_calendar_color"></i>
+                                </button>
+                            </div>
+                            <div class="datepick">
+                                <input autocomplete="off" name="endDateTime" type="text" class="calendar"
+                                    placeholder="結束日期時間" value="2020/01/17 12:00" />
+                                <button class="btn">
+                                    <i class="i_calendar_color"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <div class="form_title"><abbr class="necessary" title="">*</abbr>活動說明<br><button type="button" onclick="doAI()" >AI文案</button></div>
+                        <div class="form_content">
+                            <div class="form_grp">
+                                <label for="desc_en" class="form_title">英文(en)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <textarea name="desc_en" id="desc_en"><p>test</p></textarea>
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+                            <div class="form_grp">
+                                <label for="desc_zh-tw" class="form_title">繁體中文(zh-tw)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <textarea name="desc_zh-tw" id="desc_zh-tw"><p>test</p></textarea>
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+                            <div class="form_grp">
+                                <label for="desc_ja" class="form_title">日文(ja)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <textarea name="desc_ja" id="desc_ja"></textarea>
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+                            <div class="form_grp">
+                                <label for="desc_ru" class="form_title">俄文(ru)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <textarea name="desc_ru" id="desc_ru"></textarea>
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+                            <div class="form_grp" style="display:none">
+                                <label for="desc_zh-cn" class="form_title">簡體中文(zh-cn)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <textarea name="desc_zh-cn" id="desc_zh-cn"><p>test</p></textarea> <label><input
+                                                name="desc_t2s" type="checkbox" value="Y">轉自繁體中文</label>
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+
+                        </div>
+                    </div>
+                    <div class="form_grp" id="contact">
+                        <div class="form_title"><abbr class="necessary" title="">*</abbr>聯絡人</div>
+                        <div class="form_content">
+                            <div class="form_grp">
+                                <label for="contact_en" class="form_title">英文(en)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <textarea name="contact_en" id="contact_en"><p>test</p></textarea>
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+                            <div class="form_grp">
+                                <label for="contact_zh-tw" class="form_title">繁體中文(zh-tw)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <textarea name="contact_zh-tw" id="contact_zh-tw"><p>test</p></textarea>
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+                            <div class="form_grp">
+                                <label for="contact_ja" class="form_title">日文(ja)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <textarea name="contact_ja" id="contact_ja"></textarea>
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+                            <div class="form_grp">
+                                <label for="contact_ru" class="form_title">俄文(ru)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <textarea name="contact_ru" id="contact_ru"></textarea>
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+                            <div class="form_grp" style="display:none">
+                                <label for="contact_zh-cn" class="form_title">簡體中文(zh-cn)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <textarea name="contact_zh-cn" id="contact_zh-cn"><p>test</p></textarea>
+                                        <label><input name="contact_t2s" type="checkbox" value="Y">轉自繁體中文</label>
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+
+                        </div>
+                    </div>
+                    <div class="form_grp" id="location">
+                        <div class="form_title"><abbr class="necessary" title="">*</abbr>活動地點</div>
+                        <div class="form_content">
+                            <div class="form_grp">
+                                <label for="location_en" class="form_title">英文(en)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="location_en" id="location_en" type="text" value="Taipei">
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+                            <div class="form_grp">
+                                <label for="location_zh-tw" class="form_title">繁體中文(zh-tw)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="location_zh-tw" id="location_zh-tw" type="text" value="Taipei">
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+                            <div class="form_grp">
+                                <label for="location_ja" class="form_title">日文(ja)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="location_ja" id="location_ja" type="text" value="">
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+                            <div class="form_grp">
+                                <label for="location_ru" class="form_title">俄文(ru)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="location_ru" id="location_ru" type="text" value="">
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+                            <div class="form_grp" style="display:none">
+                                <label for="location_zh-cn" class="form_title">簡體中文(zh-cn)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="location_zh-cn" id="location_zh-cn" type="text" value="Taipei">
+                                        <label><input name="location_t2s" type="checkbox" value="Y">轉自繁體中文</label>
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+
+                        </div>
+                    </div>
+                    <div class="form_grp" id="map">
+                        <div class="form_title">活動地點經緯度</div>
+                        <div class="form_content">
+                            <div class="form_grp">
+                                <label for="" class="form_title">經度</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="mapLongitude" type="text" value="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="" class="form_title">緯度</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="mapLatitude" type="text" value="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_grp" id="liveUrl">
+                        <label for="liveUrl" class="form_title">活動直播網址</label>
+                        <div class="form_content">
+                            <div class="form_grp">
+                                <label for="liveUrl_en" class="form_title">英文(en)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="liveUrl_en" id="liveUrl_en" type="text" value="">
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+                            <div class="form_grp">
+                                <label for="liveUrl_zh-tw" class="form_title">繁體中文(zh-tw)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="liveUrl_zh-tw" id="liveUrl_zh-tw" type="text" value="">
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+                            <div class="form_grp">
+                                <label for="liveUrl_ja" class="form_title">日文(ja)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="liveUrl_ja" id="liveUrl_ja" type="text" value="">
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+                            <div class="form_grp">
+                                <label for="liveUrl_ru" class="form_title">俄文(ru)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="liveUrl_ru" id="liveUrl_ru" type="text" value="">
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+
+                        </div>
+                    </div>
+                    <div class="form_grp" id="filmUrl">
+                        <label for="filmUrl" class="form_title">活動影片網址</label>
+                        <div class="form_content">
+                            <div class="form_grp">
+                                <label for="filmUrl_en" class="form_title">英文(en)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="filmUrl_en" id="filmUrl_en" type="text" value="">
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+                            <div class="form_grp">
+                                <label for="filmUrl_zh-tw" class="form_title">繁體中文(zh-tw)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="filmUrl_zh-tw" id="filmUrl_zh-tw" type="text" value="">
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+                            <div class="form_grp">
+                                <label for="filmUrl_ja" class="form_title">日文(ja)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="filmUrl_ja" id="filmUrl_ja" type="text" value="">
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+                            <div class="form_grp">
+                                <label for="filmUrl_ru" class="form_title">俄文(ru)</label>
+                                <div class="form_content">
+                                    <div class="sub_form_content">
+                                        <input name="filmUrl_ru" id="filmUrl_ru" type="text" value="">
+                                    </div>
+                                </div>
+                            </div><!--end form_grp-->
+
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <div class="fix_block fix_btngrp">
+                            <div class="btn_grp">
+                                <input type="button" class="btn btn-primary btn-submit" value="送出" />
+                                <input type="button" class="btn btn-cancel" value="取消" />
+                            </div>    
+                            <h3>異動資訊</h3>
+                            <div class="table_list">
+                                <table>
+                                    <tr>
+                                        <th>新增人員</th>
+                                        <td>charlot+101@hyweb.com.tw(已不存在)(charlot+101@hyweb.com.tw)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>新增時間</th>
+                                        <td>2020/01/17 16:36:54</td>
+                                    </tr>
+                                    <tr>
+                                        <th>異動人員</th>
+                                        <td>系統管理者(admin)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>異動時間</th>
+                                        <td>2020/01/17 16:39:56</td>
+                                    </tr>
+                                </table>
+                            </div>       
+                            
+                        </div>
+                    </div>
+                    <input type="hidden" name="status" value="PU" />
+                    <input type="hidden" name="showId" value="QQ" />
+                    <input type="hidden" name="id" value="85" />
+                </form>
+            </div><!--end hy_block-->
+        </div>
+    </div>
+
+
+
+</body>
+<!-- JS都需要放在最下面 -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- TTS admin 專用 -->
+<script src="js/customize.js"></script>
+<!-- tree view -->
+<script src="js/jquery.treeview.js"></script>
+<!-- pg-calendar -->
+<script src="vendor/pg_calendar/js/pignose.calendar.full.min.js"></script>
+<!--showlist search js css -->
+
+<script type="text/JavaScript" src="vendor/chosen_v1.8.5/chosen.jquery.min.js"></script>
+
+<script>
+    $(function () {
+        $(".chosen").chosen({
+            search_contains: true,
+            width: '100%'
+        });
+        if ($(".form_content input[type=text]").val() == "") {
+            $(".form_content input").removeAttr("value");
+        }
+
+        $(".form_content input[type=text]").blur(function () {
+            if (this.value == '') {
+                $(this).removeAttr("value");
+            } else {
+                $(this).attr("value", this.value);
+            }
+        });
+    });
+
+   
+    function aiclose(){
+		$(".aitxt").hide();
+	}
+    function doAI() {
+        $(".aitxt").show();
+    }
+</script>
+
+</html>

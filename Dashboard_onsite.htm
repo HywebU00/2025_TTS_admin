@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>台灣國際專業展網站管理系統</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    
+    <link rel="stylesheet" href="vendor/chosen_v1.8.5/chosen.min.css">
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/hyui_admin.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="images/ico.png" />
+    
+</head>
+
+<body>
+<!-- header load('00header.htm') -->
+<header></header>
+<!-- menu load('00menu.htm') -->
+<aside></aside>
+<!-- 主要內容 -->
+<div class="main_zone ">
+    <div class="content">
+        <h2>現場換證儀錶板</h2>
+
+        <div class="Dashboard-content">
+   
+        
+        <div class="showSearch">
+            
+            <div class="hy_block">
+                <div class="dashboard-search">                
+                    <div class="col-left">
+                        <div class="col-6-6">
+                            <form>
+                            <div class="form_grid">
+                                <div class="form_grp has_chosen">                        
+                                    <!--<label for="" class="form_title">展覽年度</label>-->
+                                    <div class="form_content">
+                                        <select id="year" name="year" class='chosen' data-placeholder='展覽年度' >
+                                                <option value="2024" >2024</option>
+                                                <option value="2023" >2023</option>
+                                                <option value="2022" >2022</option>
+                                                <option value="2021" >2021</option>
+                                                <option value="2020" >2020</option>
+                                                <option value="2019" >2019</option>
+                                                <option value="2018" >2018</option>
+                                                <option value="2017" >2017</option>
+                                                <option value="2016" >2016</option>
+                                                <option value="2015" >2015</option>
+                                                <option value="2014" >2014</option>
+                                                <option value="2013" >2013</option>
+                                                <option value="2012" >2012</option>
+                                        </select>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="form_grp has_chosen">
+                                    <!--<label for="" class="form_title">展覽</label>-->
+                                    <div class="form_content">
+                                        <select id="showID" name="showID" class='chosen' data-placeholder='選擇展覽'  >
+                                                <option value="1S" >1S 1S展</option>
+                                                <option value="AP" >AP </option>
+                                                <option value="AQ" >AQ 台灣國際</option>
+                                                <option value="CL" >CL Lue的展覽網站</option>
+                                                <option value="CP" >CP DEMO網站</option>
+                                                <option value="ED" >ED 國際建材大展</option>
+                                                <option value="FT" >FT </option>
+                                                <option value="L1" >L1 </option>
+                                                <option value="MT" >MT 台灣會展網2.0</option>
+                                                <option value="PP" >PP x</option>
+                                                <option value="QQ" >QQ QQ-測試外界展</option>
+                                                <option value="SI" >SI 南島民族論壇全球資訊網</option>
+                                                <option value="TT" >TT TT測試網站</option>
+                                                <option value="UU" >UU UU</option>
+                                                <option value="XC" >XC 擦擦擦</option>
+                                                <option value="XP" >XP XP Test</option>
+                                                <option value="z1" >z1 test1</option>
+                                                <option value="zx" >zx sdf</option>
+                                        </select>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div> <!-- end form_grid-->      
+                            </form>
+                        </div> <!--end col-6-6--> 
+                    </div>
+                    <div class="col-right">
+                        <button type="submit">送出</button>
+                        <button type="button">複製連結</button>
+                    </div>                    
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="Dashboard-body">
+            
+            <!--統計數字 2：1用dm21 -->
+            <div class="showBox dm21">
+                <div class="showBox-top-logo">
+                    <img src="https://storage.googleapis.com/www.taiwantradeshow.com.tw/ttsShow/202110/T-48553784.png" alt="台北國際汽機車零配件展&amp;台北國際車用電子展">
+                </div>
+                <div class="showBox-body">
+                    <div class="showBox-data">
+                        <div class="showBox-data-title">換證統計</div>
+                        <div class="showBox-data-list">
+                            <ul>
+                                <li>
+                                    <div class="showBox-data-item">今日換證人數</div>
+                                    <div class="showBox-data-nums">
+                                        <div class="showBox-data-total">
+                                            <span class="showBox-data-sum">231</span><span class="ren">人</span><br>
+                                            <!--<span class="showBox-data-trend">+2.3%</span>-->
+                                        </div>
+                                        <div class="showBox-data-area">
+                                            <div>
+                                                <span class="showBox-data-tw">Taiwan</span><span class="showBox-data-s1">32109</span>
+                                                <!--<span class="showBox-data-trend">+4.5%</span>-->
+                                                <span class="showBox-data-os">Oversea</span><span class="showBox-data-s2">24680</span>
+                                                <!--<span class="showBox-data-trend">-0.5%</span>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="showBox-data-item">換證人數</div>
+                                    <div class="showBox-data-nums">
+                                        <div class="showBox-data-total">
+                                            <span class="showBox-data-sum">5678</span><span class="ren">人</span><br>
+                                            <span class="showBox-data-trend">+2.3%</span>
+                                        </div>
+                                        <div class="showBox-data-area">
+                                            <div>
+                                                <span class="showBox-data-tw">Taiwan</span><span class="showBox-data-s1">8765</span>
+                                                <span class="showBox-data-trend">+4.5%</span>
+                                                <span class="showBox-data-os">Oversea</span><span class="showBox-data-s2">66</span>
+                                                <span class="showBox-data-trend">-0.5%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="showBox-data-item">上屆換證人數</div>
+                                    <div class="showBox-data-nums">
+                                        <div class="showBox-data-total">
+                                            <span class="showBox-data-sum">76543</span><span class="ren">人</span><br>
+                                        </div>
+                                        <div class="showBox-data-area">
+                                            <div>
+                                                <span class="showBox-data-tw">Taiwan</span><span class="showBox-data-s1">5467</span>
+                                                <br>
+                                                <span class="showBox-data-os">Oversea</span><span class="showBox-data-s2">68999</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="showBox-data-item">入場/直接入閘人次</div>
+                                    <div class="showBox-data-nums">
+                                        <div class="showBox-data-total">
+                                            <span class="showBox-data-sum">5678</span><span class="ren">人</span><br>
+                                        </div>
+                                        <div class="showBox-data-area">
+                                            <div>
+                                                <span class="showBox-data-tw">Taiwan</span><span class="showBox-data-s1">8765</span>
+                                                <br>
+                                                <span class="showBox-data-os">Oversea</span><span class="showBox-data-s2">66</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="date-list">
+                                    <span><a href="javascript:;">10/27</a></span>
+                                    <span><a class="active" href="javascript:;">10/28</a></span>
+                                    <span><a href="javascript:;">10/29</a></span>
+                                    <span><a href="javascript:;">10/30</a></span>
+                                    <span><a href="javascript:;">10/31</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--圖表 2：1用dm21 -->
+            <div class="showBox dm21">
+                <div class="showBox-body">
+                    <div class="showBox-data">
+                        <div class="showBox-data-title">換證統計</div>
+                        <div class="showBox-data-chart">
+                            <div class="chart-grid">
+                                <div class="chart-img">
+                                    <canvas></canvas>
+                                </div>
+                                <div class="chart-img">
+                                    <canvas></canvas>
+                                </div>
+                                <div class="chart-img">
+                                    <canvas></canvas>
+                                </div>
+                                <div class="chart-img">
+                                    <canvas></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!--圖表 2：1用dm21 -->
+            <div class="showBox dm21">
+                <div class="showBox-body">
+                    <div class="showBox-data">
+                        <div class="showBox-data-title">前十大國外換證件數</div>
+                        <div class="showBox-data-chart">
+                            <div class="chart-img">
+                                <canvas></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="date-list">
+                            <span><a  class="active" href="javascript:;">10/28</a></span>
+                            <span><a href="javascript:;">10/29</a></span>
+                            <span><a href="javascript:;">10/30</a></span>
+                            <span><a href="javascript:;">10/31</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+
+            <!--圖表 2：1用dm21 -->
+            <div class="showBox dm21">
+                <div class="showBox-body">
+                    <div class="showBox-data">
+                        <div class="showBox-data-title">每日換證統計</div>
+                        <div class="showBox-data-chart">
+                            <div class="chart-img">
+                                <canvas></canvas>
+                            </div>
+                        </div>
+                        <div class="showBox-data-table">
+                            <table>
+                                <tr>
+                                    <th>年度</th><th>預登總數</th><th>報到總數</th><th>報到率</th><th>預登回流率</th>
+                                </tr>
+                                <tr>
+                                    <td>2022</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                </tr>
+                                <tr>
+                                    <td>2021</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                </tr>
+                                <tr>
+                                    <td>2020</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                </tr>
+                                <tr>
+                                    <td>2019</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                </tr>
+                                <tr>
+                                    <td>2018</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--圖表 2：1用dm21 -->
+            <div class="showBox dm21">
+                <div class="showBox-body">
+                    <div class="showBox-data">
+                        <div class="showBox-data-title">前十大國外換證件數</div>
+                        <div class="showBox-data-chart">
+                            <div class="chart-img">
+                                <canvas></canvas>
+                            </div>
+                        </div>
+                        <div class="showBox-data-table">
+                            <table>
+                                <tr>
+                                    <th>年度</th><th>預登總數</th><th>報到總數</th><th>報到率</th><th>預登回流率</th>
+                                </tr>
+                                <tr>
+                                    <td>2022</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                </tr>
+                                <tr>
+                                    <td>2021</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                </tr>
+                                <tr>
+                                    <td>2020</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                </tr>
+                                <tr>
+                                    <td>2019</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                </tr>
+                                <tr>
+                                    <td>2018</td><td>56433</td><td>3422</td><td>65%</td><td>45%</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="date-list">
+                            <span><a  class="active" href="javascript:;">10/28</a></span>
+                            <span><a href="javascript:;">10/29</a></span>
+                            <span><a href="javascript:;">10/30</a></span>
+                            <span><a href="javascript:;">10/31</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>      
+
+
+
+
+
+
+        </div><!--Dashboard-body END-->
+    
+        
+        
+    
+
+    </div>
+</div>
+
+         
+</body>
+<!-- JS都需要放在最下面 -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- TTS admin 專用 -->
+<script src="js/customize.js"></script>
+<!-- tree view -->
+<script src="js/jquery.treeview.js"></script>
+<!-- pg-calendar -->
+<script src="vendor/pg_calendar/js/pignose.calendar.full.min.js"></script>
+
+<script type="text/JavaScript" src="vendor/chosen_v1.8.5/chosen.jquery.min.js"></script>
+<script>
+$(function() {
+    
+    $(".chosen").chosen({
+        search_contains:true,
+        width: '100%'
+    });
+
+    $(".date-list a").click(function(){
+        $(this).parent().siblings().find("a").removeClass("active");
+        $(this).addClass("active");
+    });
+    
+});
+</script>
+
+</html>

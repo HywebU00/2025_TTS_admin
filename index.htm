@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TTS後台切版檔案</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/hyui_admin.css">
+    <style>
+        body {
+            background: #FFF
+        }
+
+        h1 {}
+
+        h3 {
+            color: #333
+        }
+
+        .element {
+            border: 5px solid orange;
+            margin-bottom: 2em
+        }
+
+        .demo_wrap {
+            max-width: 1000px;
+            margin: 0em auto 1em;
+            padding: 15px 15px 3em;
+            clear: both;
+            font-size: .938em
+        }
+
+        .demo_wrap h1 {
+            display: block;
+            margin: 0px auto;
+            max-width: 600px;
+            float: left;
+            line-height: 1.35em;
+            margin-right: 1em
+        }
+
+        .demo_wrap h1 small {
+            margin: 0px .5em
+        }
+
+        .demo_wrap h1 img {
+            width: 50px;
+            margin-right: .5em
+        }
+
+        @media screen and (max-width:545px) {
+            .demo_wrap h1 {
+                max-width: 100%;
+                float: none;
+                text-align: center;
+                font-size: 1.5em
+            }
+
+            .demo_wrap h1 small {
+                display: block
+            }
+
+            .demo_wrap h1 img {
+                width: 30px
+            }
+        }
+
+        .num {
+            width: 12%
+        }
+
+        body {}
+
+        table {
+            margin-bottom: 1em;
+            background: #FFF;
+            counter-reset: num
+        }
+
+        th:last-child {
+            width: 15%
+        }
+
+        table caption {
+            text-align: left;
+            font-weight: bold;
+            font-size: 1.25em;
+            padding: .5em 0;
+            color: #ff5050
+        }
+
+        tbody tr td:first-child:before {
+            counter-increment: num;
+            display: block;
+            text-align: center;
+            content: counters(num, ".") " "
+        }
+
+        tbody tr td:nth-child(2) {
+            width: 35%
+        }
+
+        .btn_grp {
+            text-align: right
+        }
+
+        @media screen and (max-width:545px) {
+            .btn_grp {
+                text-align: center
+            }
+
+            hr {
+                display: none
+            }
+        }
+
+        hr {
+            border: 1px solid transparent
+        }
+
+        table td a {
+            color: cornflowerblue;
+        }
+
+        td span {
+            display: block;
+            background: rgba(0, 128, 0, .1);
+            color: green;
+            text-align: center;
+            padding: .2em .5em;
+            border-radius: .4em;
+            margin: 0px auto;
+            max-width: 4em
+        }
+
+        .line td {
+            background: #EDEEF3;
+            color: #333;
+            font-weight: bold
+        }
+
+        .window td {
+            color: #AAA
+        }
+
+        .window td:nth-child(2):before {
+            content: "-  ";
+            padding-left: 1em
+        }
+
+        .window td:nth-child(3) {
+            padding-left: 2em
+        }
+
+        .new {
+            color: blue;
+        }
+
+        .new a {
+            color: blue;
+        }
+
+        .new2 {
+            color: orangered;
+        }
+
+        .new2 a {
+            color: orangered;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <div class="demo_wrap">
+        <h1><img src="images/logo.svg" alt="">台灣國際專業展<small>網站管理系統</small></h1>
+        <div class="btn_grp">
+            <!--<a href="https://github.com/HywebU00/2019_TTS_admin" class="btn" target="_blank">切版檔案請按此下載</a>-->
+            <br><br>
+        </div>
+        <h2>2025.06新增</h2>
+        <p>備註：新的css寫在新增的chooseTemplate.css中，亦同步@import在hyui_admin.css中，如果套hyui_admin.css會跑版，請直接在hyui_admin.css"後"新增chooseTemplate.css</p>
+        <div class="element">
+            <div class="table_wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="num">編號</th>
+                            <th>頁面名稱</th>
+                            <th>檔案名稱</th>
+                            <th>進度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td class="new">版型管理new2</td>
+                            <td class="new"><a href="版型管理_new2.htm"></a></td>
+                            <td>
+                                舊有版型管理新增智慧選版按鈕，請搜尋：按鈕外多包一層.chooseTemplate做比對
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="new">智慧選版1</td>
+                            <td class="new"><a href="智慧選版1.htm" target="_blank"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="new">智慧選版1</td>
+                            <td class="new"><a href="智慧選版2.htm" target="_blank"></a></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h2>2025新增</h2>
+        <div class="element">
+            <div class="table_wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="num">編號</th>
+                            <th>頁面名稱</th>
+                            <th>檔案名稱</th>
+                            <th>進度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td class="new">AI文案</td>
+                            <td class="new"><a href="form1.htm" target="_blank"></a></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h2>後來新增</h2>
+        <div class="element">
+            <div class="table_wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="num">編號</th>
+                            <th>頁面名稱</th>
+                            <th>檔案名稱</th>
+                            <th>進度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td class="new">問卷</td>
+                            <td class="new"><a href="基本元素00_form_new_quest.htm" target="_blank"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="new">參展商個人化設定</td>
+                            <td class="new"><a href="exhibitor-personal-form.htm" target="_blank"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="new">儀錶板-後台</td>
+                            <td class="new"><a href="Dashboard_admin.htm" target="_blank"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="new">儀錶板-設定區塊</td>
+                            <td class="new"><a href="Dashboard_form_1.htm" target="_blank"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="new">儀錶板-新增圖表</td>
+                            <td class="new"><a href="Dashboard_form_2.htm" target="_blank"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="new">儀錶板-前台</td>
+                            <td class="new"><a href="Dashboard_portal.htm" target="_blank"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="new">現場換證儀錶板</td>
+                            <td class="new"><a href="Dashboard_onsite.htm" target="_blank"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="new">現場換證儀錶板View</td>
+                            <td class="new"><a href="Dashboard_onsite_view.htm" target="_blank"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="new">表格樣式(加第二層選單)</td>
+                            <td class="new"><a href="基本元素00_表格_new.htm" target="_blank"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="new">年度展覽管理</td>
+                            <td class="new"><a href="年度展覽管理_new.htm" target="_blank"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="new">展後報告</td>
+                            <td class="new"><a href="report-after.htm" target="_blank"></a></td>
+                            <td></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h2>網頁共用元素</h2>
+        <div class="element">
+            <div class="table_wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="num">編號</th>
+                            <th>頁面名稱</th>
+                            <th>檔案名稱</th>
+                            <th>進度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <td></td>
+                        <td>圖庫管理</td>
+                        <td><a href="圖庫管理.htm"></a></td>
+                        <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>版型管理</td>
+                            <td><a href="版型管理_new.htm"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>輸入表單樣式</td>
+                            <td><a href="基本元素00_form_new.htm"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>卡片樣式</td>
+                            <td><a href="基本元素00_卡片式_new.htm"></a></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>icon樣式</td>
+                            <td><a href="基本元素00_icon_new.htm"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>按鈕樣式</td>
+                            <td><a href="基本元素00_btn_new.htm"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>選單管理模組</td>
+                            <td><a href="基本元素00_showlist_new.htm"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>其他模組</td>
+                            <td><a href="基本元素00_other_new.htm"></a></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h2>範例頁面</h2>
+        <div class="table_wrapper">
+            <!-- hyUI 標準頁面 -->
+            <table>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>檔案名稱</th>
+                        <th>進度</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>登入頁</td>
+                        <td><a href="login.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>展覽/年度檔期管理</td>
+                        <td><a href="show_list.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>版型設定 拖拉頁面</td>
+                        <td><a href="choose_layout.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>版型設定 模組屬性</td>
+                        <td><a href="choose_layout_module.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>版型設定 頁面資訊</td>
+                        <td><a href="choose_layout_pagesetting.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="line">
+                        <td></td>
+                        <td colspan="3">系統設定</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>部門組織管理</td>
+                        <td><a href="系統設定01_0部門組織管理.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>新增子部門</td>
+                        <td><a href="系統設定01_1新增子部門.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>修改部門</td>
+                        <td><a href="系統設定01_2修改部門.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>人員帳號管理</td>
+                        <td><a href="系統設定02_0人員帳號管理.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>新增使用者</td>
+                        <td><a href="系統設定02_1人員帳號管理_新增使用者.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>專案群組管理</td>
+                        <td><a href="系統設定03_0專案群組管理.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>新增群組</td>
+                        <td><a href="系統設定03_1專案群組管理_新增群組.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>修改檢視群組</td>
+                        <td><a href="系統設定03_2專案群組管理_修改檢視群組.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>角色級職管理</td>
+                        <td><a href="系統設定04_0角色級職管理.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="window">
+                        <td></td>
+                        <td>新增功能資訊</td>
+                        <td><a href="系統設定04_1新增功能資訊.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="window">
+                        <td></td>
+                        <td>新增角色</td>
+                        <td><a href="系統設定04_2新增角色.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="window">
+                        <td></td>
+                        <td>修改檢視角色</td>
+                        <td><a href="系統設定04_3修改檢視角色.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>功能權限管理</td>
+                        <td><a href="系統設定05_0功能權限管理.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="window">
+                        <td></td>
+                        <td>編輯功能資訊</td>
+                        <td><a href="系統設定05_0_1編輯功能資訊.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="window">
+                        <td></td>
+                        <td>新增功能權限</td>
+                        <td><a href="系統設定05_0_3新增功能權限.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="window">
+                        <td></td>
+                        <td>編輯功能權限</td>
+                        <td><a href="系統設定05_0_5編輯功能權限.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="window">
+                        <td></td>
+                        <td>編輯功能權限</td>
+                        <td><a href="系統設定05_0_6編輯功能權限.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="window">
+                        <td></td>
+                        <td>新增功能資訊</td>
+                        <td><a href="系統設定05_0_7新增功能資訊.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>後台帳號功能查詢</td>
+                        <td><a href="系統設定05_1功能權限管理_後台帳號功能查詢.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>後台帳號登入紀錄</td>
+                        <td><a href="系統設定05_2功能權限管理_後台帳號登入紀錄.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>前台會員登入紀錄</td>
+                        <td><a href="系統設定05_3功能權限管理_前台會員登入紀錄.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>權限管理</td>
+                        <td><a href="系統設定05_4功能權限管理_權限管理.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>資料選項管理</td>
+                        <td><a href="系統設定06_0資料選項管理.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="window">
+                        <td></td>
+                        <td>新增資料選項</td>
+                        <td><a href="系統設定06_1新增資料選項.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="window">
+                        <td></td>
+                        <td>修改檢視資料選項</td>
+                        <td><a href="系統設定06_2修改檢視資料選項.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>服務客戶</td>
+                        <td><a href="系統設定07_0服務客戶.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>擷取紀錄查詢</td>
+                        <td><a href="系統設定07_1擷取紀錄查詢.htm"></a></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JS都需要放在最下面 -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <script src="js/customize.js"></script>
+    <script>
+        $(function () {
+            $('tbody').find('a').each(function (index, el) {
+                var Link = $(this).attr('href');
+                $(this).text(Link);
+            });
+        })
+    </script>
+</body>
+
+</html>

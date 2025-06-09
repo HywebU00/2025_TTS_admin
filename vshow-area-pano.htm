@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>台灣國際專業展網站管理系統</title>
+	<!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+	<link rel="stylesheet" href="css/hyui_admin.css">
+	<link rel="icon" type="image/png" href="images/ico.png" />
+
+
+
+</head>
+<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css?_v=1683513042375" />
+<link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css?_v=1683513042375" />
+<style>
+	
+	
+</style>
+
+<body class="body_white">
+	<form id="frm" name="frm" action="" class="form_grid" method="POST">
+		<div class="hy_block">
+
+
+			<div class="hy_block_body">
+				<h3>XL2-展區設定</h3>
+
+				<div class="form_grp">
+					<label for="" class="form_title"><abbr class="necessary" title="">*</abbr>展區數量</label>
+					<div class="form_content radio_grp form_inline">
+						<label>
+							<input name="dataType" type="radio" value="1" style="padding:0;"
+								onclick="$('#area2').hide()">顯示單一展區
+						</label>
+						<label>
+							<input name="dataType" type="radio" value="2" style="padding:0;"
+								onclick="$('#area2').show()">顯示雙展區
+						</label>
+
+					</div>
+				</div>
+
+				<div class="form_grp" style="margin:0px;" id="area1">
+					<label for="" class="form_title"><abbr class="necessary" title="">*</abbr>展區一</label>
+					<div class="form_content">
+						<div class="chart-list" style="padding:0.1em;">
+							<ul>
+								<li id="203E3916652B9BE5" data-index="0" data-pano="XL1">
+									<div class="img-container"><img src="images/dataIMG/img01.jpg"
+										alt="Bicycle 123 Parts/自行車零配件"></div>
+									<div>Bicycle 123 Parts/自行車零配件
+										<BR>(已設定)
+									</div>
+								</li>
+								<li id="32EE7E4489297D3F" data-index="1" data-pano="L2">
+									<div class="img-container"><img src="images/dataIMG/img02.jpg"
+										alt="Bicycle Parts & Accessories/自行車零配件"></div>
+									<div>Bicycle Parts & Accessories/自行車零配件
+										<BR>(已設定)
+									</div>
+								</li>
+								<li id="52303BB48090FCC5" data-index="2" data-pano="L3">
+									<div class="img-container"><img 
+										src="images/dataIMG/img03.jpg"
+										alt="Complete Bicycle/自行車整車區"></div>
+									<div>Complete Bicycle/自行車整車區
+										<BR>(已設定)
+									</div>
+								</li>
+								<li id="7BC1ADA4EC52881F" data-index="3" data-pano="L4">
+									<div class="img-container">
+										<img src="images/dataIMG/img04.jpg"
+										alt="Dive Equipment/買裝備"></div>
+									<div>Dive Equipment/買裝備
+										<BR>(已設定)
+									</div>
+								</li>
+								<li id="DBCA157366ED01CA" data-index="4" data-pano="L5">
+									<div class="img-container">
+										<img src="images/dataIMG/img05.jpg"
+										alt="Doristest/測試測試測試"></div>
+									<div>Doristest/測試測試測試
+										<BR>(已設定)
+									</div>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="form_grp" style="margin:0px;" id="area2">
+					<label for="" class="form_title"><abbr class="necessary" title="">*</abbr>展區二</label>
+					<div class="form_content">
+						<div class="chart-list" style="padding:0.1em;">
+							<ul>
+								<li id="203E3916652B9BE5" data-index="0" data-pano="XL1">
+									<div class="img-container"><img 
+										src="images/dataIMG/img05.jpg"
+										alt="Bicycle 123 Parts/自行車零配件"></div>
+									<div>Bicycle 123 Parts/自行車零配件
+										<BR>(已設定)
+									</div>
+								</li>
+								<li id="32EE7E4489297D3F" data-index="1" data-pano="L2">
+									<div class="img-container"><img 
+										src="images/dataIMG/img06.jpg"
+										alt="Bicycle Parts & Accessories/自行車零配件"></div>
+									<div>Bicycle Parts & Accessories/自行車零配件
+										<BR>(已設定)
+									</div>
+								</li>
+								<li id="52303BB48090FCC5" data-index="2" data-pano="L3">
+									<div class="img-container"><img 
+										src="images/dataIMG/img07.jpg"
+										alt="Complete Bicycle/自行車整車區"></div>
+									<div>Complete Bicycle/自行車整車區
+										<BR>(已設定)
+									</div>
+								</li>
+								<li id="7BC1ADA4EC52881F" data-index="3" data-pano="L4">
+									<div class="img-container"><img 
+										src="images/dataIMG/img08.jpg"
+										alt="Dive Equipment/買裝備"></div>
+									<div>Dive Equipment/買裝備
+										<BR>(已設定)
+									</div>
+								</li>
+								<li id="DBCA157366ED01CA" data-index="4" data-pano="L5">
+									<div class="img-container"><img 
+										src="images/dataIMG/img09.jpg"
+										alt="Doristest/測試測試測試"></div>
+									<div>Doristest/測試測試測試
+										<BR>(已設定)
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="btn_grp">
+					<button type="button" class="btn btn-primary" onclick="doSubmit()" value="送出">送出</button>
+					<button type="button" class="btn" value="取消" onclick="window.parent.closeFancybox();">取消</button>
+				</div>
+
+
+
+			</div><!--end hy_block_body-->
+
+		</div><!--end hy_block-->
+	</form>
+
+
+	<link href="js/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui/jquery-ui.min.js"></script>
+	<script src="vendor/jquery.easing.min.js"></script>
+	<script src="vendor/nicescroll/jquery.nicescroll.min.js"></script>
+	<script src="js/jquery-ui/datepicker-zh-TW.js"></script>
+	<script src="js/customize_tts.js"></script>
+	<script src="js/common.js?v=1683513042399" charset="utf-8"></script>
+
+	<script>
+		//menu function
+		// menu設定
+		var Menu_Status = $("aside").hasClass("closed");
+		var _Menu_Btn = $("#menuBtn");
+		_Menu_Btn.off().click(function (e) {
+			if (!Menu_Status) {
+				$('aside').addClass('closed');
+				$('header').addClass('closed');
+				$('.main_zone').addClass('closed');
+				$(this).parent().addClass('closed');
+				Menu_Status = true;
+			} else {
+				$('aside').removeClass('closed');
+				$('header').removeClass('closed');
+				$('.main_zone').removeClass('closed');
+				$(this).parent().removeClass('closed');
+				Menu_Status = false;
+			}
+
+			jQuery.ajax({
+				type: "POST",
+				url: "/index-menu-" + (Menu_Status ? "opened" : "closed") + ".html",
+				success: function (data) {
+
+				}, complete: function () {
+
+				},
+				error: function (msg, error, thrownError) {
+					//alert(thrownError + " , "+error);
+				}
+			});
+			if ($('.show_list').length) {
+				if ($('.show_list').position().left > 0) {
+					$('.show_list').css("left", $('menu').width());
+				}
+			}
+
+			$(this).blur();
+			e.preventDefault();
+		});
+
+	</script>
+	<script>
+		<!--
+				 	
+			 function addCsrf(){
+					  $("form[method='post']" ).each(function() {
+					   $(this).find("input[name='_csrf']").remove();	
+					 var csrfInp = $('<input type="hidden" name="_csrf" value="ddddd107-34c4-4769-92bf-aedd5ae7ddad"/>');
+					 //console.log($(this).attr("action"));
+				 $(this).append( csrfInp );
+			   });
+			 }
+			 
+		    
+			 $.ajaxSetup({
+				   cache:false,
+			   beforeSend: function (xhr) {       	 
+				   xhr.setRequestHeader("X-XSRF-TOKEN", "ddddd107-34c4-4769-92bf-aedd5ae7ddad");
+			   }}
+			 );
+			 $("form[method='post']" ).each(function() {
+					 var csrfInp = $('<input type="hidden" name="_csrf" value="ddddd107-34c4-4769-92bf-aedd5ae7ddad"/>');
+					 //console.log($(this).attr("action"));
+				 $(this).append( csrfInp );
+			 });
+			 //foralaEditorCsrf init
+			 var foralaEditorCsrf = {"headerName":"X-XSRF-TOKEN","token": "ddddd107-34c4-4769-92bf-aedd5ae7ddad"};
+			  
+			 
+			 
+			 //選擇其他展覽
+			 if($(".show_list").length>0){
+				 //展覽年度管理	
+				 $(".content h2").append("<button class=\"btn btn-show-list\" onclick=\"doYearListBtn(1);\">選擇其它年度</button>");
+			 }
+			 ->
+	</script>
+	<script src="vendor/slick/slick.min.js?_v=1683513042400"></script>
+
+	<script>
+		<!--
+		
+		  function doSubmit(){
+				 let si = $(".chart-list ul").slick("slickCurrentSlide");
+				 let aid= $("li[data-slick-index='"+si+"']").attr("id");
+				 console.log(aid);
+				
+			  let dd = {"id":aid,"panoID":"XL2"};
+			  doMask();
+			  jQuery.ajax({
+			  type: "POST",
+			  url: "3770CDAA6A6401C3-booth-pano-save.json",
+				data: JSON.stringify(dd),
+				contentType:"application/json",
+				dataType: "json",
+			  success:function(result){
+					console.log(result);
+					if(result.errorCode==1){
+						let info = result.result.info;
+						if(info.panoID.startsWith("X")){
+							 //large img
+							 alert(1);
+							 parent.location.reload();
+						}else{
+							//small img
+							//spotid,title,imgid,photoPath,tid,imgPath
+						parent.updateBanner(info.panoID,info.name["zh-tw"],info.panoID.replace("L","B"),result.result.fileDomain+info.photo.path);
+						if(result.result.oldPanoID!="" && result.result.oldPanoID!="-1"){
+							let opid=result.result.oldPanoID;
+							let dimg = result.result.fileDomain+"/ttsShowYear/202109/T-96704772-S.jpg";
+							parent.updateBanner(opid,"未設定",opid.replace("L","B"),dimg);
+						}
+						}
+						//parent.closeFancybox(); 
+					  }
+			  }, 
+			  error:function(msg, error,thrownError){
+				 //alert(thrownError+" , "+error);
+			  },complete:function(){
+				 closeModal();
+			  }
+			});
+		  
+		  }
+		  
+		 
+		  var validator;
+		 $(document).ready(function() {
+				// doMask();  
+			$("#area1 ul,#area2 ul").slick({
+				lazyLoad: 'ondemand',
+				dots: false,
+				infinite: true,
+				speed: 300,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: false,
+				arrow: true,
+				responsive: [{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						infinite: true,
+						dots: false,
+						arrows: true
+					}
+				}]
+			});    
+
+			$(".chart-list ul").slick({
+				lazyLoad: 'ondemand',
+				dots: false,
+				infinite: true,
+				speed: 300,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: false,
+				arrow: true,
+				responsive: [{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						infinite: true,
+						dots: false,
+						arrows: true
+					}
+				}]
+			});    
+		    
+			let item = $("li[data-pano='XL2']");
+			if(item && item.length>0){
+			  $(".chart-list ul").slick('slickGoTo', item.attr("data-index"),false);
+			}
+			setTimeout(function(){
+				//Your function here
+			},2500); 
+			  closeModal(); 
+		}); 
+		
+		 
+		
+		//-->
+	</script>
+</body>
+
+
+</html>

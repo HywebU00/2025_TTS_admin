@@ -1,0 +1,60 @@
+ * {
+     box-sizing: border-box;
+ }
+ body {
+     margin: 0;
+     padding: 0;
+     width: 100%;
+     height: 100vh;
+     background: #E8E8E8;
+     @include box-sizing;
+ }
+ // 最外圍預設為100%
+ .wrapper {
+     width: 100%;
+     margin: 0px auto;
+     @include screen('mobile') {
+         background: #FFF;
+     }
+ }
+ // 整體共用container樣式，請注意首頁切版頁面的整齊
+ .container {
+     padding: 0;
+     margin: 0 auto;
+     max-width: $container-max; //請看_variable.scss
+ }
+ .main {
+     position: relative;
+     margin: 0 auto;
+     padding: 0; // max-width: $container-max;
+     // 可先設定一個中央區塊最大寬，限制accesskey對齊
+     @include screen('mobile') {
+         padding-top: 55px;
+     }
+     // 內頁標題設定
+     h2 {
+         line-height: 1.25em;
+     }
+ }
+ ////////////////////////////////////////////////////////////
+ // 為了與首頁區隔，請在內頁加上innerpage ClassName
+ .innerpage {
+     padding-top: 2em;
+     @include screen('mobile') {
+         padding-top: 5em;
+     }
+     >.container {
+         @include gutter(); //gutter 代表左右要留白
+     }
+ }
+ // animation
+ @keyframes bounceInDown {
+     0% {
+         opacity: 0;
+         transform: translateY(-50px);
+     }
+     100% {
+         transform: translateY(0);
+     }
+ }
+ // admin_template

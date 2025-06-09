@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>台灣國際專業展網站管理系統</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/hyui_admin.css">
+    <!-- pg-calendar -->
+    <link rel="stylesheet" href="vendor/pg_calendar/css/pignose.calendar.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="images/ico.png" />
+</head>
+
+<body>
+    <!-- header load('00header.htm') -->
+    <header></header>
+    <!-- menu load('00menu.htm') -->
+    <aside id="menu"></aside>
+    <!-- 主要內容 -->
+    <div class="main_zone">
+	<div class="pills">
+                 <ul>
+                    <li class="active"><a href="論壇05_12活動資訊管理.htm">活動資訊</a></li>
+                    <li><a href="論壇05_13活動資訊管理_議程管理.htm">議程管理</a></li>
+					<li><a href="論壇05_14活動資訊管理_報名管理.htm">報名管理</a></li>
+                </ul>
+            </div>
+
+        <div class="content">
+            <!-- path -->
+            <div class="breadcrumb hy_block">
+                 <ul>
+                    <li><a href="#">論壇活動</a></li>
+                    <li><a href="#">論壇網站管理</a></li>
+                    <li onclick="javascript:showDiv('note')">活動資訊管理?</li>
+                </ul>
+            </div>
+            <!-- 節點標題 -->
+            <h2>活動資訊管理</h2>
+						
+                <div class="table_list">
+                    <!--<h3>新增部門至 <span>中華民國對外貿易協會</span></h3>-->
+                    <form action="" class="form_grid">
+						<h3>活動資訊</h3>
+					    
+						<div class="form_grp">
+								<div class="form_title_th">
+									活動名稱<abbr class="necessary" title="">*</abbr>
+								</div>
+							</div>
+						
+						<div class="form_grp">
+                            <label for="apartment_num" class="form_title">中文
+                            </label>
+                            <div class="form_content">
+                               <input type="text" id="username" value="" onblur="javascript:showDiv('seminar_list')">
+                            </div>
+                        </div>
+					    <div class="form_grp">
+                            <label for="apartment_num" class="form_title">英文
+                            </label>
+                            <div class="form_content">
+                                <input type="text" id="username" value="" onblur="javascript:showDiv('seminar_list')">
+                            </div>
+                        </div>
+						<div class="form_grp">
+                            <label for="apartment_num" class="form_title">義大利文
+                            </label>
+                            <div class="form_content">
+                                <input type="text" id="username" value="">
+                            </div>
+                        </div>
+						<div class="form_grp">
+                            <label for="apartment_num" class="form_title">越南文
+                            </label>
+                            <div class="form_content">
+                                <input type="text" id="username" value="">
+                            </div>
+                        </div>
+						<div class="form_grp">
+                            <label for="apartment_num" class="form_title">簡體中文
+                            </label>
+                            <div class="form_content hasBtn">
+                                <input type="text" id="username" value="">
+								  <button class="btn" >轉自繁中</button>
+							
+                            </div>
+                        </div>
+						
+					<div class="form_grp">
+                            <label for="" class="form_title">活動分類<abbr class="necessary" title="">*</abbr></label>
+                            <div class="form_content hasBtn">
+                                <input name="" type="text" value="展覽，會議 ，獎旅">
+                                <button class="btn" onclick="window.open('共用01_多語選擇.htm', '','width=400,height=300');">..</button>
+                            </div>
+                        </div>
+						<div class="form_grp">
+                            <label for="" class="form_title">活動歸屬展覽</label>
+                            <div class="form_content hasBtn">
+                                <input name="" type="text" value="食品展" >
+                                <button class="btn" onclick="window.open('共用01_展覽選擇.htm', '','width=800,height=600');">..</button>
+                            </div>
+                        </div>
+							<div class="form_grp">
+                            <label for="" class="form_title">發布至展覽活動行事曆</label>
+                            <div class="form_content hasBtn">
+                                <input name="" type="text" value="Computex，水展，食品展" >
+                                <button class="btn" onclick="window.open('共用01_展覽選擇.htm', '','width=800,height=600');">..</button>
+                            </div>
+                        </div>
+						
+					<div class="form_grp">
+								<div class="form_title_th">
+									活動連結<abbr class="necessary" title="">*</abbr>
+								</div>
+							</div>
+						<div class="form_grp">
+                        
+                            <div class="form_content">
+                                <input type="radio" id="username" value="Root">內部
+								<input type="radio" id="username" value="Root" checked>外部
+								
+                            </div>
+                        </div>
+						<div class="form_grp">
+						
+                            <label for="apartment_num" class="form_title">中文
+                            </label>
+                            <div class="form_content">
+                               <input type="text" id="username" value="" onblur="javascript:showDiv('seminar_list')">
+                            </div>
+                        </div>
+						
+					    <div class="form_grp">
+                            <label for="apartment_num" class="form_title">英文
+                            </label>
+                            <div class="form_content">
+                                <input type="text" id="username" value="" onblur="javascript:showDiv('seminar_list')">
+                            </div>
+                        </div>
+						
+						<div class="form_grp">
+                            <label for="apartment_num" class="form_title">義大利文
+                            </label>
+                            <div class="form_content">
+                                <input type="text" id="username" value="">
+                            </div>
+                        </div>
+						<div class="form_grp">
+                            <label for="apartment_num" class="form_title">越南文
+                            </label>
+                            <div class="form_content">
+                                <input type="text" id="username" value="">
+                            </div>
+                        </div>
+						<div class="form_grp">
+                            <label for="apartment_num" class="form_title">簡體中文
+                            </label>
+                            <div class="form_content hasBtn">
+                                <input type="text" id="username" value="">
+								  <button class="btn" >取自繁中</button>
+							
+                            </div>
+                        </div>
+						
+						
+						<div class="form_grp ">
+                        <label for="apartment_num" class="form_title">活動日期時間<abbr class="necessary" title="">*</abbr></label>
+                        <div class="form_content form_inline">
+                            <div class="datepick">
+                                <input name="" type="text" value="" class="calendar">
+                                <button class="btn"><i class="i_calendar_color"></i></button>
+								<select id="startHour" name="startHour">
+	  	  <option value="00">00</option>
+	  	  <option value="01">01</option>
+	  	  <option value="02">02</option>
+	  	  <option value="03">03</option>
+	  	  <option value="04">04</option>
+	  	  <option value="05">05</option>
+	  	  <option value="06">06</option>
+	  	  <option value="07">07</option>
+	  	  <option value="08">08</option>
+	  	  <option value="09">09</option>
+	  	  <option value="10">10</option>
+	  	  <option value="11">11</option>
+	  	  <option value="12">12</option>
+	  	  <option value="13">13</option>
+	  	  <option value="14">14</option>
+	  	  <option value="15">15</option>
+	  	  <option value="16">16</option>
+	  	  <option value="17">17</option>
+	  	  <option value="18">18</option>
+	  	  <option value="19">19</option>
+	  	  <option value="20">20</option>
+	  	  <option value="21">21</option>
+	  	  <option value="22">22</option>
+	  	  <option value="23">23</option>
+	  	  </select> : <select id="startHour" name="startHour">
+	  	  <option value="00">00</option>
+	  	  <option value="01">01</option>
+	  	  <option value="02">02</option>
+	  	  <option value="03">03</option>
+	  	  <option value="04">04</option>
+	  	  <option value="05">05</option>
+	  	  <option value="06">06</option>
+	  	  <option value="07">07</option>
+	  	  <option value="08">08</option>
+	  	  <option value="09">09</option>
+	  	  <option value="10">10</option>
+	  	  <option value="11">11</option>
+	  	  <option value="12">12</option>
+	  	  <option value="13">13</option>
+	  	  <option value="14">14</option>
+	  	  <option value="15">15</option>
+	  	  <option value="16">16</option>
+	  	  <option value="17">17</option>
+	  	  <option value="18">18</option>
+	  	  <option value="19">19</option>
+	  	  <option value="20">20</option>
+	  	  <option value="21">21</option>
+	  	  <option value="22">22</option>
+	  	  <option value="23">23</option>
+	  	  </select>
+                            </div>
+         <div class="datepick">
+                                <input name="" type="text" value="" class="calendar">
+                                <button class="btn"><i class="i_calendar_color"></i></button>
+								<select id="startHour" name="startHour">
+	  	  <option value="00">00</option>
+	  	  <option value="01">01</option>
+	  	  <option value="02">02</option>
+	  	  <option value="03">03</option>
+	  	  <option value="04">04</option>
+	  	  <option value="05">05</option>
+	  	  <option value="06">06</option>
+	  	  <option value="07">07</option>
+	  	  <option value="08">08</option>
+	  	  <option value="09">09</option>
+	  	  <option value="10">10</option>
+	  	  <option value="11">11</option>
+	  	  <option value="12">12</option>
+	  	  <option value="13">13</option>
+	  	  <option value="14">14</option>
+	  	  <option value="15">15</option>
+	  	  <option value="16">16</option>
+	  	  <option value="17">17</option>
+	  	  <option value="18">18</option>
+	  	  <option value="19">19</option>
+	  	  <option value="20">20</option>
+	  	  <option value="21">21</option>
+	  	  <option value="22">22</option>
+	  	  <option value="23">23</option>
+	  	  </select> : <select id="startHour" name="startHour">
+	  	  <option value="00">00</option>
+	  	  <option value="01">01</option>
+	  	  <option value="02">02</option>
+	  	  <option value="03">03</option>
+	  	  <option value="04">04</option>
+	  	  <option value="05">05</option>
+	  	  <option value="06">06</option>
+	  	  <option value="07">07</option>
+	  	  <option value="08">08</option>
+	  	  <option value="09">09</option>
+	  	  <option value="10">10</option>
+	  	  <option value="11">11</option>
+	  	  <option value="12">12</option>
+	  	  <option value="13">13</option>
+	  	  <option value="14">14</option>
+	  	  <option value="15">15</option>
+	  	  <option value="16">16</option>
+	  	  <option value="17">17</option>
+	  	  <option value="18">18</option>
+	  	  <option value="19">19</option>
+	  	  <option value="20">20</option>
+	  	  <option value="21">21</option>
+	  	  <option value="22">22</option>
+	  	  <option value="23">23</option>
+	  	  </select>
+                            </div>
+                        </div>
+                    </div>
+						
+						
+						
+				
+							<!--<div class="form_grp">
+                            <label for="apartment_num" class="form_title">活動地點人數限制<abbr class="necessary" title="">*</abbr>
+                            </label>
+                            <div class="form_content">
+                              <input type="text" id="username" value="0">
+							  </br>0為無限制
+                            </div>
+                        </div>-->
+						
+						<div class="form_grp">
+								<div class="form_title_th">
+									活動說明<abbr class="necessary" title="">*</abbr>
+								</div>
+							</div>
+						
+						<div class="form_grp has-danger">
+                            <label for="apartment_num" class="form_title">中文
+                            </label>
+                               <div class="form_content">
+							<button class="btn" onclick="window.open('共用01_系統帳號人員選擇.htm', '','width=800,height=600');">上傳圖片</button>
+							<button class="btn" onclick="window.open('共用01_htmleditor.htm', '','width=800,height=600');">Html Editor</button>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+												<div class="form_grp has-danger">
+                            <label for="apartment_num" class="form_title">英文
+                            </label>
+                               <div class="form_content">
+							<button class="btn" onclick="window.open('共用01_系統帳號人員選擇.htm', '','width=800,height=600');">上傳圖片</button>
+							<button class="btn" onclick="window.open('共用01_htmleditor.htm', '','width=800,height=600');">Html Editor</button>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+												<div class="form_grp has-danger">
+                            <label for="apartment_num" class="form_title">義大利文
+                            </label>
+                               <div class="form_content">
+							<button class="btn" onclick="window.open('共用01_系統帳號人員選擇.htm', '','width=800,height=600');">上傳圖片</button>
+							<button class="btn" onclick="window.open('共用01_htmleditor.htm', '','width=800,height=600');">Html Editor</button>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+												<div class="form_grp has-danger">
+                            <label for="apartment_num" class="form_title">越南文
+                            </label>
+                               <div class="form_content">
+							<button class="btn" onclick="window.open('共用01_系統帳號人員選擇.htm', '','width=800,height=600');">上傳圖片</button>
+							<button class="btn" onclick="window.open('共用01_htmleditor.htm', '','width=800,height=600');">Html Editor</button>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+						<div class="form_grp has-danger">
+                            <label for="apartment_num" class="form_title">簡體中文
+                            </label>
+                               <div class="form_content">
+							<button class="btn" onclick="window.open('共用01_系統帳號人員選擇.htm', '','width=800,height=600');">上傳圖片</button>
+							<button class="btn" onclick="window.open('共用01_htmleditor.htm', '','width=800,height=600');">Html Editor</button>
+							<button class="btn" onclick="window.open('共用01_htmleditor.htm', '','width=800,height=600');">轉自繁中</button>
+							  
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+					
+					<div class="form_grp">
+								<div class="form_title_th">
+									活動地點<abbr class="necessary" title="">*</abbr>
+								</div>
+							</div>
+						
+						<div class="form_grp">
+                            <label for="apartment_num" class="form_title">中文
+                            </label>
+                            <div class="form_content">
+                               <input type="text" id="username" value="" onblur="javascript:showDiv('seminar_list')">
+                            </div>
+                        </div>
+					    <div class="form_grp">
+                            <label for="apartment_num" class="form_title">英文
+                            </label>
+                            <div class="form_content">
+                                <input type="text" id="username" value="" onblur="javascript:showDiv('seminar_list')">
+                            </div>
+                        </div>
+						<div class="form_grp">
+                            <label for="apartment_num" class="form_title">義大利文
+                            </label>
+                            <div class="form_content">
+                                <input type="text" id="username" value="">
+                            </div>
+                        </div>
+						<div class="form_grp">
+                            <label for="apartment_num" class="form_title">越南文
+                            </label>
+                            <div class="form_content">
+                                <input type="text" id="username" value="">
+                            </div>
+                        </div>
+						<div class="form_grp">
+                            <label for="apartment_num" class="form_title">簡體中文
+                            </label>
+                            <div class="form_content hasBtn">
+                                <input type="text" id="username" value="">
+								  <button class="btn" >轉自繁中</button>
+							
+                            </div>
+                        </div>
+			<div class="form_grp">
+								<div class="form_title_th">
+									活動地址
+								</div>
+							</div>
+						
+						<div class="form_grp">
+                            <label for="apartment_num" class="form_title">中文
+                            </label>
+                            <div class="form_content">
+                               <input type="text" id="username" value="" onblur="javascript:showDiv('seminar_list')">
+                            </div>
+                        </div>
+					    <div class="form_grp">
+                            <label for="apartment_num" class="form_title">英文
+                            </label>
+                            <div class="form_content">
+                                <input type="text" id="username" value="" onblur="javascript:showDiv('seminar_list')">
+                            </div>
+                        </div>
+						<div class="form_grp">
+                            <label for="apartment_num" class="form_title">義大利文
+                            </label>
+                            <div class="form_content">
+                                <input type="text" id="username" value="">
+                            </div>
+                        </div>
+						<div class="form_grp">
+                            <label for="apartment_num" class="form_title">越南文
+                            </label>
+                            <div class="form_content">
+                                <input type="text" id="username" value="">
+                            </div>
+                        </div>
+						<div class="form_grp">
+                            <label for="apartment_num" class="form_title">簡體中文
+                            </label>
+                            <div class="form_content hasBtn">
+                                <input type="text" id="username" value="">
+								  <button class="btn" >轉自繁中</button>
+							
+                            </div>
+                        </div>
+					
+						<div class="form_grp">
+                            <label for="apartment_num" class="form_title">活動地點與地址顯示設定
+                            </label>
+                            <div class="form_content">
+                                <td>
+      <input name="showLocation" id="showLocation" type="radio" value="S" onclick="javascript:showXY();">單純顯示資訊
+      <input name="showLocation" id="showLocation" type="radio" value="G" onclick="javascript:showXY();" checked>連結Google Map<br>
+                  <div id="mapXY" style="display: block;">
+        經度<input type="text" name="longitude" id="longitude" value="" size="8">
+        緯度<input type="text" name="latitude" id="latitude" value="" size="8">於Google Map中使用(範例：經度:121.562510，緯度:25.033929)
+      </div>
+      </td>
+								
+                            </div>
+                        </div>
+						
+				<div class="form_grp">
+								<div class="form_title_th">
+									聯絡人<abbr class="necessary" title="">*</abbr>
+								</div>
+							</div>
+						
+						<div class="form_grp has-danger">
+                            <label for="apartment_num" class="form_title">中文
+                            </label>
+                               <div class="form_content">
+
+							<button class="btn" onclick="window.open('共用01_htmleditor.htm', '','width=800,height=600');">Html Editor</button>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+												<div class="form_grp has-danger">
+                            <label for="apartment_num" class="form_title">英文
+                            </label>
+                               <div class="form_content">
+						
+							<button class="btn" onclick="window.open('共用01_htmleditor.htm', '','width=800,height=600');">Html Editor</button>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+												<div class="form_grp has-danger">
+                            <label for="apartment_num" class="form_title">義大利文
+                            </label>
+                               <div class="form_content">
+				
+							<button class="btn" onclick="window.open('共用01_htmleditor.htm', '','width=800,height=600');">Html Editor</button>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+												<div class="form_grp has-danger">
+                            <label for="apartment_num" class="form_title">越南文
+                            </label>
+                               <div class="form_content">
+						
+							<button class="btn" onclick="window.open('共用01_htmleditor.htm', '','width=800,height=600');">Html Editor</button>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+						<div class="form_grp has-danger">
+                            <label for="apartment_num" class="form_title">簡體中文
+                            </label>
+                               <div class="form_content">
+						
+							<button class="btn" onclick="window.open('共用01_htmleditor.htm', '','width=800,height=600');">Html Editor</button>
+							<button class="btn" onclick="window.open('共用01_htmleditor.htm', '','width=800,height=600');">轉自繁中</button>
+							  
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>		
+	
+						<div class="form_grp has-danger">
+                            <label for="" class="form_title">參考資料</label>
+                            <div class="form_content">
+						
+							<input type="button" class="btn" onclick="javascript:showDiv('referdoc');" value="參考資料"></button>
+                               
+                            </div>
+                        </div>
+						
+						<div class="form_grp">
+								<div class="form_title_th">
+									其他說明
+								</div>
+							</div>
+						
+						<div class="form_grp has-danger">
+                            <label for="apartment_num" class="form_title">中文
+                            </label>
+                               <div class="form_content">
+
+							<button class="btn" onclick="window.open('共用01_htmleditor.htm', '','width=800,height=600');">Html Editor</button>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+												<div class="form_grp has-danger">
+                            <label for="apartment_num" class="form_title">英文
+                            </label>
+                               <div class="form_content">
+						
+							<button class="btn" onclick="window.open('共用01_htmleditor.htm', '','width=800,height=600');">Html Editor</button>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+												<div class="form_grp has-danger">
+                            <label for="apartment_num" class="form_title">義大利文
+                            </label>
+                               <div class="form_content">
+				
+							<button class="btn" onclick="window.open('共用01_htmleditor.htm', '','width=800,height=600');">Html Editor</button>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+												<div class="form_grp has-danger">
+                            <label for="apartment_num" class="form_title">越南文
+                            </label>
+                               <div class="form_content">
+						
+							<button class="btn" onclick="window.open('共用01_htmleditor.htm', '','width=800,height=600');">Html Editor</button>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+						<div class="form_grp has-danger">
+                            <label for="apartment_num" class="form_title">簡體中文
+                            </label>
+                               <div class="form_content">
+						
+							<button class="btn" onclick="window.open('共用01_htmleditor.htm', '','width=800,height=600');">Html Editor</button>
+							<button class="btn" onclick="window.open('共用01_htmleditor.htm', '','width=800,height=600');">轉自繁中</button>
+							  
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>		
+						
+						
+						
+						<h3>異動資訊</h3>
+				<div class="form_grp">
+                    <label for="apartment_num" class="form_title">新增人員</label>
+                    <div class="form_content">
+                       張三(a0343)
+                    </div>
+                </div>
+				<div class="form_grp">
+                    <label for="apartment_num" class="form_title">新增時間</label>
+                    <div class="form_content">
+                       2019/09/04 12:34
+                    </div>
+                </div>
+				<div class="form_grp">
+                    <label for="apartment_num" class="form_title">異動人員</label>
+                    <div class="form_content">
+                       張三(a0343)
+                    </div>
+                </div>
+				<div class="form_grp">
+                    <label for="apartment_num" class="form_title">異動時間</label>
+                    <div class="form_content">
+                       2019/09/04 12:34
+                    </div>
+                </div>
+                        <div class="btn_grp">
+                            <button class="btn btn-primary">確認</button>
+							 <button class="btn btn-cancel">取消</button>
+                        </div>
+                    </form>
+                </div>
+	
+		
+ 
+        </div>
+    </div>
+	
+	<div id='note' style="width: 600px;  height: 300px;  position: absolute;  top: 50%;  left: 50%;  margin: -150px 0 0 -300px;background-color:pink;overflow:scroll" onclick="javascript:closeDiv('note')">
+	<p>開發前你是否已經讀過TTS的切版原則?</p>
+	<p>寫程式前一定要知道，D部門類似頁面的操作行為，最好先由SA講解一下</p>
+	 <p>多語系資料結構為 : 多語系，不同時發布，這類的資料ADM一定會有繁中與英文，且列表要顯示繁中與英文資料，其他語系則依據論壇所選用的語系讓使用者於新增時輸入多語資料，其他語系若沒有輸入資料，則全數帶入英文資料，故系統再怎樣所有必填欄位都一定要輸入英文資料</p>
+	<p>儲存活動資料後，才顯示右邊2個頁籤使用</p>
+	</div>
+	
+	<div id='referdoc' style="width: 900px;  height: 500px;  position: absolute;  top: 3500px;  left: 50%;  margin: -150px 0 0 -300px;background-color:pink;overflow:scroll; display:none" onclick="javascript:closeDiv('referdoc')">
+				<div class="hy_block">
+					<h2>活動參考資料</h2>
+						<div class="form_grp">
+                            <label for="" class="form_title">語系</label>
+                            <div class="form_content">
+								<select>
+									<option>繁體中文</option>
+									<option>英文</option>
+									<option>義大利文</option>
+									<option>越南文</option>
+									<option>簡體中文</option>
+								</select>
+							
+                               
+                            </div>
+                        </div>
+						<div class="control_panel">
+                    <button class="btn btn-sm" onclick="javascript:showDiv('addreferdoc');closeDiv('referdoc');"><i class="i_add"></i>新增參考資料</button>
+					
+                </div>
+                <div class="table_list ">
+                    <table>
+                        <thead>
+							<tr>
+								<th>顯示名稱</th>
+								<th>檔案</th>
+								<th>權限</th>
+								<th>上線日期</th>
+								<th>動作</th>
+
+							</tr>
+                        </thead>
+                        <tbody>
+                          	<tr><td>報名資訊</td><td><a href="#">xxx.pdf</a></td><td>公開</td><td>2019/09/23</td><td><button class="btn btn-sm">編輯</button><button class="btn btn-sm">刪除</button>
+							
+					</td></tr>
+							<tr><td>飯店資訊</td><td>xxx.doc</td><td>登入</td><td></td><td></td</tr>
+							<tr><td>宴會菜單</td><td>xxx.pdf</td><td>報名</td><td></td><td></td</tr>
+							<tr><td>宴會菜單</td><td>xxx.pdf</td><td>報到</td><td></td><td></td</tr>	
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+	</div>
+	
+	
+	<div id='addreferdoc' style="width: 800px;  height: 800px;  position: absolute;  top: 3500px;  left: 50%;  margin: -150px 0 0 -300px;background-color:pink;overflow:scroll;display:none" onclick="javascript:closeDiv('addreferdoc')">
+				<div class="hy_block">
+					<h2>新增活動參考資料</h2>
+						<div class="form_grp">
+                            <label for="" class="form_title">語系</label>
+                            <div class="form_content">
+								<select>
+									<option>繁體中文</option>
+									<option selected>英文</option>
+									<option>義大利文</option>
+									<option>越南文</option>
+									<option>簡體中文</option>
+								</select>
+							
+                               
+                            </div>
+                        </div>
+						
+							<div class="form_grp">
+                            <label for="apartment_num" class="form_title"> 顯示名稱<abbr class="necessary" title="">*</abbr>
+                            </label>
+                            <div class="form_content">
+                                <input type="text" id="username" value="" >
+                            </div>
+                        </div>
+							<div class="form_grp">
+                            <label for="apartment_num" class="form_title"> 上傳檔案<abbr class="necessary" title="">*</abbr>
+                            </label>
+                             <div class="form_content hasBtn">
+                                <input type="text" id="username" value="">
+								  <button class="btn" >上傳檔案</button>
+							
+                            </div>
+                        </div>
+						<div class="form_grp">
+                            <label for="apartment_num" class="form_title"> 權限<abbr class="necessary" title="">*</abbr>
+                            </label>
+                             <div class="form_content form_inline">
+                               		
+								<label>
+                                    <input type="checkbox" name="sampleRadio1" value="" checked>公開</label>
+								
+								 <label>
+                                    <input type="checkbox" name="sampleRadio1" value="" >登入</label>
+								
+								 <label>
+                                    <input type="checkbox" name="sampleRadio1" value="" >報名</label>
+								
+								 <label>
+                                    <input type="checkbox" name="sampleRadio1" value="" >報到</label>
+								
+							 
+                            </div>
+                        </div>
+						<div class="form_grp ">
+                        <label for="apartment_num" class="form_title">上線日期<abbr class="necessary" title="">*</abbr></label>
+                        <div class="form_content form_inline">
+                            <div class="datepick">
+                                <input name="" type="text" value="" class="calendar">
+                                <button class="btn"><i class="i_calendar_color"></i></button>
+								
+                            </div>
+
+                        </div>
+                    </div>
+
+						<div class="form_grp">
+                        <label for="apartment_num" class="form_title">同時發布語系</label>
+                        <div class="form_content">
+                            <div class="radio_grp form_inline">
+                                <label>
+                                    <input type="checkbox" name="sampleRadio1" value="" checked disabled>英文</label>
+								 <label>
+                                    <input type="checkbox" name="sampleRadio1" value="" >中文</label>
+								 <label>
+                                    <input type="checkbox" name="sampleRadio1" value="" >義大利文</label>
+								 <label>
+                                    <input type="checkbox" name="sampleRadio1" value="" >越南文</label> 
+                            </div>
+                        </div>
+                    </div>						
+					
+					 <div class="btn_grp">
+                            <button class="btn btn-primary">確認</button>
+							 <button class="btn btn-cancel">取消</button>
+                        </div>
+
+                    </div>
+	
+			
+                
+            </div>
+	</div>
+	
+	
+</body>
+<!-- JS都需要放在最下面 -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- TTS admin 專用 -->
+<script src="js/customize.js"></script>
+<!-- tree view -->
+<script src="js/jquery.treeview.js"></script>
+<!-- pg-calendar -->
+<script src="vendor/pg_calendar/js/pignose.calendar.full.min.js"></script>
+<script src="js/human.js"></script>
+<script>
+$(function() {
+    if ($('.datepick').length > 0) {
+        $('.datepick input').pignoseCalendar({
+            lang: 'ch',
+            modal: true,
+            format: 'YYYY-MM-DD',
+        });
+    }
+    // header file：00header.htm    
+    // menu file：00menu.htm
+    $('header').load('00header.htm');
+    $('aside').load('00menu.htm');
+});
+</script>
+</html>

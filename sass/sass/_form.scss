@@ -1,0 +1,761 @@
+@mixin formStyle($f_color:$color-word, $f_border:$color-gray, $f_radius:.2em) {
+    color: $f_color;
+    font-size: 1em;
+    border: 1px solid transparent;
+    padding: .5em;
+    background: #F8F8F8;
+    vertical-align: middle;
+    margin-bottom: .2em;
+    @include box-sizing();
+    @include border-radius($f_radius);
+    transition: .3s ease-out;
+    &:hover, &:focus {
+        outline: none;
+    }
+}
+select::-ms-expand {
+    display: none;
+}
+.form_grid {
+    margin: .5em;
+    @media screen and (min-width: 1400px) {
+        margin: .5em auto .5em 1em;
+        // width: 80%;
+        min-width: 500px;
+    }
+    @include screen('mobile') {
+        margin: .2em;
+        width: 100%;
+        min-width: 1em;
+    }
+    .form_grp {
+        border-bottom: 1px dashed #EDEEF3;
+        overflow: hidden;
+        padding: .2em 0;
+        &.col-12 {
+            clear: both;
+            width: 100% !important;
+            display: block;
+        }
+    }
+    .form_title_th, .form_content_th {
+        text-align: center;
+        font-weight: bold;
+        border-bottom: 1px solid #DDD;
+        padding: .2em 0 1.5em;
+        font-size: .938em;
+        height: 3em;
+        line-height: 3em;
+        @include screen('mobile') {
+            display: none;
+        }
+    }
+    .form_title, .form_title_th {
+        @include make-xs-column(12);
+        // @include make-sm-column(3);
+        // @include make-md-column(3);
+        // @include make-lg-column(3);
+        width: 130px;
+        display: table-cell;
+        vertical-align: middle;
+        line-height: 1.35em;
+        font-weight: bold;
+        min-height: 2em;
+        @include gutter(4px);
+        padding-top: .2em;
+        word-break: break-all;
+    }
+    .form_content, .form_content_th {
+        @include make-xs-column(12);
+        // @include make-sm-column(9);
+        // @include make-md-column(9);
+        // @include make-lg-column(9);
+        @include gutter(4px);
+        width: calc(100% - 140px);
+        // &.form_inline{
+        //     input{
+        //         display:inline-block;
+        //         width:auto !important;
+        //     }
+        // }
+        p.notice {
+            font-size: .875em;
+            display: block;
+            margin: 0;
+            color: #999;
+            background: none;
+            padding: 0;
+            border: none;
+        }
+        &.hastel {
+            input[type="text"]:first-child {
+                width: 6em;
+                min-width: 1em;
+                margin-right: .5em;
+            }
+            input[type="text"]:last-child {
+                width: 6em;
+                min-width: 1em;
+                margin-left: .5em;
+            }
+        }
+        .form_grp {
+            border-bottom: none;
+        }
+        .info {
+            margin: .3em 0;
+            span {
+                display: inline-block;
+                margin-right: .3em;
+                color: $color-info;
+            }
+        }
+        .sub_form_content {
+            margin-bottom: .3em;
+            &.hasBtn {
+                position: relative;
+                button, a, input[type="button"] {
+                    padding: .5em 1em !important;
+                    right: 0;
+                    top: 0;
+                    font-size: 1em;
+                    margin: 0;
+                    width: 7.5em;
+                    position: absolute;
+                    @include text-overflow;
+                    @include gradient(#FFF, #EEE, vertical);
+                    border: 1px solid #CCC;
+                    &:hover, &:focus {
+                        background: #FFF;
+                        border: 1px solid $aHover !important;
+                    }
+                }
+                >input[type="text"] {
+                    width: calc(100% - 8em);
+                }
+            }
+        }
+        &.hasIcon, &.hasBtn {
+            padding-right: 4.5em;
+            button, a, input[type="button"] {
+                position: absolute;
+                top: -.22em;
+                right: .5em;
+                padding: .5em !important;
+                min-width: 1em;
+                width: auto;
+                @include gradient(#FFF, #EEE, vertical);
+                border: 1px solid #CCC;
+                &:hover, &:focus {
+                    background: #FFF;
+                    border: 1px solid $aHover !important;
+                }
+            }
+            a {
+                color: $aHover;
+                &:hover, &:focus {
+                    color: lighten($aHover, 10);
+                }
+            }
+        }
+        &.hasBtn {
+            padding-right: 1em;
+            position: relative;
+            button, a, input[type="button"] {
+                @extend %btn;
+                @include btn_setting($color-blue, #FFF);
+            }
+            >input[type="text"] {
+                width: calc(100% - 8em);
+            }
+        }
+        &.hasDot {
+            padding-right: 1em;
+            position: relative;
+            button, a, input[type="button"] {
+                padding: .5em !important;
+                right: 1.1em;
+                top: 0em;
+                font-size: 1em;
+                margin: 0;
+                width: 3em;
+                min-width: 3em;
+                position: absolute;
+                @include text-overflow;
+                @include gradient(#FFF, #EEE, vertical);
+                border: 1px solid #CCC;
+                &:hover, &:focus {
+                    background: #FFF;
+                    border: 1px solid $aHover !important;
+                }
+            }
+            >input[type="text"] {
+                width: calc(100% - 3.5em);
+            }
+        }
+        .datepick, .select {
+            &+.datepick {
+                margin-left: .3em;
+                margin-right: 0;
+                padding-right: 0;
+                @include screen('tablet') {
+                    margin-left: 0em;
+                    display: block;
+                }
+                &:before {
+                    content: "-";
+                    font-size: 1.5em;
+                    display: inline-block;
+                    position: absolute;
+                    left: -.65em;
+                    top: .3em;
+                }
+                button, a, input[type="button"] {
+                    right: 0;
+                }
+            }
+            &+.select {
+                margin-left: 0em;
+                margin-right: 0;
+                padding-right: 0;
+                &:before {
+                    display: none;
+                }
+                button, a, input[type="button"] {
+                    right: 0;
+                }
+            }
+            //padding-right: 24px;
+            margin-right: 0.8em;
+            position:relative;
+            display:inline-block;
+            @include screen('tablet') {
+                display: block;
+                padding-right: 0em;
+            }
+            button, a, input[type="button"] {
+                position: absolute;
+                padding: .37em .1em !important;
+                //right: .5em;
+                right: 0em;
+                top: -.1em;
+                min-width: 1em;
+                background: none;
+                border: none;
+                width: auto;
+                pointer-events: none;
+                i {
+                    &:before {
+                        width: 1.75em;
+                        height: 1.75em;
+                    }
+                }
+                &:hover, &:focus {
+                    box-shadow: none;
+                    border: none !important;
+                }
+            }
+            >input[type="text"] {
+                width: auto;
+                min-width: 4em;
+                padding-right: 3em;
+            }
+        }
+    }
+}
+//---------------------------------------------form setting--------//
+form, div {
+    .form_grp,
+    .check_grp,
+    .radio_grp,
+    .btn_grp,
+    .upload_grp {
+        //margin-bottom: .2em;
+        // max-width: 70em;
+        margin: .2em auto .2em;
+    }
+    .check_grp,
+    .radio_grp {
+        label {
+            display: block;
+        }
+        // radio與check個別行內設定
+        &.form_inline {
+            label {
+                display: inline-block;
+                margin: .2em .5em 0 0;
+                vertical-align: middle;
+                // font-size: .875em;
+            }
+        }
+    }
+    .form_grp,
+    .upload_grp {
+        // 文字表單個別行內設定
+        &.form_inline {
+            label {
+                display: inline-block;
+                margin-right: .5em;
+            }
+            input,
+            textarea,
+            select {
+                width: auto;
+            }
+            input[type="radio"] {
+                width: 1em;
+            }
+        }
+    }
+    // form 全域行內設定
+    &.form_inline {
+        label {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: .5em;
+            &~input,
+            &~textarea {
+                display: inline-block;
+                width: auto;
+                vertical-align: middle;
+            }
+        }
+        input[type="text"],
+        input[type="password"],
+        select,
+        textarea {
+            width: auto;
+            display: inline-block;
+            min-width: 20em;
+            @include screen('mobile') {
+                min-width: 10em;
+            }
+        }
+        .form_grp,
+        .check_grp,
+        .radio_grp,
+        .btn_grp,
+        .upload_grp {
+            display: inline-block;
+            margin-right: .5em;
+        }
+        //.check_grp,
+        //.radio_grp {}
+        .btn_grp {
+            .btn,
+            input[type="submit"],
+            input[type="reset"],
+            input[type="button"],
+            input[type="search"] {
+                margin-top: -2px;
+                padding: .45em 1em;
+            }
+        }
+        select,
+        textarea {
+            width: auto;
+        }
+        select {
+            min-width: 4em;
+        }
+    }
+}
+//---------------------------------------------下拉選單--------//
+label,
+legend {
+    // white-space: nowrap;
+    display: inline-block;
+    margin: 0 0 .5em 0;
+    @include screen('xs_mobile') {
+        display: block;
+    }
+    &.inline {
+        input,
+        select,
+        textarea {
+            width: auto;
+        }
+    }
+}
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+//---------------------------------------------預設設定--------//
+input,
+textarea,
+select,
+button {
+    @include formStyle(); // 預設載入formStyle設定
+    &.error {
+        border: 1px solid $color-red;
+        box-shadow: 0px 0px 0px 1px $color-red;
+        color: red;
+        +.notice_warning {
+            border: none;
+            background: none;
+            color: $color-red;
+            font-size: 1em;
+            margin: 0;
+            padding-left: 25px;
+        }
+    }
+}
+input,
+select,
+textarea {
+    width: 100%;
+    -webkit-appearance: none; //清除 safari 的預設樣式
+    -moz-appearance: none;
+    appearance: none;
+}
+select {
+    transition: none !important;
+}
+//---------------------------------------------文字輸入表單--------//
+input[type="text"],
+input[type="password"],
+input[type="file"],
+input[type="tel"],
+textarea {
+    &::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: darken($color-gray, 20);
+    }
+    &::-moz-placeholder {
+        /* Firefox 19+ */
+        color: darken($color-gray, 20);
+    }
+    &:-ms-input-placeholder {
+        /* IE 10+ */
+        color: darken($color-gray, 20);
+    }
+    &:-moz-placeholder {
+        /* Firefox 18- */
+        color: darken($color-gray, 20);
+    }
+}
+button,
+input[type="button"]
+    {
+    @extend %btn;
+    @include btn_setting($form-btn, #FFF);
+    text-shadow: none !important;
+}
+input[type="submit"] {
+    @extend %btn;
+    @include btn_setting($form-btn, #FFF);
+}
+textarea {
+    @include formStyle();
+    height: 5em;
+    overflow-y: scroll;
+    @include screen('xs_mobile') {
+        width: 100%;
+    }
+}
+input[type="text"]:focus,
+input[type="reset"]:focus,
+input[type="file"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border: 1px solid transparent !important;
+    @include box-shadow(0px 0px 0px 1px transparent);
+    outline: none;
+    background: #f1f1f1;
+}
+select:focus {
+    background: #F4F4F4 url(../images/basic/icon_select_arrow.svg) no-repeat right center;
+    background-size: 20px;
+}
+//
+//input[type="file"] {}
+//---------------------------------------------下拉選單--------//
+select {
+    line-height: 2.4em;
+    height: 2.4em;
+    padding: 0 24px 0 .5em;
+    border: 1px solid transparent;
+    background: #F4F4F4 url(../images/basic/icon_select_arrow.svg) no-repeat right center;
+    background-size: 20px;
+    option {
+        outline: none;
+        border: none;
+    }
+    &:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 #000;
+    }
+}
+//---------------------------------------------reset--------//
+input[type="reset"] {
+    @extend %btn;
+    @include btn_setting(darken($color-gray, 20), #FFF);
+    text-shadow: none;
+}
+//---------------------------------------------checkbox & radio--------//
+input[type="checkbox"],
+input[type="radio"] {
+    font-size: 1em;
+    margin: -4px .2em 0 0;
+    width: 1em;
+    height: 1em;
+    background-color: #f7f6ee;
+    border: 2px solid $color-gray;
+}
+input[type="radio"] {
+    border-radius: 50%;
+}
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    border-color: $form-btn;
+    background-color: $form-btn;
+    outline: none;
+}
+input[type="checkbox"]:checked {
+    background-image: url(../images/basic/icon_checked.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 98%;
+    box-shadow: $form-btn 0 0 0 1px;
+    @include border-radius(2px);
+}
+input[type="radio"]:checked {
+    box-shadow: #fff 0 0 0 2px inset, $form-btn 0 0 0 1px;
+}
+//---------------------------------------------readonly disable -------//
+input[readonly],
+input[disabled] {
+    background: #EAEAEA !important;
+    color: #888;
+    &~label {
+        color: #888;
+    }
+    &:hover,
+    &:focus {
+        // background: lighten($color-gray, 10) !important;
+        // color: darken($color-gray, 30) !important;
+        // border-color: darken($color-gray, 10) !important;
+        // box-shadow: none !important;
+        cursor: not-allowed;
+    }
+}
+// 檔案上傳
+// https://codepen.io/shubhamc_007/pen/oZyodd
+.upload_grp {
+    position: relative;
+    input[readonly],
+    input[disable] {
+        background: transparent;
+        color: #666;
+    }
+    .upload_btn {
+        position: absolute;
+        overflow: hidden;
+        top: 0px;
+        right: 2px;
+        @extend %btn;
+        @include btn_setting($form-btn, #FFF);
+        padding: .2em 1em !important;
+        @include border-radius(4px);
+        &:hover,
+        &:focus {
+            cursor: pointer !important;
+        }
+    }
+}
+input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 1.25em;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+//---------------------------------------------captcha--------//
+img.captcha {
+    display: inline-block;
+    vertical-align: middle;
+    height: 2.5em;
+    width: auto;
+    margin-bottom: .5em;
+    &+input {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
+    }
+    ~img {
+        display: inline-block;
+        vertical-align: middle;
+        height: 2.5em;
+        margin-bottom: .5em;
+    }
+}
+//---------------------------------------------必填欄位說明--------//
+abbr[title] {
+    border-bottom: none;
+    text-decoration: none;
+}
+.form-control-danger {
+    .notice_warning {
+        border: none;
+        background: none;
+        color: $color-red;
+        font-size: 1em;
+        margin: 0;
+        padding-left: 25px;
+    }
+}
+.has-error {
+    .form_title {
+        color: $color-red;
+    }
+    .form-control-danger {
+        +.notice_warning {
+            border: none;
+            background: none;
+            color: $color-red;
+            font-size: 1em;
+            margin: 0;
+            padding-left: 25px;
+        }
+        input,
+        textarea,
+        select {
+            border: none;
+            outline: none;
+            border: 1px solid $color-red;
+            box-shadow: 0 0 0 1px $color-red inset;
+            &:focus {
+                border: 1px solid transparent !important;
+                @include box-shadow(0px 0px 0px 2px transparent);
+            }
+        }
+        .form-control-feedback {
+            color: $color-red;
+        }
+    }
+}
+.form-control-danger {
+    .check_grp, .radio_grp, .fr-box, .upload_area {
+        border: 1px solid $color-red;
+        box-shadow: 0 0 0 1px $color-red inset;
+        @include border-radius(4px);
+    }
+}
+.photoSuggest{
+    padding:0.5em 0;
+    i{
+        filter: opacity(30%);
+    }
+    a{
+        padding-left:0.1em;
+        color: #666;
+        font-size: 0.92em;
+        &:hover, &:focus{
+            color: $primaryColor;
+        }
+
+    }
+}
+.sgtxt{
+    font-size: 0.95em;
+    padding:1em;
+}
+.nolabel{
+    .form_grp {
+        width:46% !important;
+        padding-left: 4% !important;
+        .col-6-6{
+            .col{
+                padding-left: 10px !important;
+                padding-right: 0 !important;
+            }
+            .col:nth-child(odd){
+                padding-left: 0 !important;
+                padding-right: 10px !important;
+            }
+        }
+        .col-4-8{
+            .col{
+                padding-left: 10px !important;
+                padding-right: 0 !important;
+            }
+            .col:nth-child(odd){
+                padding-left: 0 !important;
+                padding-right: 10px !important;
+            }
+        }
+        .form_content{
+            width:100% !important;
+            .datepick{
+                width:44% !important;
+            }
+        }
+    }
+    .chosen-single{
+        height:2.8em !important;
+        padding-top: 6px !important;
+        div{
+            b{
+                background-position: 0px 8px  !important;
+            }
+        }
+    }
+    .chosen-search {
+        input[type=text], input[type=text]:focus{
+            background-position: 100% -21px  !important;
+            border: 1px solid #ddd !important;
+        }
+    }
+}
+.title_31{
+    .form_title{
+        width: 33%;
+        padding-right: 2%;
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+    }
+    .form_content{
+        width: 64%;
+        .form_title{
+            text-indent: 0em;
+            margin-left: 0em;
+            width: 25%;
+        }
+        .form_content{
+            width: 75%;
+        }
+    }
+}
+
+.lineated_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: #999;
+    font-size:0.9em;
+    padding:1.25em 0em;
+    &:before{
+        content: "";
+        flex: 1;
+        border-top: 1px solid #ddd;
+        padding-left:20%;
+        margin:0 10px 0 0;
+    }
+    &:after{
+        content: "";
+        flex: 1;
+        border-top: 1px solid #ddd;
+        padding-right:20%;
+        margin:0 0 0 10px;
+    }
+  }

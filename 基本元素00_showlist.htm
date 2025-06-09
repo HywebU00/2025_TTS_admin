@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>台灣國際專業展網站管理系統</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/hyui_admin.css">
+    <!-- pg-calendar -->
+    <link rel="stylesheet" href="vendor/pg_calendar/css/pignose.calendar.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="images/ico.png" />
+</head>
+
+<body>
+    <!-- header load('00header.htm') -->
+    <header></header>
+    <!-- menu load('00menu.htm') -->
+    <aside></aside>
+    <!-- 主要內容 -->
+    <div class="main_zone">
+        <div class="pills">
+            <ul>
+                <li class="active"><a href="#" class="show_choose">選擇其他展覽</a></li>
+                <li><a href="#">pills按鈕</a></li>
+                <li><a href="#">pills按鈕</a></li>
+                <li><a href="#">pills按鈕</a></li>
+                <li><a href="#">pills按鈕</a></li>
+                <li><a href="#">pills按鈕</a></li>
+                <li><a href="#">pills按鈕</a></li>
+                <li><a href="#">pills按鈕</a></li>
+            </ul>
+        </div>
+        <!-- 目錄樹區塊 -->
+        <div class="menu_setting hy_block">
+            <div class="title"> 展覽選單管理 </div>
+            <h3>台北國際禮品展台北國際禮品展台北國際禮品展(QE)</h3>
+            <select name="" id="selectSample">
+                <option value="">繁體中文</option>
+                <option value="">簡體中文</option>
+                <option value="">英文</option>
+                <option value="">日文</option>
+            </select>
+            <div class="btn_grp">
+                <button class="btn btn-xs btn-blue"><i class="i_add invert"></i>新增語系</button>
+            </div>
+            <ul class="menu_tree">
+                <li><span>主選單 <a href="#" class="i_add"></a></span>
+                    <ul>
+                        <li><span>展覽介紹<a href="#" class="i_edit"></a>
+                                <a href="#" class="i_trash"></a></span>
+                            <ul>
+                                <li><span>地點<a href="#" class="i_edit"></a>
+                                        <a href="#" class="i_trash"></a></span></li>
+                            </ul>
+                        </li>
+                        <li><span>最新消息 <a href="#" class="i_edit"></a>
+                                <a href="#" class="i_trash"></a>
+                            </span></li>
+                        <li><span>主題活動 <a href="#" class="i_edit"></a>
+                                <a href="#" class="i_trash"></a>
+                            </span></li>
+                        <li><span>產品總覽 <a href="#" class="i_edit"></a>
+                                <a href="#" class="i_trash"></a>
+                            </span></li>
+                        <li><span>影音專區 <a href="#" class="i_edit"></a>
+                                <a href="#" class="i_trash"></a>
+                            </span></li>
+                        <li><span>參展登記 <a href="#" class="i_edit"></a>
+                                <a href="#" class="i_trash"></a>
+                            </span></li>
+                        <li><span>參展專區 <a href="#" class="i_edit"></a>
+                                <a href="#" class="i_trash"></a>
+                            </span></li>
+                        <li><span>廠商總覽 <a href="#" class="i_edit"></a>
+                                <a href="#" class="i_trash"></a>
+                            </span></li>
+                        <li><span>檔案下載 <a href="#" class="i_edit"></a>
+                                <a href="#" class="i_trash"></a>
+                            </span></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="menu_tree">
+                <li><span>買主<a href="#" class="i_add"></a></span>
+                    <ul>
+                        <li><span>展覽介紹<a href="#" class="i_edit"></a>
+                                <a href="#" class="i_trash"></a></span>
+                            <ul>
+                                <li><span>地點<a href="#" class="i_edit"></a>
+                                        <a href="#" class="i_trash"></a></span></li>
+                            </ul>
+                        </li>
+                        <li><span>最新消息 <a href="#" class="i_edit"></a>
+                                <a href="#" class="i_trash"></a>
+                            </span></li>
+                        <li><span>主題活動 <a href="#" class="i_edit"></a>
+                                <a href="#" class="i_trash"></a>
+                            </span></li>
+                        <li><span>產品總覽 <a href="#" class="i_edit"></a>
+                                <a href="#" class="i_trash"></a>
+                            </span></li>
+                        <li><span>影音專區 <a href="#" class="i_edit"></a>
+                                <a href="#" class="i_trash"></a>
+                            </span></li>
+                        <li><span>參展登記 <a href="#" class="i_edit"></a>
+                                <a href="#" class="i_trash"></a>
+                            </span></li>
+                        <li><span>參展專區 <a href="#" class="i_edit"></a>
+                                <a href="#" class="i_trash"></a>
+                            </span></li>
+                        <li><span>廠商總覽 <a href="#" class="i_edit"></a>
+                                <a href="#" class="i_trash"></a>
+                            </span></li>
+                        <li><span>檔案下載 <a href="#" class="i_edit"></a>
+                                <a href="#" class="i_trash"></a>
+                            </span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="show_list">
+            <h3>展覽列表：<a href="#" class="close_btn"></a></h3>
+            <div class="form_grid">
+                <div class="form_grp">
+                    <label for="" class="form_title">查詢展覽</label>
+                    <div class="form_content hasBtn">
+                        <input name="" type="text" placeholder="請輸入展覽關鍵字">
+                        <button class="btn"><i class="i_search"></i>查詢</button>
+                    </div>
+                </div>
+            </div>
+            <h4>會內展覽：</h4>
+            <ul class="tts_show">
+                <li><a href="#"><img src="images/ex_01.png" alt="">台北國際禮品展台北國際禮品展(QE)</a></li>
+                <li><a href="#"><img src="images/ex_02.png" alt="">高雄國際清真產品展(HK)</a></li>
+                <li><a href="#"><img src="images/ex_03.png" alt="">高雄國際食品展(KF)</a></li>
+                <li><a href="#"><img src="images/ex_04.png" alt="">高雄國際飯店、餐飲暨烘焙設備用品展(KH)</a></li>
+                <li><a href="#"><img src="images/ex_05.png" alt=""> SMART ASIA India(SI)</a></li>
+                <li><a href="#"><img src="images/ex_06.png" alt="">台灣國際人工智慧暨物聯網展(IO)</a></li>
+                <li><a href="#"><img src="images/ex_01.png" alt="">台北國際禮品展台北國際禮品展(QE)</a></li>
+                <li><a href="#"><img src="images/ex_02.png" alt="">高雄國際清真產品展(HK)</a></li>
+                <li><a href="#"><img src="images/ex_03.png" alt="">高雄國際食品展(KF)</a></li>
+                <li><a href="#"><img src="images/ex_04.png" alt="">高雄國際飯店、餐飲暨烘焙設備用品展(KH)</a></li>
+                <li><a href="#"><img src="images/ex_05.png" alt=""> SMART ASIA India(SI)</a></li>
+                <li><a href="#"><img src="images/ex_06.png" alt="">台灣國際人工智慧暨物聯網展(IO)</a></li>
+                <li><a href="#"><img src="images/ex_01.png" alt="">台北國際禮品展台北國際禮品展(QE)</a></li>
+                <li><a href="#"><img src="images/ex_02.png" alt="">高雄國際清真產品展(HK)</a></li>
+            </ul>
+            <h4>會外展覽：</h4>
+            <ul class="not_tts_show">
+                <li><a href="#"><img src="images/ex_06.png" alt="">台灣國際人工智慧暨物聯網展(IO)</a></li>
+                <li><a href="#"><img src="images/ex_01.png" alt="">台北國際禮品展台北國際禮品展(QE)</a></li>
+                <li><a href="#"><img src="images/ex_02.png" alt="">高雄國際清真產品展(HK)</a></li>
+                <li><a href="#"><img src="images/ex_03.png" alt="">高雄國際食品展(KF)</a></li>
+                <li><a href="#"><img src="images/ex_04.png" alt="">高雄國際飯店、餐飲暨烘焙設備用品展(KH)</a></li>
+                <li><a href="#"><img src="images/ex_05.png" alt=""> SMART ASIA India(SI)</a></li>
+                <li><a href="#"><img src="images/ex_06.png" alt="">台灣國際人工智慧暨物聯網展(IO)</a></li>
+                <li><a href="#"><img src="images/ex_01.png" alt="">台北國際禮品展台北國際禮品展(QE)</a></li>
+                <li><a href="#"><img src="images/ex_02.png" alt="">高雄國際清真產品展(HK)</a></li>
+                <li><a href="#"><img src="images/ex_03.png" alt="">高雄國際食品展(KF)</a></li>
+                <li><a href="#"><img src="images/ex_04.png" alt="">高雄國際飯店、餐飲暨烘焙設備用品展(KH)</a></li>
+            </ul>
+        </div>
+        <div class="content">
+        </div>
+    </div>
+</body>
+<!-- JS都需要放在最下面 -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- TTS admin 專用 -->
+<script src="js/customize.js"></script>
+<!-- tree view -->
+<script src="js/jquery.treeview.js"></script>
+<!-- pg-calendar -->
+<script src="vendor/pg_calendar/js/pignose.calendar.full.min.js"></script>
+<!-- scrollbar -->
+<script src="vendor/scrollbar/jquery.scrollbar.min.js"></script>
+<script>
+$(function() {
+    if ($('.datepick').length > 0) {
+        $('.datepick input').pignoseCalendar({
+            lang: 'ch',
+            modal: true,
+            format: 'YYYY-MM-DD',
+        });
+    }
+    // header file：00header.htm    
+    // menu file：00menu.htm
+    $('header').load('00header.htm');
+    $('aside').load('00menu.htm');
+});
+</script>
+
+</html>
